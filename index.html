@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <title>AL HIKMAH</title>
+  <script type="text/javascript">
+  var i = ;
+  var images = [];
+  var slideTime = 100; // 1 seconds
+  
+  images[0] = 'https://1.bp.blogspot.com/-qEfCXjYyN7U/YTTF92yBscI/AAAAAAAAD9g/LAMKHjA0GEwX37cIGBcD1nqez2pGcT0TgCLcBGAsYHQ/s882/211c726d01201e5f132e1450b22c6129.jpg';
+  images[1] = 'https://avatars.githubusercontent.com/u/84139744?v=4';
+  images[2] = 'https://avatars.githubusercontent.com/u/84139744?v=4';
+  
+  function changePicture() {
+  document.body.style.backgroundImage = images[i];
+  
+  if (i < images.length - 1) {
+  i++;
+  } else {
+  i = 0;
+  }
+  
+  setTimeout("changePicture()", slideTime);
+  }
+  
+  window.onload = changePicture;
+  </script>
+  <style type="text/css">
+ * {
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ 
+ .home {
+ height: 100%;
+ padding-top: 40vh;
+ overflow: hidden;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ text-align: center;
+ background-image: url("https://1.bp.blogspot.com/-qEfCXjYyN7U/YTTF92yBscI/AAAAAAAAD9g/LAMKHjA0GEwX37cIGBcD1nqez2pGcT0TgCLcBGAsYHQ/s882/211c726d01201e5f132e1450b22c6129.jpg");
+ background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("i") center top;
+ background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("https://avatars.githubusercontent.com/u/84139744?v=4") center top;
+ background-size: cover;
+ }
+ 
+ .home__name {
+ font-size: 5rem;
+ padding-bottom: 1rem;
+ margin-bottom: 1rem;
+ border-bottom: 2px solid #fff;
+ }
+ 
+ .home__name--last {
+ color: #ff652f;
+ font-weight: 700;
+ }
+ 
+ .menu-btn {
+ position: absolute;
+ z-index: 1;
+ right: 1rem;
+ top: 1rem;
+ height: 20px;
+ width: 28px;
+ cursor: pointer;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .menu-btn__burger {
+ position: absolute;
+ right: 0;
+ top: 0.5rem;
+ width: 28px;
+ height: 3px;
+ background: #fff;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .menu-btn__burger::before {
+ content: '';
+ position: absolute;
+ top: -8px;
+ width: 28px;
+ height: 3px;
+ background: #fff;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .menu-btn__burger::after {
+ content: '';
+ position: absolute;
+ top: 8px;
+ width: 20px;
+ height: 3px;
+ background: #fff;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .menu-btn__burger.open {
+ -webkit-transform: rotate(720deg);
+ transform: rotate(720deg);
+ background: transparent;
+ }
+ 
+ .menu-btn__burger.open::before {
+ -webkit-transform: rotate(45deg) translate(5px, 8px);
+ transform: rotate(45deg) translate(5px, 8px);
+ }
+ 
+ .menu-btn__burger.open::after {
+ width: 28px;
+ -webkit-transform: rotate(-45deg) translate(3px, -7px);
+ transform: rotate(-45deg) translate(3px, -7px);
+ }
+ 
+ .nav {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100vw;
+ opacity: 0.98;
+ visibility: hidden;
+ }
+ 
+ .nav.open {
+ visibility: visible;
+ }
+ 
+ .nav .menu-nav {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-flow: column wrap;
+ flex-flow: column wrap;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ -webkit-box-pack: center;
+ -ms-flex-pack: center;
+ justify-content: center;
+ height: 100vh;
+ overflow: hidden;
+ background: #272727;
+ list-style-type: none;
+ padding-right: 1rem;
+ -webkit-transform: translateY(-100%);
+ transform: translateY(-100%);
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .nav .menu-nav.open {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ }
+ 
+ .nav .menu-nav__item {
+ -webkit-transform: translateX(100vw);
+ transform: translateX(100vw);
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .nav .menu-nav__item.open {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+ }
+ 
+ .nav .menu-nav__item.active > a {
+ color: #ff652f;
+ }
+ 
+ .nav .menu-nav__link {
+ display: inline-block;
+ font-size: 2rem;
+ text-transform: uppercase;
+ padding: 2rem 0;
+ font-weight: 300;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .nav .menu-nav__link:hover {
+ color: #ff652f;
+ }
+ 
+ .menu-nav__item:nth-child(1) {
+ -webkit-transition-delay: 0.25s;
+ transition-delay: 0.25s;
+ }
+ 
+ .menu-nav__item:nth-child(2) {
+ -webkit-transition-delay: 0.35s;
+ transition-delay: 0.35s;
+ }
+ 
+ .menu-nav__item:nth-child(3) {
+ -webkit-transition-delay: 0.45s;
+ transition-delay: 0.45s;
+ }
+ 
+ .menu-nav__item:nth-child(4) {
+ -webkit-transition-delay: 0.55s;
+ transition-delay: 0.55s;
+ }
+ 
+ .about {
+ padding-bottom: 2rem;
+ }
+ 
+ .about__bio-image {
+ height: 50vh;
+ width: 100%;
+ background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
+ background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("https://1.bp.blogspot.com/-qDFUei_Ah50/YTQxbrHFWTI/AAAAAAAAD7A/YvAbuQOLyT0F6BYtWB-d1PwIQzN0X_jlQCLcBGAsYHQ/s750/ALHIKMAH6.jpg") center top;
+ background-size: cover;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ -webkit-box-pack: end;
+ -ms-flex-pack: end;
+ justify-content: flex-end;
+ }
+ 
+ .about__bio-image p {
+ margin-bottom: 2rem;
+ }
+ 
+ .about__bio {
+ width: 80%;
+ text-align: center;
+ }
+ 
+ .about__bio .text-secondary {
+ padding-bottom: 1rem;
+ }
+ 
+ .about .jobs {
+ width: 60vw;
+ margin: 2rem auto 0 auto;
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-columns: 1fr;
+ grid-template-columns: 1fr;
+ grid-gap: 2rem;
+ }
+ 
+ .about .jobs__job {
+ background: #414141;
+ padding: 0.5rem;
+ border-bottom: 5px solid #ff652f;
+ }
+ 
+ .about .jobs__job h2, .about .jobs__job h3 {
+ margin: 0.5rem 0;
+ }
+ 
+ .about .jobs__job h6 {
+ margin: 0.3rem 0;
+ }
+ 
+ .about .social-icons {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ }
+ 
+ .about footer {
+ -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+ transform: rotate(90deg) translate(-3rem, -5rem);
+ }
+ 
+ .projects {
+ padding-bottom: 2rem;
+ }
+ 
+ .projects__bio-image {
+ height: 30vh;
+ width: 100%;
+ background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
+ background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+ background-size: cover;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ -webkit-box-pack: end;
+ -ms-flex-pack: end;
+ justify-content: flex-end;
+ }
+ 
+ .projects__bio-image .text-secondary {
+ font-size: 2rem;
+ margin-bottom: 2rem;
+ }
+ 
+ .projects__items {
+ width: 60vw;
+ margin: 2rem auto 0 auto;
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-columns: 1fr;
+ grid-template-columns: 1fr;
+ grid-gap: 2rem;
+ }
+ 
+ .projects__item {
+ position: relative;
+ border-bottom: 5px solid #ff652f;
+ overflow: hidden;
+ cursor: pointer;
+ }
+ 
+ .projects__item img {
+ width: 100%;
+ }
+ 
+ .projects__item::after {
+ content: '';
+ position: absolute;
+ top: 100%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background: #ff652f;
+ opacity: 0;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .projects__item:hover::after {
+ top: 0;
+ opacity: 0.9;
+ }
+ 
+ .projects__item:hover .projects__btn {
+ opacity: 1;
+ }
+ 
+ .projects__btns {
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 100%;
+ z-index: 1;
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-columns: (1fr)[2];
+ grid-template-columns: repeat(2, 1fr);
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ text-align: center;
+ }
+ 
+ .projects__btn {
+ opacity: 0;
+ color: #000;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ .projects__btn:hover {
+ color: #fff;
+ }
+ 
+ .projects .social-icons {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ }
+ 
+ .projects footer {
+ -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+ transform: rotate(90deg) translate(-3rem, -5rem);
+ }
+ 
+ .contact {
+ height: 100%;
+ padding-top: 40vh;
+ overflow: hidden;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
+ background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+ background-size: cover;
+ }
+ 
+ .contact h2 {
+ font-size: 3rem;
+ margin-bottom: 2rem;
+ }
+ 
+ .contact__list {
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-columns: 1fr;
+ grid-template-columns: 1fr;
+ grid-gap: 2rem;
+ font-size: 1.5rem;
+ }
+ 
+ .contact .social-icons {
+ position: initial;
+ margin-top: 2rem;
+ }
+ 
+ @media screen and (min-width: 768px) {
+ .menu-btn {
+ visibility: hidden;
+ }
+ .nav {
+ visibility: visible;
+ }
+ .nav .menu-nav {
+ display: block;
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ height: 100%;
+ background: transparent;
+ text-align: right;
+ }
+ .nav .menu-nav__item {
+ display: inline;
+ padding-right: 1.5rem;
+ }
+ .nav .menu-nav__link {
+ font-size: 1.5rem;
+ }
+ .about__bio {
+ font-size: 1.5rem;
+ }
+ .projects__bio-image {
+ height: 40vh;
+ }
+ .projects__items {
+ -ms-grid-columns: (1fr)[2];
+ grid-template-columns: repeat(2, 1fr);
+ }
+ .projects .text-secondary {
+ font-size: 3rem;
+ }
+ .contact__list {
+ -ms-grid-columns: (1fr)[2];
+ grid-template-columns: repeat(2, 1fr);
+ }
+ }
+ 
+ @media screen and (min-width: 1024px) {
+ .projects__items {
+ -ms-grid-columns: (1fr)[3];
+ grid-template-columns: repeat(3, 1fr);
+ }
+ .contact__list {
+ -ms-grid-columns: (1fr)[3];
+ grid-template-columns: repeat(3, 1fr);
+ }
+ }
+ 
+ @media screen and (min-width: 1600px) {
+ .projects__bio-image {
+ height: 50vh;
+ }
+ 
+ }
+ body {
+ background: #FFFFF;
+ color: #fff;
+ height: 100vh;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ line-height: 1;
+ }
+ 
+ h1, h2, h3 {
+ font-weight: 400;
+ }
+ 
+ a {
+ color: #fff;
+ text-decoration: none;
+ }
+ 
+ .text-secondary {
+ color: #ff652f;
+ }
+ 
+ header {
+ position: fixed;
+ z-index: 2;
+ width: 100%;
+ padding: 1rem;
+ }
+ 
+ main {
+ height: 100%;
+ width: 100%;
+ }
+ 
+ main .social-icons {
+ position: fixed;
+ bottom: 1rem;
+ left: 1rem;
+ }
+ 
+ main .social-icons a {
+ padding: 0.4rem;
+ -webkit-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ }
+ 
+ main .social-icons a:hover {
+ color: #ff652f;
+ }
+ button {
+ margin: 20px;
+ }
+ .custom-btn {
+ width: 130px;
+ height: 40px;
+ color: #fff;
+ border-radius: 5px;
+ padding: 10px 25px;
+ font-family: 'Lato', sans-serif;
+ font-weight: 500;
+ background: transparent;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ position: relative;
+ display: inline-block;
+ box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ outline: none;
+ }
+ 
+ /* 1 */
+ .btn-1 {
+ background: rgb(6,14,131);
+ background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+ border: none;
+ }
+ .btn-1:hover {
+ background: rgb(0,3,255);
+ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+ }
+ 
+ /* 2 */
+ .btn-2 {
+ background: rgb(96,9,240);
+ background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+ border: none;
+ 
+ }
+ .btn-2:before {
+ height: 0%;
+ width: 2px;
+ }
+ .btn-2:hover {
+ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+ -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.2),
+ inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+ }
+ 
+ 
+ /* 3 */
+ .btn-3 {
+ background: rgb(0,172,238);
+ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+ width: 130px;
+ height: 40px;
+ line-height: 42px;
+ padding: 0;
+ border: none;
+ 
+ }
+ .btn-3 span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+ }
+ .btn-3:before,
+ .btn-3:after {
+ position: absolute;
+ content: "";
+ right: 0;
+ top: 0;
+ background: rgba(2,126,251,1);
+ transition: all 0.3s ease;
+ }
+ .btn-3:before {
+ height: 0%;
+ width: 2px;
+ }
+ .btn-3:after {
+ width: 0%;
+ height: 2px;
+ }
+ .btn-3:hover{
+ background: transparent;
+ box-shadow: none;
+ }
+ .btn-3:hover:before {
+ height: 100%;
+ }
+ .btn-3:hover:after {
+ width: 100%;
+ }
+ .btn-3 span:hover{
+ color: rgba(2,126,251,1);
+ }
+ .btn-3 span:before,
+ .btn-3 span:after {
+ position: absolute;
+ content: "";
+ left: 0;
+ bottom: 0;
+ background: rgba(2,126,251,1);
+ transition: all 0.3s ease;
+ }
+ .btn-3 span:before {
+ width: 2px;
+ height: 0%;
+ }
+ .btn-3 span:after {
+ width: 0%;
+ height: 2px;
+ }
+ .btn-3 span:hover:before {
+ height: 100%;
+ }
+ .btn-3 span:hover:after {
+ width: 100%;
+ }
+ 
+ /* 4 */
+ .btn-4 {
+ background-color: #4dccc6;
+ background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+ line-height: 42px;
+ padding: 0;
+ border: none;
+ }
+ .btn-4:hover{
+ background-color: #89d8d3;
+ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+ }
+ .btn-4 span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+ }
+ .btn-4:before,
+ .btn-4:after {
+ position: absolute;
+ content: "";
+ right: 0;
+ top: 0;
+ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+ -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.9),
+ inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+ transition: all 0.3s ease;
+ }
+ .btn-4:before {
+ height: 0%;
+ width: .1px;
+ }
+ .btn-4:after {
+ width: 0%;
+ height: .1px;
+ }
+ .btn-4:hover:before {
+ height: 100%;
+ }
+ .btn-4:hover:after {
+ width: 100%;
+ }
+ .btn-4 span:before,
+ .btn-4 span:after {
+ position: absolute;
+ content: "";
+ left: 0;
+ bottom: 0;
+ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+ -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.9),
+ inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+ transition: all 0.3s ease;
+ }
+ .btn-4 span:before {
+ width: .1px;
+ height: 0%;
+ }
+ .btn-4 span:after {
+ width: 0%;
+ height: .1px;
+ }
+ .btn-4 span:hover:before {
+ height: 100%;
+ }
+ .btn-4 span:hover:after {
+ width: 100%;
+ }
+ 
+ /* 5 */
+ .btn-5 {
+ width: 130px;
+ height: 40px;
+ line-height: 42px;
+ padding: 0;
+ border: none;
+ background: rgb(255,27,0);
+ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+ }
+ .btn-5:hover {
+ color: #f0094a;
+ background: transparent;
+ box-shadow:none;
+ }
+ .btn-5:before,
+ .btn-5:after{
+ content:'';
+ position:absolute;
+ top:0;
+ right:0;
+ height:2px;
+ width:0;
+ background: #f0094a;
+ box-shadow:
+ -1px -1px 5px 0px #fff,
+ 7px 7px 20px 0px #0003,
+ 4px 4px 5px 0px #0002;
+ transition:400ms ease all;
+ }
+ .btn-5:after{
+ right:inherit;
+ top:inherit;
+ left:0;
+ bottom:0;
+ }
+ .btn-5:hover:before,
+ .btn-5:hover:after{
+ width:100%;
+ transition:800ms ease all;
+ }
+ 
+ 
+ /* 6 */
+ .btn-6 {
+ background: rgb(247,150,192);
+ background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+ line-height: 42px;
+ padding: 0;
+ border: none;
+ }
+ .btn-6 span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+ }
+ .btn-6:before,
+ .btn-6:after {
+ position: absolute;
+ content: "";
+ height: 0%;
+ width: 1px;
+ box-shadow:
+ -1px -1px 20px 0px rgba(255,255,255,1),
+ -4px -4px 5px 0px rgba(255,255,255,1),
+ 7px 7px 20px 0px rgba(0,0,0,.4),
+ 4px 4px 5px 0px rgba(0,0,0,.3);
+ }
+ .btn-6:before {
+ right: 0;
+ top: 0;
+ transition: all 500ms ease;
+ }
+ .btn-6:after {
+ left: 0;
+ bottom: 0;
+ transition: all 500ms ease;
+ }
+ .btn-6:hover{
+ background: transparent;
+ color: #76aef1;
+ box-shadow: none;
+ }
+ .btn-6:hover:before {
+ transition: all 500ms ease;
+ height: 100%;
+ }
+ .btn-6:hover:after {
+ transition: all 500ms ease;
+ height: 100%;
+ }
+ .btn-6 span:before,
+ .btn-6 span:after {
+ position: absolute;
+ content: "";
+ box-shadow:
+ -1px -1px 20px 0px rgba(255,255,255,1),
+ -4px -4px 5px 0px rgba(255,255,255,1),
+ 7px 7px 20px 0px rgba(0,0,0,.4),
+ 4px 4px 5px 0px rgba(0,0,0,.3);
+ }
+ .btn-6 span:before {
+ left: 0;
+ top: 0;
+ width: 0%;
+ height: .5px;
+ transition: all 500ms ease;
+ }
+ .btn-6 span:after {
+ right: 0;
+ bottom: 0;
+ width: 0%;
+ height: .5px;
+ transition: all 500ms ease;
+ }
+ .btn-6 span:hover:before {
+ width: 100%;
+ }
+ .btn-6 span:hover:after {
+ width: 100%;
+ }
+ 
+ /* 7 */
+ .btn-7 {
+ background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+ line-height: 42px;
+ padding: 0;
+ border: none;
+ }
+ .btn-7 span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+ }
+ .btn-7:before,
+ .btn-7:after {
+ position: absolute;
+ content: "";
+ right: 0;
+ bottom: 0;
+ background: rgba(251,75,2,1);
+ box-shadow:
+ -7px -7px 20px 0px rgba(255,255,255,.9),
+ -4px -4px 5px 0px rgba(255,255,255,.9),
+ 7px 7px 20px 0px rgba(0,0,0,.2),
+ 4px 4px 5px 0px rgba(0,0,0,.3);
+ transition: all 0.3s ease;
+ }
+ .btn-7:before{
+ height: 0%;
+ width: 2px;
+ }
+ .btn-7:after {
+ width: 0%;
+ height: 2px;
+ }
+ .btn-7:hover{
+ color: rgba(251,75,2,1);
+ background: transparent;
+ }
+ .btn-7:hover:before {
+ height: 100%;
+ }
+ .btn-7:hover:after {
+ width: 100%;
+ }
+ .btn-7 span:before,
+ .btn-7 span:after {
+ position: absolute;
+ content: "";
+ left: 0;
+ top: 0;
+ background: rgba(251,75,2,1);
+ box-shadow:
+ -7px -7px 20px 0px rgba(255,255,255,.9),
+ -4px -4px 5px 0px rgba(255,255,255,.9),
+ 7px 7px 20px 0px rgba(0,0,0,.2),
+ 4px 4px 5px 0px rgba(0,0,0,.3);
+ transition: all 0.3s ease;
+ }
+ .btn-7 span:before {
+ width: 2px;
+ height: 0%;
+ }
+ .btn-7 span:after {
+ height: 2px;
+ width: 0%;
+ }
+ .btn-7 span:hover:before {
+ height: 100%;
+ }
+ .btn-7 span:hover:after {
+ width: 100%;
+ }
+ 
+ /* 8 */
+ .btn-8 {
+ background-color: #f0ecfc;
+ background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+ line-height: 42px;
+ padding: 0;
+ border: none;
+ }
+ .btn-8 span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+ }
+ .btn-8:before,
+ .btn-8:after {
+ position: absolute;
+ content: "";
+ right: 0;
+ bottom: 0;
+ background: #c797eb;
+ /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+ -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.5),
+ inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+ transition: all 0.3s ease;
+ }
+ .btn-8:before{
+ height: 0%;
+ width: 2px;
+ }
+ .btn-8:after {
+ width: 0%;
+ height: 2px;
+ }
+ .btn-8:hover:before {
+ height: 100%;
+ }
+ .btn-8:hover:after {
+ width: 100%;
+ }
+ .btn-8:hover{
+ background: transparent;
+ }
+ .btn-8 span:hover{
+ color: #c797eb;
+ }
+ .btn-8 span:before,
+ .btn-8 span:after {
+ position: absolute;
+ content: "";
+ left: 0;
+ top: 0;
+ background: #c797eb;
+ /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+ -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.5),
+ inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+ transition: all 0.3s ease;
+ }
+ .btn-8 span:before {
+ width: 2px;
+ height: 0%;
+ }
+ .btn-8 span:after {
+ height: 2px;
+ width: 0%;
+ }
+ .btn-8 span:hover:before {
+ height: 100%;
+ }
+ .btn-8 span:hover:after {
+ width: 100%;
+ }
+ 
+ 
+ /* 9 */
+ .btn-9 {
+ border: none;
+ transition: all 0.3s ease;
+ overflow: hidden;
+ }
+ .btn-9:after {
+ position: absolute;
+ content: " ";
+ z-index: -1;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: #1fd1f9;
+ background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+ transition: all 0.3s ease;
+ }
+ .btn-9:hover {
+ background: transparent;
+ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+ -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.5),
+ inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+ color: #fff;
+ }
+ .btn-9:hover:after {
+ -webkit-transform: scale(2) rotate(180deg);
+ transform: scale(2) rotate(180deg);
+ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+ -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.5),
+ inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+ }
+ 
+ /* 10 */
+ .btn-10 {
+ background: rgb(22,9,240);
+ background: linear-gradient(0deg, rgba(22,9,240,1) 0%, rgba(49,110,244,1) 100%);
+ color: #fff;
+ border: none;
+ transition: all 0.3s ease;
+ overflow: hidden;
+ }
+ .btn-10:after {
+ position: absolute;
+ content: " ";
+ top: 0;
+ left: 0;
+ z-index: -1;
+ width: 100%;
+ height: 100%;
+ transition: all 0.3s ease;
+ -webkit-transform: scale(.1);
+ transform: scale(.1);
+ }
+ .btn-10:hover {
+ color: #fff;
+ border: none;
+ background: transparent;
+ }
+ .btn-10:hover:after {
+ background: rgb(0,3,255);
+ background: linear-gradient(0deg, rgba(2,126,251,1) 0%,  rgba(0,3,255,1)100%);
+ -webkit-transform: scale(1);
+ transform: scale(1);
+ }
+ 
+ /* 11 */
+ .btn-11 {
+ border: none;
+ background: rgb(251,33,117);
+ background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%);
+ color: #fff;
+ overflow: hidden;
+ }
+ .btn-11:hover {
+ text-decoration: none;
+ color: #fff;
+ }
+ .btn-11:before {
+ position: absolute;
+ content: '';
+ display: inline-block;
+ top: -180px;
+ left: 0;
+ width: 30px;
+ height: 100%;
+ background-color: #fff;
+ animation: shiny-btn1 3s ease-in-out infinite;
+ }
+ .btn-11:hover{
+ opacity: .7;
+ }
+ .btn-11:active{
+ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+ -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+ inset -4px -4px 6px 0 rgba(255,255,255,.2),
+ inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+ }
+ 
+ 
+ @-webkit-keyframes shiny-btn1 {
+ 0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+ 80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+ 81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+ 100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+ }
+ 
+ 
+ /* 12 */
+ .btn-12{
+ position: relative;
+ right: 20px;
+ bottom: 20px;
+ border:none;
+ box-shadow: none;
+ width: 130px;
+ height: 40px;
+ line-height: 42px;
+ -webkit-perspective: 230px;
+ perspective: 230px;
+ }
+ .btn-12 span {
+ background: rgb(0,172,238);
+ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+ display: block;
+ position: absolute;
+ width: 130px;
+ height: 40px;
+ box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ border-radius: 5px;
+ margin:0;
+ text-align: center;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ -webkit-transition: all .3s;
+ transition: all .3s;
+ }
+ .btn-12 span:nth-child(1) {
+ box-shadow:
+ -7px -7px 20px 0px #fff9,
+ -4px -4px 5px 0px #fff9,
+ 7px 7px 20px 0px #0002,
+ 4px 4px 5px 0px #0001;
+ -webkit-transform: rotateX(90deg);
+ -moz-transform: rotateX(90deg);
+ transform: rotateX(90deg);
+ -webkit-transform-origin: 50% 50% -20px;
+ -moz-transform-origin: 50% 50% -20px;
+ transform-origin: 50% 50% -20px;
+ }
+ .btn-12 span:nth-child(2) {
+ -webkit-transform: rotateX(0deg);
+ -moz-transform: rotateX(0deg);
+ transform: rotateX(0deg);
+ -webkit-transform-origin: 50% 50% -20px;
+ -moz-transform-origin: 50% 50% -20px;
+ transform-origin: 50% 50% -20px;
+ }
+ .btn-12:hover span:nth-child(1) {
+ box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ -webkit-transform: rotateX(0deg);
+ -moz-transform: rotateX(0deg);
+ transform: rotateX(0deg);
+ }
+ .btn-12:hover span:nth-child(2) {
+ box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+ -webkit-transform: rotateX(-90deg);
+ -moz-transform: rotateX(-90deg);
+ transform: rotateX(-90deg);
+ }
+ 
+ 
+ /* 13 */
+ .btn-13 {
+ background-color: #89d8d3;
+ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+ border: none;
+ z-index: 1;
+ }
+ .btn-13:after {
+ position: absolute;
+ content: "";
+ width: 100%;
+ height: 0;
+ bottom: 0;
+ left: 0;
+ z-index: -1;
+ border-radius: 5px;
+ background-color: #4dccc6;
+ background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+ box-shadow:
+ -7px -7px 20px 0px #fff9,
+ -4px -4px 5px 0px #fff9,
+ 7px 7px 20px 0px #0002,
+ 4px 4px 5px 0px #0001;
+ transition: all 0.3s ease;
+ }
+ .btn-13:hover {
+ color: #fff;
+ }
+ .btn-13:hover:after {
+ top: 0;
+ height: 100%;
+ }
+ .btn-13:active {
+ top: 2px;
+ }
+ 
+ 
+ /* 14 */
+ .btn-14 {
+ background: rgb(255,151,0);
+ border: none;
+ z-index: 1;
+ }
+ .btn-14:after {
+ position: absolute;
+ content: "";
+ width: 100%;
+ height: 0;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ border-radius: 5px;
+ background-color: #eaf818;
+ background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+ box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ transition: all 0.3s ease;
+ }
+ .btn-14:hover {
+ color: #000;
+ }
+ .btn-14:hover:after {
+ top: auto;
+ bottom: 0;
+ height: 100%;
+ }
+ .btn-14:active {
+ top: 2px;
+ }
+ 
+ /* 15 */
+ .btn-15 {
+ background: #b621fe;
+ border: none;
+ z-index: 1;
+ }
+ .btn-15:after {
+ position: absolute;
+ content: "";
+ width: 0;
+ height: 100%;
+ top: 0;
+ right: 0;
+ z-index: -1;
+ background-color: #663dff;
+ border-radius: 5px;
+ box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ transition: all 0.3s ease;
+ }
+ .btn-15:hover {
+ color: #fff;
+ }
+ .btn-15:hover:after {
+ left: 0;
+ width: 100%;
+ }
+ .btn-15:active {
+ top: 2px;
+ }
+ 
+ 
+ /* 16 */
+ .btn-16 {
+ border: none;
+ color: #000;
+ }
+ .btn-16:after {
+ position: absolute;
+ content: "";
+ width: 0;
+ height: 100%;
+ top: 0;
+ left: 0;
+ direction: rtl;
+ z-index: -1;
+ box-shadow:
+ -7px -7px 20px 0px #fff9,
+ -4px -4px 5px 0px #fff9,
+ 7px 7px 20px 0px #0002,
+ 4px 4px 5px 0px #0001;
+ transition: all 0.3s ease;
+ }
+ .btn-16:hover {
+ color: #000;
+ }
+ .btn-16:hover:after {
+ left: auto;
+ right: 0;
+ width: 100%;
+ }
+ .btn-16:active {
+ top: 2px;
+ }
+ footer {
+ font-size: 1rem;
+ position: fixed;
+ bottom: 0.4rem;
+ right: 1rem;
+ text-align: right;
+ padding: 1rem;
+ color: #fff;
+ }
+ /*# sourceMappingURL=main.css.map */
+  </style>
+</head>
+<body>
+  <header> 
+    <div class="menu-btn">
+      <span class="menu-btn__burger"></span>
+    </div>
+
+    <nav class="nav">
+      <ul class="menu-nav">
+        <li class="menu-nav__item active">
+          <a href="index.html" class="menu-nav__link">
+            Home
+          </a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="https://www.alhikmah.my.id/p/al-quran.html?m=1" class="menu-nav__link">
+        AL QUR'AN
+          </a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="/dashboard.html" class="menu-nav__link">
+            DASHBOARD
+          </a>
+        </li>
+        <li class="menu-nav__item">
+        <a href="/projects.html" class="menu-nav__link">
+        PROJECTS
+        </a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="/login.html" class="menu-nav__link">
+           LOGIN            
+          </a>
+        </li>
+        <li class="menu-nav__item">
+        <a href="/faq.html" class="menu-nav__link">
+        FAQ            
+        </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home">
+      
+      <h1 class="home__name">
+        AHMAD <span class="home__name--last">WAHYUDI</span>
+      </h1>
+      <h2>
+        Web Developer, Designer & Programmer
+      </h2>
+
+      <div class="social-icons">
+        <a href="https://business.facebook.com/Awgroupchannel/?fref=nf">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="/whatsapp.html">
+        <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+        <a href="https://www.jagel.id/app/al-hikmah-191932">
+        <i class="fab fa-linkedin fa-2x"></i>
+        </a>    
+        <a href="https://youtu.be/yioSEoi0OBI">
+          <i class="fab fa-youtube fa-2x"></i>
+        </a>
+        <a href="https://codepen.io/SAN3">
+          <i class="fab fa-codepen fa-2x"></i>
+        </a>
+        <a href="https://github.com/wahyu9kdl">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="/html5.html">
+        <i class="fab fa-html5 fa-2x"></i>
+        </a>
+        <a href="/css3.html">
+        <i class="fab fa-css3 fa-2x"></i>
+        </a>
+        <a href="/js.html">
+        <i class="fab fa-js fa-2x"></i>
+        </a>
+        <a href="/php.html">
+        <i class="fab fa-php fa-2x"></i>
+        </a>
+       <a href="/node.html">
+       <i class="fab fa-node fa-2x"></i>
+       </a>
+       <a href="https://appsgeyser.io/14282939/ALHIKMAH">
+       <i class="fab fa-apple fa-2x"></i>
+       </a>
+        <a href="https://appsgeyser.io/13719672/Aw-Aplikasi">
+        <i class="fab fa-app-store fa-2x"></i>
+        </a>
+        <a href="/asymmetrik.html">
+        <i class="fab fa-asymmetrik fa-2x"></i>
+        </a>
+        <a href="/windows.html">
+        <i class="fab fa-windows fa-2x"></i>
+        </a>
+                <a href="https://cse.google.com/cse?cx=792e1c207270e2810">
+                <i class="fab fa-google fa-2x"></i>
+                </a>
+                <a href="/google-play.html">
+                <i class="fab fa-google-play fa-2x"></i>
+                </a>
+                <a href="https://sfile.mobi/8y9IgJ52b6b">
+                <i class="fab fa-google-drive fa-2x"></i>
+                </a>
+                        <a href="https://paypal.me/wahyudi9kdl">
+                        <i class="fab fa-paypal fa-2x"></i>
+                        </a><a href="https://saweria.co/AwGroupChannel">
+                        <i class="fab fa-cc-visa fa-2x"></i>
+                        </a>
+                        </a><a href="/amazon.html">
+                        <i class="fab fa-cc-amazon-pay fa-2x"></i>
+                        </a>
+      </div>
+
+      <footer>&copy; Copyright 2019</footer>
+    </section>
+  </main>
+<script type="text/javascript">
+ const menuBtn = document.querySelector('.menu-btn');
+ const hamburger = document.querySelector('.menu-btn__burger');
+ const nav = document.querySelector('.nav');
+ const menuNav = document.querySelector('.menu-nav');
+ const navItems = document.querySelectorAll('.menu-nav__item');
+ 
+ let showMenu = false;
+ 
+ menuBtn.addEventListener('click', toggleMenu);
+ 
+ function toggleMenu() {
+ if(!showMenu) {
+ hamburger.classList.add('open');
+ nav.classList.add('open');
+ menuNav.classList.add('open');
+ navItems.forEach(item => item.classList.add('open'));
+ 
+ showMenu = true;
+ } else {
+ hamburger.classList.remove('open');
+ nav.classList.remove('open');
+ menuNav.classList.remove('open');
+ navItems.forEach(item => item.classList.remove('open'));
+ 
+ showMenu = false;
+ }
+ }
+ </script>
+ <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+  <script src="js/main.js"></script>
+  
+  <div>
+  <center><div style="position: relative;"><h2 style="display: block; font-weight: bold; margin-top: 10px; color: black;">Artikel</h2></div></center>
+  <div class="list-border" id="result-title" style="border-radius: 5px; border: 1px solid rgb(204, 204, 204); margin: 5px 0px; max-height: 295px; overflow: auto; text-align: left;"><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/11/video-intro-islami.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Video Intro Islami 100% Free Download - alhikmah</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/11/ebooks.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">EBOOKS ISLAMI ALHIKMAH.</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/08/aplikasi.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">APLICATION ALHIKMAH.MY.ID Resmi</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/best-responsive-free-amp-blogger.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Best Responsive Free AMP Blogger Templates</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/sholawat.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">KUMPULAN SHOLAWAT NABI MERDU ©️ 2021 ( @ALHIKMAH )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/asmaul-husna.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Asmaul Husna</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/11/adzan.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Mp3 Adzan Dan Iqamah Terbaik ~ AL HIKMAH</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/11/murottal.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Mp3 Murottal Imam Besar Masjidil Haram ~ Al hikmah</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/santri.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Makna Santri - alhikmah</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/12/lirik-lagu-nusantara.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Lirik Lagu Nusantara</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/download-e-books.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">DOWNLOAD E - BOOKS</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/e-books.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">e-Books Alhikmah.my.id</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/download-terjemah-kitab-kuning.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Download Terjemah Kitab Kuning</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/kitab-di-pesantren.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Mengenal Peradaban Kitab Kuning di Pesantren - alhikmah</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/blog-post.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">5 Situs Sejarah Wajib Dikunjungi di 2021, Peninggalan Purbakala yang Melegenda di Indonesia</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/blog-post_4.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">الفيۃ ابن مالك</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/backlink-berkualitas-dari-situs-besar.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Alur Backlink Berkualitas Dari Situs Besar Indonesia</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/mensyukuri-nikmat-terbesar-dan-karunia.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Mensyukuri Nikmat Terbesar dan Karunia Allah Swt | AL HIKMAH</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/kitab-maulid-nabi-muhammad-saw-yang.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Kitab Maulid Nabi Muhammad saw yang populer di Indonesia ( AL HIKMAH )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/peringatan-maulid-nabi-muhammad-saw.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">PERINGATAN MAULID NABI MUHAMMAD SAW ( SEJARAH , PENDAPAT ULAMA' , DALIL - DALIL , FADHILAH / KEUTAMAAN BERSHOLAWAT ATAS NABI MUHAMMAD SAW ) - alhikmah</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/yahoo.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">NEWS Index Yahoo search ALHIKMAH.MY.ID</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/menumbuhkan-rasa-cinta-kepada.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">MENUMBUHKAN RASA CINTA KEPADA RASULULLAH SAW</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/universitas-yang-menyediakan-program.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Universitas yang Menyediakan Program Kuliah Online di Indonesia</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/sejarah-kota-kendal.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Sejarah Kota Kendal.</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/09/gif.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">DOWNLOAD GRATIS "Wallpaper bagus dan keren". DOWNLOAD WALLPAPER HD , DOWNLOAD WALLPAPER GIF , DOWNLOAD WALLPAPER ANDROID | DOWNLOAD AW DESAIN IMAGE GIF</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/kode-warna-html-lengkap-untuk-template.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Kode Warna HTML Lengkap untuk Template Blooger Responsive</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/12/estimate-price-website.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Test Estimate Price website AL HIKMAH</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/07/spoiler.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">SPOILER DAN KEYBOAD ARABIC</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/fadhilah-membaca-sholawat-dengan-hati.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Fadhilah Membaca Sholawat dengan Hati yang IKLAS.</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/fadhilah-membaca-sholawat.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Fadhilah Membaca Sholawat</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/10/nu-channel-tv.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Sekilas Tentang NU Channel TV ~ Kajian Islami ( Alhikmah )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/riset-kata-kunci-untuk-seo-100-page-one.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Riset Keyword untuk SEO 100% Page One</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/09/kitab-kuning.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">KITAB KUNING LENGKAP - AL HIKMAH | GRATIS DOWNLOAD</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/sejarah-berdirinya-pesantren-pertama-di.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Sejarah Berdirinya Pesantren Pertama Di Indonesia - alhikmah</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/12/metode-dakwah-kata-kata-hikmah.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">METODE DAKWAH 𝖆𝖑 𝖍𝖎𝖐𝖒𝖆𝖍 ( al hikmah barokah ) | طريقة الدعوة (الحكمة بركة)</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/kisah-hikmah-abu-yazid-al-bisthami.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Kisah hikmah -Abu Yazid Al-Busthami ( MA'RIFAT BILLAH )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/bilal-bin-rabbah-sosok-yang-sangat.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Bilal bin Rabbah ( sosok yang sangat dekat dengan Rasulullah SAW, dan dijamin masuk surga</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/perjalanan-menikmati-15-negeri-muslim.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">PERJALANAN MENIKMATI 15 NEGERI MUSLIM DIDUNIA.</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/09/wallpaper.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">WALLPAPER ISLAMI FREE DOWNLOAD - AL HIKMAH</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/gambar-islami-al-hikmah.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">GAMBAR ISLAMI GRATIS DOWNLOAD - AL HIKMAH</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/hikmah.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">AL - HIKMAH { Termasuk Ilmu Tasawuf }</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/katakatahikmah-abuya-dr-hamka.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Kata Kata Hikmah ABUYA HAMKA</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/download-pdf-puluhan-27-judul-kitab.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Download PDF Gratis | Puluhan (27) Judul Kitab Karya Syaikh Nawawi Umar Al-Bantani Al-Jawi</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/09/download-kitab_15.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Download Kitab Terlengkap | Kitab Kuning PDF , Kumpulan kitab ulama-ulama tersohor</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/tiga-sisi-agamaislam-iman-dan-ihsan.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Islam, Iman dan Ihsan | Tiga Pilar Agama | alhikmah</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/filsafat-dibalik-tembang-macapat.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">FILSAFAT DIBALIK TEMBANG MACAPAT</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/09/3d.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">3D ANIMATION MAKER ON CODEPEN</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/adabul-alim-wal-mutaalim-bab-5-akhlak.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Adabul Alim Wal Muta'alim | BAB 5 Akhlak Ustadz Terhadap Diri Sendiri | KATA KATA HIKMAH [ AL HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/macam-macam-metode-penafsiran-alquran.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Macam-macam Metode Penafsiran Alquran dan Penjelasannya</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/09/download-kitab.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">DOWNLOAD KITAB</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/09/wallpaper_5.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">WALLPAPER ANDROID AND DESKTOP: FREE DOWNLOAD WALLPAPER - Awfanspage</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/ucapan-romantis-1.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">KUMPULAN VIDIO HIKMAH</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/optimisme-husnudhon-billah.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">OPTIMISME ( HUSNUDHON BILLAH )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/08/optimasi.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">OPTIMASI | DAFTAR LINK DAN JUDUL SITUS ALHIKMAH 100+</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/08/digital.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">DIGITAL</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/blog-post_13.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">KITA UNTUK INDONESIA MAJU 2021</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/khutbah-idul-adha-bahasa-jawa.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Khutbah idul adha bahasa jawa</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/sejarah-wali-songo.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Wali Songo | Sejarah Wali Songo dan Asal Usulnya - Sejarah Lengkap</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/ajisaka-dan-asal-mula-aksara-jawa.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Ajisaka dan Asal Mula Aksara Jawa</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/membuat-blog-gratis-mudah-dan-bisa.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Membuat Blog Gratis, Mudah dan Bisa Menghasilkan Uang</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/07/download-file.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Download File Pdf Kumpulan Kitab Islami [ alhikmah.my.id ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/kitab-talim-mutaalim-dan-terjemahan.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">BACA DAN DOWNLOAD KITAB TA'LIM MUTA'ALIM DAN TERJEMAHAN</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/12/konsep-kesehatan-dalam-islam.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Konsep Kesehatan Dalam Islam</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/wa.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">BERKAH ISTIQOMAH [ AL HIKMAH - KATA KATA HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/abdurrahman-bin-auf-ra-dijamin-masuk.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">ABDURRAHMAN BIN AUF RA ( dijamin masuk surga oleh Rasulullah SAW )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/04/kumpulan-vidio-kang-santri-indonesia.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Kumpulan Vidio Kang Santri Indonesia</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/tasawuf.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">SUFI DAN TASAWUF</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/adabul-alim-wal-mutaalim-bab-1.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Adabul Alim Wal Muta'alim | BAB 1 - Keutamaan Ilmu Dan Ulama Serta Keutamaan Proses Belajar Dan Mengajar | KATA KATA HIKMAH [ AL HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/daftar-surat-ayat-ayat-al-quran.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">DAFTAR SURAT &amp; AYAT-AYAT AL-QURAN</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/12/cara-membuat-headline-blogspot.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Cara Membuat HEADLINE Blogspot</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/memenejemen-tulisan-di-blooger.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Memenejemen tulisan di blooger</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/keutamaan-keistimewaan-dan-peristiwa.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">KEUTAMAAN , KEISTIMEWAAN DAN PERISTIWA BERSEJARAH DI BULAN RAJAB</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/nadhom-imriti-kata-kata-hikmah-al-hikmah.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Nadhom Al Imrithi | Karya Beliau Syaikh Syarafuddin al-‘Imrithy KATA KATA HIKMAH [ AL HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/terjemah-kitab-imrithi.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Belajar Kitab Al Imrithi Nadhom dan Terjemahannya</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/adabul-alim-wal-mutaalim-bab-2-akhlaq.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Adabul Alim Wal Muta'alim | BAB 2 Akhlaq pelajar (santri) pada dirinya sendiri | KATA KATA HIKMAH [ AL HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/mengenal-dan-mungulas-teknik-arsitektur.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Mengenal dan Mungulas Teknik Arsitektur</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/12/desain-rumah-masa-kini-karya-arsitek.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Desain Rumah Masa Kini Karya Arsitek Terbaik 2020</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/kisah-sejarah-raden-fatah-kesultanan.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">KISAH SEJARAH RADEN FATAH( Kesultanan Demak )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/membuat-tulisan-menarik-dengan-text.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">MEMBUAT TULISAN MENARIK DENGAN TEXT BERGERAK BUAT BLOOG</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/web-push-notifications-dos-and-donts.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Web Push Notifications – Dos and Don’ts</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/tanbihul-ghafilin.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">TANBIHUL GHAFILIN (تنبيه الغافلين)</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/ada-9-alasan-kenapa-harus-fanatik.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">9 ALASAN KENAPA HARUS FANATIK KEPADA NU ( NAHDLATUL ULAMA )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/adabul-alim-wal-mutaalim-bab-3-akhlaq.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Adabul Alim Wal Muta'alim | BAB 3 Akhlaq Seorang Pelajar Terhadap Gurunya | KATA KATA HIKMAH [ AL HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/cara-membuat-related-post-artikel.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Cara Membuat Related Post (Artikel Terkait) Otomatis di Postingan Blog</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/05/cara-membuat-dan-mempublikasikan-cbox.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Cara Membuat dan Mempublikasikan Cbox Anda Secara Gratis</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/ngaji-tafsir-jalalain.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">NGAJI TAFSIR JALALAIN</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/adabul-alim-wal-mutaalim-muqadimah-kata.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Adabul Alim Wal Muta'alim | Muqadimah | KATA KATA HIKMAH [ AL HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/adabul-alim-wal-mutaalim-bab-6-akhlak.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Adabul Alim Wal Muta'alim | BAB 6 Akhlak Ustadz Ketika Mengajar | KATA KATA HIKMAH [ AL HIKMAH ]</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/lirik-sholawat-nahdliyyah-arab-latin.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Lirik “Sholawat Nahdliyyah” (Arab, Latin, Terjemahan)</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/tutorial-membuat-sitemap-seo-di-blogspot.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Tutorial Membuat Sitemap SEO di Blogspot</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/teknik-seo.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">TEKNIK SEO ( Mendapatkan Backlink Gratis Bagi Pemula )</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/judul-blog.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Cara Praktis Membuat Ucapan Selamat Datang di Blooger</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/ayo-mondok-pentingnya-memilih-pesantren.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Ayo MONDOK ; Pentingnya Memilih Pesantren yang Tepat</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/wanita-menurut-islam.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Wanita Menurut Islam</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/panduan-untuk-menulis-about-me.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">panduan untuk menulis “About Me”</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/desaign-grafis.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Desain grafis</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/03/kiai-mansyur-sholeh-mojosari-nganjuk.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Kiai Mansyur Sholeh Mojosari, Nganjuk</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/masjid-nabawi-bahasa-arab.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Masjid Nabawi &nbsp;(bahasa Arab:&nbsp;المسجد النبوي‎)</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/kilas-sejarah-sang-pendiri-bangsa-ir.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">KILAS SEJARAH SANG PENDIRI BANGSA IR . SOEKARNO SETELAH TERUSIR DARI ISTANA NEGARA.</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/08/sholawat.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Sholawat</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/09/bijaksana.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">BIJAKSANA</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/asal-muasal-aksara-jawa.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Asal Muasal Aksara Jawa</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/aplikasi-android-terbaru.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">🚀Aplikasi android Terbaru 2021🛰</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/03/panduan-lengkap-semrush-tools-seo-2021.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Panduan Lengkap SEMrush Tools SEO 2021 Untuk Pemula dan Pebisnis</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/10/bisnis-rumahan-dengan-hasil-yang-lumayan.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Ide Kreatif 20 Bisnis Rumahan dengan Hasil yang Lumayan</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2020/11/download-mp3-murotal-al-quran-gratis-30.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Download Gambar Islami [ gratis ] 2021</a></div><div style="border-bottom: 1px solid rgb(204, 204, 204); font-size: 15px; line-height: 24px; padding: 6px 12px;"><a href="http://www.alhikmah.my.id/2021/01/adabul-alim-wal-mutaalim-bab-10-tata.html" rel="noopener noreferrer nofollow" style="color: black; text-decoration-line: none; transition: all 0.25s ease 0s; word-break: break-word;" target="_blank">Adabul Alim Wal Muta'alim | BAB 10 Tata krama seorang pelajar dengan buku-buku sebagai alatnya ilmu dan yang berhubungan dengan cara-cara memperolehnya | KATA KATA HIKMAH [ AL HIKMAH ]</a></div>
+</div>
+<center>
+<span style="color: black; center"><h1>HALAMAN</h1></span>
+<p><span style="color: black;">BERIKUT INI MERUPAKAN DAFTAR HALAMAN YANG KAMI SAJIKAN DISITUS ALHIKMAH.MY.ID SEMOGA BISA BERMANFAAT</span></p>
+</center>
+<div class="btn">
+  <a href="https://www.alhikmah.my.id/p/al-quran.html">
+  <button class="custom-btn btn-1">AL QUR'AN</button></a>
+  <a href="https://www.alhikmah.my.id/p/tafsir-web.html">
+  <button class="custom-btn btn-2">TAFSIR</button></a>
+  <a href="https://www.alhikmah.my.id/p/mp3-al-quran.html">
+  <button class="custom-btn btn-3">MP3 AL QUR'AN</button></a>
+  <a href="https://www.alhikmah.my.id/p/al-hikmah-center.html">
+  <button class="custom-btn btn-4">ISLAMIC</button></a>
+  <a href="https://www.alhikmah.my.id/p/makkah-tv-live.html">
+  <button class="custom-btn btn-5">TV MAKKAH</button></a>
+  <a href="https://www.alhikmah.my.id/p/madina-tv-live.html">
+  <button class="custom-btn btn-6">TV MADINAH</button></a>
+  <a href="https://www.alhikmah.my.id/p/jadwal-sholat.html">
+  <button class="custom-btn btn-7">JADWAL SHOLAT</button></a>
+  <a href="https://www.alhikmah.my.id/p/harga-kitab.html">
+  <button class="custom-btn btn-8">KITAB</button></a>
+  <a href="https://www.alhikmah.my.id/p/7-kitab-dasar-yang-diajarkan-di.html">
+  <button class="custom-btn btn-9">INFORMASI</button></a>
+  <a href="https://www.alhikmah.my.id/p/daftar-campaign-affiliasi-website-kami.html">
+  <button class="custom-btn btn-10">MARKET</button></a>
+  <a href="https://www.alhikmah.my.id/p/sitemap-kata-kata-hikmah_3.html">
+  <button class="custom-btn btn-11">ARTIKEL<div class="dot"></div></button></a>
+  <a href="https://www.alhikmah.my.id/search/label/SHOLAWAT?m=1">
+  <button class="custom-btn btn-12"><span>Click!</span><span>SHOLAWAT</span></button></a>
+  <a href="https://saweria.co/AwGroupChannel">
+  <button class="custom-btn btn-13">BERDONASI</button></a>
+  <a href="https://www.alhikmah.my.id/p/license.html">
+  <button class="custom-btn btn-14">Licensi</button></a>
+  <a href="https://kata-h.blogspot.com/p/login_25.html">
+  <button class="custom-btn btn-15">LOGIN</button></a>
+  <a href="https://www.alhikmah.my.id/p/registrasi.html">
+  <button class="custom-btn btn-16">REGRISTRASI</button></a>
+  <script async src="https://cse.google.com/cse.js?cx=db5f08cfff3041318"></script>
+  <div class="gcse-search"></div>
+  <div><center><p style="font-family: Andale Mono, monospace;color:black">
+    AL HIKMAH.Style DESIGNING</p></center>
+</div>
+
+</body>
+</html>
