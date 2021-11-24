@@ -1,4 +1,0 @@
-"Id" type = bigint(20)
-"nama" type = varchar(50)
-"email" type = varchar (50)
-"password" type = varchar(8)
