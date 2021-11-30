@@ -1,1 +1,422 @@
-Index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+  crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Portfolio Homepage With DarkMode Toggle - ramCoder</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.1s ease;
+    }
+    html {
+    overflow-x: hidden;
+    }
+    :root {
+    --bg-color: rgb(226, 226, 226);
+    --text-color: rgb(36, 34, 34);
+    --highlighted-color: rgb(240, 68, 32);
+    }
+    [data-theme="dark"] {
+    --bg-color: rgb(36, 34, 34);
+    --text-color: rgb(226, 226, 226);
+    --highlighted-color: rgb(240, 68, 31);
+    }
+    body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+    }
+    /* background animation  */
+    .boxes div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 3px solid var(--text-color);
+    border-radius: 5px;
+    }
+    
+    .boxes div:nth-child(1) {
+    top: 70%;
+    left: 10%;
+    animation: box-animate 10s infinite;
+    }
+    
+    .boxes div:nth-child(2) {
+    top: 20%;
+    left: 80%;
+    animation: box-animate 9s infinite;
+    }
+    
+    .boxes div:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    animation: box-animate 6s infinite;
+    }
+    
+    .boxes div:nth-child(4) {
+    top: 80%;
+    left: 60%;
+    animation: box-animate 15s infinite;
+    }
+    
+    .boxes div:nth-child(5) {
+    top: 30%;
+    left: 30%;
+    animation: box-animate 9s infinite;
+    }
+    
+    .boxes div:nth-child(6) {
+    top: 90%;
+    left: 90%;
+    animation: box-animate 12s infinite;
+    }
+    
+    .boxes div:nth-child(7) {
+    top: 80%;
+    left: 30%;
+    animation: box-animate 2s infinite;
+    }
+    
+    .boxes div:nth-child(8) {
+    top: 40%;
+    left: 20%;
+    animation: box-animate 2s infinite;
+    }
+    
+    .boxes div:nth-child(9) {
+    top: 50%;
+    left: 80%;
+    animation: box-animate 2s infinite;
+    }
+    
+    @keyframes box-animate {
+    0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+    }
+    
+    100% {
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+    }
+    }
+    /* navbar styles */
+    nav {
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    .burger-div {
+    display: none;
+    pointer-events: none;
+    }
+    .logo {
+    font-size: 2rem;
+    color: var(--highlighted-color);
+    font-weight: bolder;
+    cursor: pointer;
+    }
+    .links {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    }
+    .home-link {
+    color: var(--highlighted-color);
+    position: relative;
+    }
+    .links ul {
+    display: flex;
+    list-style: none;
+    width: 80%;
+    justify-content: space-around;
+    }
+    .links ul li {
+    cursor: pointer;
+    position: relative;
+    }
+    .links ul li:hover {
+    color: var(--highlighted-color);
+    }
+    .links ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 2px;
+    height: 2px;
+    width: 0%;
+    background-color: var(--highlighted-color);
+    transition: 0.3s ease;
+    }
+    .links ul li:hover::after {
+    width: 70%;
+    }
+    .checkbox {
+    height: 30px;
+    width: 60px;
+    appearance: none;
+    background-color: var(--text-color);
+    border-radius: 50px;
+    position: relative;
+    transition: 0.4s ease;
+    cursor: pointer;
+    }
+    .checkbox::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: var(--highlighted-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    }
+    .checkbox:checked::before {
+    left: calc(60px - 30px);
+    }
+    /* hero section  */
+    .home {
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    .content {
+    color: var(--text-color);
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .content h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    position: relative;
+    }
+    .content h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 2px;
+    height: 2px;
+    width: 40%;
+    background-color: var(--highlighted-color);
+    }
+    .content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    }
+    .content p span {
+    color: var(--highlighted-color);
+    font-size: 2rem;
+    }
+    .contact-btn {
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: 2px solid var(--highlighted-color);
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--highlighted-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+    }
+    .contact-btn:hover {
+    box-shadow: inset 100px 0 0 0 var(--highlighted-color);
+    color: rgb(226, 226, 226);
+    }
+    .image {
+    max-width: 30%;
+    }
+    .image img {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: inset 500px 0 0 0 var(--highlighted-color);
+    transition: all 0.3s ease;
+    }
+    .image img:hover {
+    transform: scale(1.01);
+    }
+    
+    Step3: 
+    After finishing up with style.css file, you will need to create an responsive.css file and the following CSS code and save the changes to take the effect.
+    
+    @media (max-width: 920px) {
+    .home {
+    flex-direction: column-reverse;
+    }
+    .content {
+    width: 90%;
+    height: 50%;
+    }
+    .content h2,
+    .content p {
+    margin-bottom: 20px;
+    }
+    .image {
+    min-height: 40%;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .image img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    }
+    }
+    @media (max-width: 768px) {
+    .burger-div {
+    display: block;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    pointer-events: all;
+    width: 60px;
+    }
+    .burger {
+    cursor: pointer;
+    transition: 0.2s ease;
+    }
+    .links {
+    display: none;
+    width: 60px;
+    position: relative;
+    }
+    .checkbox {
+    display: block;
+    }
+    .active-nav {
+    display: inline-block;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--bg-color);
+    z-index: 1;
+    }
+    .active-nav ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <div class="burger-div">
+        <i class="fas fa-bars burger"></i>
+      </div>
+      <div class="logo">AwGC</div>
+      <div class="links">
+        <ul>
+          <li class="home-link nav-link">Home</li>
+          <li class="nav-link">About</li>
+          <li class="nav-link">Services</li>
+          <li class="nav-link">Contact</li>
+        </ul>
+      </div>
+      <input type="checkbox" name="" id="themeswitch" class="checkbox" />
+    </nav>
+    <section class="home">
+      <div class="content">
+        <h2>Explore the programming beauty!</h2>
+        <p>with <span class="name">A W</span></p>
+       <a href="/index.html" > <button class="contact-btn">Contact</button></a>
+      </div>
+      <div class="image"><img src="https://avatars.githubusercontent.com/u/84139744?v=4" /></div>
+    </section>
+    <script src="./script.js">    
+    </script>
+    <script type="text/javascript">
+    var themeSwitcher = document.querySelector(".checkbox");
+    
+    var currentTheme = localStorage.getItem("theme");
+    
+    if (currentTheme) {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    if (currentTheme === "dark") {
+    themeSwitcher.checked = true;
+    }
+    }
+    
+    function switchTheme(e) {
+    if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+    } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+    }
+    }
+    
+    themeSwitcher.addEventListener("change", switchTheme, false);
+    
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".links");
+    const links = document.querySelectorAll(".nav-link");
+    
+    burger.addEventListener("click", () => {
+    nav.classList.toggle("active-nav");
+    burger.classList.toggle("fa-times");
+    });
+    
+    for (let i of links) {
+    i.addEventListener("click", (e) => {
+    if (e.target.classList.contains("nav-link")) {
+    nav.classList.toggle("active-nav");
+    burger.classList.toggle("fa-times");
+    }
+    });
+    }
+    </script>
+    <script src="/Ads/Ads.js"></script>
+  </body>
+</html>
