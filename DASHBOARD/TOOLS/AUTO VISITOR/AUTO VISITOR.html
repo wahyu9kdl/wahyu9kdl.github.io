@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	    <script type="text/javascript"> setTimeout( function(){ window.location = "https://jali.me/Hikmah" }, 90000); // waktu tunggu atau delay </script>
+
+	    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+     crossorigin="anonymous"></script>
+
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript"> setTimeout( function(){ window.location = "https://www.alhikmah.my.id/2021/08/optimasi.html?m=1" }, 50000); // waktu tunggu atau delay </script>
+<script>
+"use strict";
+
+
+setInterval(function() {
+
+	let hours = document.querySelector("#hours");
+	let minutes = document.querySelector("#minutes");
+	let secends = document.querySelector("#secends");
+
+	let am_pm = document.querySelector("#AM_PM");
+
+	let hr = new Date().getHours();
+	let min = new Date().getMinutes();
+	let sec = new Date().getSeconds();
+
+	hours.innerHTML = hr;
+	minutes.innerHTML = min;
+	secends.innerHTML = sec;
+console.log (hr);
+	if (hr >= 0 && hr < 12) {
+		am_pm.innerHTML = "AM";
+	} else {
+		am_pm.innerHTML = "PM";
+	}
+ 
+	if (hr == 1) {
+		hours.innerHTML = "01";
+	} else if (hr == 2) {
+		hours.innerHTML = "02";
+	} else if (hr == 3) {
+		hours.innerHTML = "03";
+	} else if (hr == 4) {
+		hours.innerHTML = "04";
+	} else if (hr == 5) {
+		hours.innerHTML = "05";
+	} else if (hr == 6) {
+		hours.innerHTML = "06";
+	} else if (hr == 7) {
+		hours.innerHTML = "07";
+	} else if (hr == 8) {
+		hours.innerHTML = "08";
+	} else if (hr == 9) {
+		hours.innerHTML = "09";
+	} else if (hr == 13) {
+		hours.innerHTML = "01";
+	} else if (hr == 14) {
+		hours.innerHTML = "02";
+	} else if (hr == 15) {
+		hours.innerHTML = "03";
+	} else if (hr == 16) {
+		hours.innerHTML = "04";
+	} else if (hr == 17) {
+		hours.innerHTML = "05";
+	} else if (hr == 18) {
+		hours.innerHTML = "06";
+	} else if (hr == 19) {
+		hours.innerHTML = "07";
+	} else if (hr == 20) {
+		hours.innerHTML = "08";
+	} else if (hr == 21) {
+		hours.innerHTML = "09";
+	} else if (hr == 22) {
+		hours.innerHTML = "10";
+	} else if (hr == 23) {
+		hours.innerHTML = "11";
+	} else if (hr == 0) {
+		hours.innerHTML = "12";
+	}
+
+
+	if (min == 0) {
+		minutes.innerHTML = "00";
+	} else if (min == 1) {
+		minutes.innerHTML = "01";
+	} else if (min == 2) {
+		minutes.innerHTML = "02";
+	} else if (min == 3) {
+		minutes.innerHTML = "03";
+	} else if (min == 4) {
+		minutes.innerHTML = "04";
+	} else if (min == 5) {
+		minutes.innerHTML = "05";
+	} else if (min == 6) {
+		minutes.innerHTML = "06";
+	} else if (min == 7) {
+		minutes.innerHTML = "07";
+	} else if (min == 8) {
+		minutes.innerHTML = "08";
+	} else if (min == 9) {
+		minutes.innerHTML = "09";
+	}
+
+
+	if (sec == 0) {
+		secends.innerHTML = "00";
+	} else if (sec == 1) {
+		secends.innerHTML = "01";
+	} else if (sec == 2) {
+		secends.innerHTML = "02";
+	} else if (sec == 3) {
+		secends.innerHTML = "03";
+	} else if (sec == 4) {
+		secends.innerHTML = "04";
+	} else if (sec == 5) {
+		secends.innerHTML = "05";
+	} else if (sec == 6) {
+		secends.innerHTML = "06";
+	} else if (sec == 7) {
+		secends.innerHTML = "07";
+	} else if (sec == 8) {
+		secends.innerHTML = "08";
+	} else if (sec == 9) {
+		secends.innerHTML = "09";
+	}
+
+	
+
+}, 1000);
+
+</script>
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #000;
+}
+
+.navicion-section {
+	position: relative;
+	width: 400px;
+	/*height: 300px;*/
+	margin: 70px auto;
+}
+
+.navicion-section p {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: #fff;
+	padding-top: 15px;
+}
+
+.time-div {
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+	-webkit-box-reflect: below 13px linear-gradient(transparent, #0005);
+}
+
+.hours {
+	margin-left: 0%;
+}
+.hours, .minutes , .secends {
+	width: 30%;
+	height: 100%;
+	background-color: #2295F5;
+	margin-left: 2.5%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px; 
+}
+.secends {
+	background-color: #FE006B;
+}
+
+.hours h2 , .minutes h2 , .secends h2 {
+	text-align: center;
+	font-size: 55px;
+	font-weight: 300;
+	color: #fff;
+	padding-top: 40px;
+}
+.hours p , .minutes p , .secends p {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 35px;
+	letter-spacing: 2px;
+	background-color: #3333;
+	border-top: 1px solid #3335;
+}
+
+.am-pm {
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	width: 60px;
+	height: 30px;
+	background-color: #FE006B;
+	border-radius: 5px;
+}
+.am-pm p {
+	justify-content: center;
+	line-height: 40px;
+	font-weight: 400;
+	color: #fff;
+	font-size: 20px;
+	background-color: #fff0;
+}</style>
+	</head>
+
+	<body id="body">
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ebda5563abbff61eec0fd196d80284a',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/8ebda5563abbff61eec0fd196d80284a/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ebda5563abbff61eec0fd196d80284a',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/8ebda5563abbff61eec0fd196d80284a/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ebda5563abbff61eec0fd196d80284a',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/8ebda5563abbff61eec0fd196d80284a/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ebda5563abbff61eec0fd196d80284a',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/8ebda5563abbff61eec0fd196d80284a/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ebda5563abbff61eec0fd196d80284a',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/8ebda5563abbff61eec0fd196d80284a/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ebda5563abbff61eec0fd196d80284a',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/8ebda5563abbff61eec0fd196d80284a/invoke.js"></scr' + 'ipt>');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5295583488737876"
+     data-ad-slot="2999640264"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p style="margin-top:0px; margin-bottom:0; padding-bottom:0; text-align:center; line-height:0"><a target="_blank" href="https://jali.me/Hikmah"><img src="http://feeds.feedburner.com/blogspot/vrkpf.4.gif" alt="AL HIKMAH" style="border:0" /></a></p><p style="margin-top:5px; padding-top:0; font-size:x-small; text-align:center"><a href="https://feedburner.google.com/fb/a/headlineanimator/install?id=7svjecfb8p9mfpuj760bo77e24&amp;w=4" onclick="window.open(this.href, 'haHowto', 'width=250,height=300,toolbar=no,address=no,resizable=yes,scrollbars'); return false" target="_blank">&uarr; Grab this Headline Animator</a></p><script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "4550b225-ede0-47fb-b8c0-a149faf7968e",
+    });
+  });
+</script>
+
+<center>
+<!-- Default Statcounter code for AL HIKMAH https://www.alhikmah.my.id -->
+<script type="text/javascript">
+var sc_project=12625991; 
+var sc_invisible=1; 
+var sc_security="7c1cb60a"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter" 
+src="https://c.statcounter.com/12625991/0/7c1cb60a/1/" alt="Web Analytics" 
+referrerpolicy="no-referrer-when-downgrade" /></a></div></noscript>
+<center><a href="http://www.blogger.com/follow-blog.g?blogID=392213471435482065" target="_blank" title="Follow My Blog"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhZo9w7yUEUyMZfWlEMwdLc5U6GgokdTUjEE2yH-MC7KtEPQtYWMaDdwenBNV-xPWOC9UZnOAob3hW7SiE0p46VzuArpYDjqFyAOEttFvL8r_OYnZHk8A-wzn6EoR3RucYBEjPngQboVFW3JLSAEaxt8j63jmjQqQyHvo4LRWxR907H75wEpCLAPoUSvg=s109" alt="Follow My Blog" /></a></center>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+     crossorigin="anonymous"></script>
+<!-- iklan -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5295583488737876"
+     data-ad-slot="9338873828"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		<section class="navicion-section">
+			
+			<p>The Time is Now</p>
+
+			<div class="time-div">
+
+				<div class="hours">
+					<h2 id="hours">00</h2>
+					<div class="am-pm">
+						<p id="AM_PM">AM</p>
+					</div>
+					<p>Hours</p>
+				</div>
+
+				<div class="minutes">
+					<h2 id="minutes">00</h2>
+					<p>Minutes</p>
+				</div>
+
+				<div class="secends">
+					<h2 id="secends">00</h2>
+					<p>Seconds</p>
+				</div>
+
+			</div>
+
+		</section>
+
+
+	<script type="text/javascript" src="js/castom.js"></script>
+<title>Auto Visitor</title>
+<link href='http://res7ock.org/assets/img/favicon.png' rel='shortcut icon' alt='icon'>
+</head>
+
+<style>
+                @import "http://fonts.googleapis.com/css?family=Play:400,700";
+						.rainbow {
+
+							-webkit-background-clip: text;
+							-background-clip: text;
+							-webkit-text-fill-color: transparent;
+							-text-fill-color: transparent;
+							background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #66f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+							background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #66f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+							}
+						.text-glow:hover, .text-glow:focus, .text-glow:active {
+						   -webkit-stroke-width: 5.3px;
+						   -webkit-stroke-color: #ccdddd;
+						   -webkit-fill-color: #eeeeee;
+						   text-shadow: 1px 0px 20px silver;
+						   -webkit-transition: width 0.3s; /*Safari & Chrome*/
+						   transition: width 0.3s;
+						   -moz-transition: width 0.3s; /* Firefox 4 */
+						   -o-transition: width 0.3s; /* Opera */
+						   }
+					   .text-glow a {
+						   -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/
+						   transition: all 0.3s ease-in;
+						   -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+						   -o-transition: all 0.3s ease-in; /* Opera */
+						   text-decoration:none;
+						   color:white;
+					   }
+                        body {
+                                background:    #000000;
+                                line-height: 1;
+                                color: #bbb;
+                                font-family: "CONSOLAS";
+                                font-size: 12px;
+                                background:#121214 url(bg.jpg) no-repeat center center fixed;
+								  -webkit-background-size: cover;
+								  -moz-background-size: cover;
+								  -o-background-size: cover;
+								  background-size: cover;
+
+                        }
+                        textarea, input, select {
+                                border:0;
+                                BORDER-COLLAPSE:collapse;
+                                border:double 2px #696969;
+                                color:#fff;
+                                background:#000000;
+                                margin:0;
+                                padding:2px 4px;
+                                font-family: Lucida Console,Tahoma;
+                                font-size:12px;
+								box-shadow: 0 0 15px gray;
+								-webkit-box-shadow: 0 0 15px gray;
+								-moz-box-shadow: 0 0 15px blue;
+						}						
+        </style>
+<br>
+<br>
+<link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'/>
+<style>body {font-family:Kelly Slab;} input {font-family:Kelly Slab;} </style>
+<center><div class="panel panel-primary panelMove toggle panelRefresh panelClose">
+                                    <!-- Start .panel -->
+                                    <div class="panel-heading">
+                                    <hr />
+                                    <h4 class="panel-title"><font color="Red" face="Pristina" size="7" >
+                                    <p>ONLINE TRAFFIC WEBSITE</p>
+                                    <p>[ OTW ]</p>
+                                    <p>100% FREE</p>
+                                    <hr />
+                                    </div>
+                                    <div class="panel-body">
+<center>
+<div>
+<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php">
+<button>
+AUTO VISITOR
+</button></a></div>
+<div>
+<a href="https://awprojectphp.000webhostapp.com/Traffic/Youtube">
+<button>
+ONLINE TRAFFIC YOUTUBE
+
+[ OTY ]
+
+SUBCIBE FREE</button></a></div>
+<div>
+<a href="https://awprojectphp.000webhostapp.com/Traffic/Website.php">
+<button>
+ONLINE TRAFFIC WEBSITE
+
+[ OTW ]
+
+100% FREE</button></a></div>
+<div>
+<a href="https://awprojectphp.000webhostapp.com/Traffic/bloog.php">
+    
+
+<button>
+ONLINE TRAFFIC BLOOG
+
+[ OTB ]
+</button></a></div>
+</center>
+
+  <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4533819,4,416,112,75,00011111']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4533819&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+<script type="text/javascript">
+	    atOptions = {
+	    'key' : '4a14a4b891cce7bd18baeed2dae86f6c',
+	    'format' : 'iframe',
+	    'height' : 50,
+	    'width' : 320,
+	    'params' : {}
+	    };
+	    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/4a14a4b891cce7bd18baeed2dae86f6c/invoke.js"></scr' + 'ipt>');
+	    </script>
+	    <script type="text/javascript">
+	    atOptions = {
+	    'key' : '4a14a4b891cce7bd18baeed2dae86f6c',
+	    'format' : 'iframe',
+	    'height' : 50,
+	    'width' : 320,
+	    'params' : {}
+	    };
+	    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/4a14a4b891cce7bd18baeed2dae86f6c/invoke.js"></scr' + 'ipt>');
+	    </script>
+	    <script type="text/javascript">
+	    atOptions = {
+	    'key' : '4a14a4b891cce7bd18baeed2dae86f6c',
+	    'format' : 'iframe',
+	    'height' : 50,
+	    'width' : 320,
+	    'params' : {}
+	    };
+	    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/4a14a4b891cce7bd18baeed2dae86f6c/invoke.js"></scr' + 'ipt>');
+	    </script>
+	    <script type="text/javascript">
+	    atOptions = {
+	    'key' : '4a14a4b891cce7bd18baeed2dae86f6c',
+	    'format' : 'iframe',
+	    'height' : 50,
+	    'width' : 320,
+	    'params' : {}
+	    };
+	    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/4a14a4b891cce7bd18baeed2dae86f6c/invoke.js"></scr' + 'ipt>');
+	    </script>
+	    <script type="text/javascript">
+	    atOptions = {
+	    'key' : '4a14a4b891cce7bd18baeed2dae86f6c',
+	    'format' : 'iframe',
+	    'height' : 50,
+	    'width' : 320,
+	    'params' : {}
+	    };
+	    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/4a14a4b891cce7bd18baeed2dae86f6c/invoke.js"></scr' + 'ipt>');
+	    </script>
+	    <script type="text/javascript">
+	    atOptions = {
+	    'key' : '4a14a4b891cce7bd18baeed2dae86f6c',
+	    'format' : 'iframe',
+	    'height' : 50,
+	    'width' : 320,
+	    'params' : {}
+	    };
+	    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://cellaraudacityslack.com/4a14a4b891cce7bd18baeed2dae86f6c/invoke.js"></scr' + 'ipt>');
+	    </script>
+
+<center><form method="GET"></center>
+<input type="text" name="url" value="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTRyTllmaUYxUUJlSGRocXRqVXowV214c0Y0QXxBQ3Jtc0trWTVXYmY1dm9WZEEySkhheWZuME9Ga1Q3LXpBVjB1MHVNWG4tTC1qa3Bna3JKZzdVN0FYN3pZdXRXWk90dmNoNVpRbEE4NElDX2ZfNUZzNGlJMjc0MnFJbmw1Q0FQSXpnWnQ1UUFBSTRKX0JuUjVsYw&q=https%3A%2F%2Fwww.alhikmah.my.id&html_redirect=1">
+<input type="max" name="max" value="10000"> 
+<input type="submit">
+<center></form></br>
+<div style="text-align:center">
+	<form action="https://check-host.net/check-http" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://check-host.net/images/checkhost.png" alt="Online Ping Utility Tool for IPv4 Address | IP AddressGuide" border="0" width="120" height="12" /></a><br />
+			<b>IPv4 Ping Free online tool to ping an IPv4 address or host name</b><br /><br />
+			<label>URL</label><br />
+			<input type="text" name="host" value="" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Ping" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+<div style="text-align:center">
+	<form action="https://check-host.net/check-ping" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://check-host.net/images/checkhost.png" alt="Online Ping Utility Tool for IPv6 Address | IP AddressGuide" border="0" width="120" height="12" /></a><br />
+			<b>IPv6 Ping Free online tool to ping an IPv6 address or host name</b><br /><br />
+			<label>Host</label><br />
+			<input type="text" name="host" value="" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Ping" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<div style="text-align:center">
+	<form action="https://click-generator.com/" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://click-generator.com/images/logo.png" alt="Online Ping Utility Tool for IPv6 Address | IP AddressGuide" border="0" width="120" height="12" /></a><br />
+			<b>Click & Traffic Generation Platform
+			We give away 20 free link hits daily
+			Let us know how it went for you,
+			
+			try again later or signup for 100 free more clicks</b><br /><br />
+			<label>CLIK LINK</label><br />
+			<input type="text" name="host" value="" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="CLIK" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>HOSTING DAN DOMAIN</h1>
+
+<h1>EXABYTES</h1>
+<div style="text-align:center">
+	<form action="https://billing.exabytes.co.id/aff.php?aff=8303039" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://cdn.exabytes.co.id/wp-content/uploads/logo-exabytes.svg" alt="billing.exabytes.co.id" border="0" width="120" height="12" /></a><br />
+			<b>Penyedia Web Hosting Indonesia</b><br /><br />
+			<label>Kembangkan Bisnis Online Anda Hari Ini
+			Web Hosting Andal & Terpercaya
+			Garansi 100 hari Uang Kembali
+			Hemat hingga 80%
+			Premium support 24/7			
+			</label><br />				
+			<input type="text" name="host" value="domain.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Cek Domain" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+
+<h1>NIAGAHOSTER</h1>
+<div style="text-align:center">
+	<form action="https://panel.niagahoster.co.id/ref/361770?r=cloud-hosting" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://s3-ap-southeast-1.amazonaws.com/www.niagahoster.co.id/images/niagahoster.png" alt="billing..co.id" border="0" width="120" height="12" /></a><br />
+			<b>Penyedia Web Hosting Indonesia</b><br /><br />
+			<label><b>Temukan Nama Domain Impian Anda.</b><b>
+			Tersedia beragam nama domain untuk segala keperluan Anda.			
+			</b></label><br />				
+			<input type="text" name="host" value="domain.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Cek Domain" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>ASIA CLOUDNS</h1>
+<div style="text-align:center">
+	<form action="https://asia.cloudns.net/aff/id/482326" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEg_kZaXhSQ81V7zFN5QWysjd54l_KcjxCazgqYCGi-NBpF6QdIHjcidQaF7mP4Jxz-DzppuAFoLGxwfPkT2gt-Dv_MhSji2dxrGDbuWMWiv82b7ngiVd_VN75CutHjiCamv8-zF2EH1OTkG8lRRL3VGu86XYUFzDGxlxNqisqjGuG2Fuz9vk2-hakMkiQ=s512" alt="cloudns.net" border="0" width="120" height="32" /></a><br />
+			<b>Penyedia Web Hosting ASIA</b><br /><br />
+			<label><b>Temukan Nama Domain untuk Menjakau partner Bisnis se Asia</b><b>
+			Tersedia beragam nama domain untuk Bisnis dan Travel		
+			</b></label><br />				
+			<input type="text" name="host" value="domain.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Cek Domain" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>SITE 123</h1>
+<div style="text-align:center">
+	<form action="https://www.site123.com/?aff=7141773" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://cdn-cms-s.f-static.com/manager/site123_website/files/logos/Logo_final_color.png?v=r6327?v=n4972" alt="site123.com" border="0" width="120" height="12" /></a><br />
+			<b>Penyedia Web Hosting Internasional</b><br /><br />
+			<label><b>Temukan Nama Domain Untuk Jangkauan ke Seluruh wilayah di Dunia</b><b>
+			Tersedia beragam nama domain untuk prospek Bisnis Perusahaan.			
+			</b></label><br />				
+			<input type="text" name="domain" value="domain.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Cek Domain" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>BACKLINK</h1>
+<div style="text-align:center">
+	<form action="https://rajabacklink.com/refferal.php?q=06a50e3f66db4a334202d3adfd31c589a334837978b494479f" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://rajabacklink.com/tm_design/logo.png" alt="backlink" border="0" width="120" height="12" /></a><br />
+			<b>Penyedia BACKLINK Website </b><br /><br />
+			<label><b>Dapatkan Backlink Untuk Situs Website Anda. Daftar Sekarang !</b><b>
+			</label><br />				
+			<input type="text" name="backlink" value="situs.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Cek Backlink" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>TRAFFIC EXCHANGE</h1>
+<h1>HIT2HIT</h1>
+<div style="text-align:center">
+	<form action="http://hit2hit.com/?rid=173879" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="http://hit2hit.com/images/allesbijelkaar11.jpg" alt="hit2hit" border="0" width="120" height="12" /></a><br />
+			<b>Dapatkan Traffic untuk situs Anda </b><br /><br />
+			<label><b>Situs Pertukaran Link / Traffic Exchange</b><b>
+			</label><br />				
+			<input type="text" name="backlink" value="situs.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Get Traffic" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>Easyhits4u</h1>
+<div style="text-align:center">
+	<form action="https://www.easyhits4u.com/?ref=wahyudi9" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://www.easyhits4u.com/images/eh-logo-light.svg" alt="Easyhits4u" border="0" width="120" height="12" /></a><br />
+			<b>Dapatkan Traffic untuk situs Anda </b><br /><br />
+			<label><b>Situs Pertukaran Link / Traffic Exchange</b><b>
+			</label><br />				
+			<input type="text" name="backlink" value="situs.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Get Traffic" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>Traffboost</h1>
+<div style="text-align:center">
+	<form action="https://www.traffboost.net?ref=203557
+	" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://www.traffboost.net/images/logo@2x.png" alt="Traffboost" border="0" width="120" height="12" /></a><br />
+			<b>Dapatkan Traffic untuk situs Anda </b><br /><br />
+			<label><b>Situs Pertukaran Link / Traffic Exchange</b><b>
+			</label><br />				
+			<input type="text" name="backlink" value="situs.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Get Traffic" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<h1>AUTO VISITOR</h1>
+<div style="text-align:center">
+	<form action="https://awprojectphp.000webhostapp.com/Traffic/index.php
+	" method="post">
+		<p style="background:#fff;border:1px solid #99A8AE;width:180px;padding:5px 5px 5px 5px;font-size:11px;font-family:'Trebuchet MS',Arial,Sans-serif;">
+			<a href="https://awprojectphp.000webhostapp.com/Traffic/index.php" target="_blank"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgvfl9TbXoD8UFnF7kHJ-jD1jpqjDHwO-a2zlcEtcF-KAtmyeIeT7jvP7tpbhIWCuf_iFP7G7Bcq6wq5P7AFZK4_30mH7qXI4Nae3wcYkacEskaz7x5ittcA6j7AY2H2SfYfFNuuijS32j1lNSY0PnHhsH55syM74sWolJ_SQ8Ci2-j3Kdx5ucseMJT=w120-h40" alt="AUTO VISITOR" border="0" width="120" height="12" /></a><br />
+			<b>Dapatkan Traffic untuk situs Anda </b><br /><br />
+			<label><b>AUTO VISITOR ONLINE</b><b>
+			</label><br />				
+			<input type="text" name="backlink" value="situs.com" style="border:solid 1px #C0C0C0;font-size:9px;width:110px;" /><br />
+			<input type="submit" value="Get Traffic" style="width:100px;font-size:10px;margin-top:3px;padding:2px 3px;color:#FFF;background:#8EB50C;border-width:1px;border-style:solid;">
+		</p>
+	</form>
+</div>
+
+<font face="Ubuntu" color="red" size="4px">
+<?php
+if (!$_GET) die();
+require("autovisitor.class.php");
+$url = $_GET["url"]; 
+$max = $_GET["max"];
+
+for($i = 1; $i < $max+1; $i++) {
+	$class = new autovisitor($url);
+	echo $i.". SUKSES - [".$class->jalankan()."]<br>";
+}
+?>
+
+<body><?php 
+include('auth/startup.php');
+include('data/data-functions.php');
+//SITE SETTINGS
+list($meta_title, $meta_description, $site_title, $site_email) = all_settings();
+include('assets/comp/header.php');
