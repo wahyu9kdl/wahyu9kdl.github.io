@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-require("randomua.class.php");
+require("https://wahyu9kdl.github.io/DASHBOARD/TOOLS/AUTO VISITOR/randomua.class.php");
 
 class autovisitor extends Random_UA {
 
