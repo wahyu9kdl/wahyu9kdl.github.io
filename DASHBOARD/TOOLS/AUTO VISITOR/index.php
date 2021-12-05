@@ -1,5 +1,4 @@
 <title>Auto Visitor</title>
-<link href='http://res7ock.org/assets/img/favicon.png' rel='shortcut icon' alt='icon'>
 </head>
 
 <style>
@@ -81,7 +80,7 @@
 <font face="Ubuntu" color="red" size="4px">
 <?php
 if (!$_GET) die();
-require("autovisitor.class.php");
+require("https://wahyu9kdl.github.io/DASHBOARD/TOOLS/AUTO VISITOR/autovisitor.class.php");
 $url = $_GET["url"]; 
 $max = $_GET["max"];
 
