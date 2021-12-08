@@ -1669,6 +1669,44 @@
   <div><center><p style="font-family: Andale Mono, monospace;color:black">
   wahyu9kdl.github.io 🎗 Style DESIGNING</p></center>
   </div>
-  
+  l 7 '15 at 1:49
+Add a comment
+Up vote
+8
+Down vote
+Appspot.com callback's service isn't available. ipinfo.io seems to be working.
+
+I did an extra step and retrieved all geo info using AngularJS. (Thanks to Ricardo) Check it out.
+
+<div ng-controller="geoCtrl">
+  <p ng-bind="ip"></p>
+  <p ng-bind="hostname"></p>
+  <p ng-bind="loc"></p>
+  <p ng-bind="org"></p>
+  <p ng-bind="city"></p>
+  <p ng-bind="region"></p>
+  <p ng-bind="country"></p>
+  <p ng-bind="phone"></p>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.angularjs.org/1.2.12/angular.min.js"></script>
+<script src="http://code.angularjs.org/1.2.12/angular-route.min.js"></script>
+<script>
+'use strict';
+var geo = angular.module('geo', [])
+.controller('geoCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.jsonp('http://ipinfo.io/?callback=JSON_CALLBACK')
+    .success(function(data) {
+    $scope.ip = data.ip;
+    $scope.hostname = data.hostname;
+    $scope.loc = data.loc; //Latitude and Longitude
+    $scope.org = data.org; //organization
+    $scope.city = data.city;
+    $scope.region = data.region; //state
+    $scope.country = data.country;
+    $scope.phone = data.phone; //city area code
+  });
+}]);
+</script>
   </body>
   </html>
