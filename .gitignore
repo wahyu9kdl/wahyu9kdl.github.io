@@ -1,5 +1,16 @@
 # Binaries for programs and plugins
+*.doct
+*.jpn
+*.png
+*.gif
+*.mp3
+*.mp4
+*.pdf
 *.exe
+*.txt
+*.zip
+*.exe
+*.app
 *.exe~
 *.dll
 *.so
