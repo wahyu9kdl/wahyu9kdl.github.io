@@ -1,0 +1,46 @@
+{
+      "name": "wahyu9kdl",
+      "version": "v.1",
+      "homepage": "https://wahyu9kdl.github.io",
+      "authors": [
+      "wahyu9kdl <blanzcye.yud@gmail.com>"
+      ],
+      "description": "Ping servers with Javascript.",
+      "main": [
+      "wahyu9kdl/wahyu9kdl.github.io/index.html"
+      ],
+      "keywords": [
+      "github",
+      "profile",
+      "projects",
+      "templates",
+      "open score code",
+      "medsos",
+      "channel",
+      "website",
+      "alhikmah.my.id",
+      "awfanspage",
+      "html",
+      "css",
+      "js",
+      "console log",
+      "Mikrover",
+      "Mikrotik",
+      "dns,hosting,ping,url,link",     
+      ""
+      ],
+      "license": "MIT",
+      "ignore": [
+      "**/.*",
+      "DASHBOARD",
+      "HTML",
+      "ads",
+      "CSS",
+      "404.html"
+      "index.html"
+      "ads.txt",
+      "pakeage.json",
+      "LICENSE",
+      "ads.txt",
+      ]
+      }
