@@ -1,3 +1,12 @@
+> .gitignore
+git add .gitignore
+git commit -m "message" .gitignore
+
+curl -o .gitignore https://www.gitignore.io/api/MY_API_NAME
+curl -o .gitignore https://www.gitignore.io/api/java
+curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/master/MY_API_NAME.gitignore
+curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/master/Java.gitignore
+
 # Binaries for programs and plugins
 *.doct
 *.jpn
