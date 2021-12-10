@@ -12,4 +12,4 @@ Profile github
 
 <h1>Kinerja</h1>
 <img alt="open collective badge" src="https://opencollective.com/animation/tiers/layanan-exclusive/badge.svg?label=Layanan%20Exclusive&color=brightgreen" />
-
+<object type="image/svg+xml" data="https://opencollective.com/animation/tiers/layanan-exclusive.svg?avatarHeight=36&width=600"></object>
