@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Movie App</title>
+    <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+    
+    :root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+    }
+    
+    * {
+    box-sizing: border-box;
+    }
+    
+    body {
+    background-color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    }
+    
+    header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    }
+    
+    header h1 {
+    color: #eee;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    }
+    
+    .search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    }
+    
+    .search::placeholder {
+    color: #7378c5;
+    }
+    
+    .search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+    }
+    
+    main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    
+    .movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    }
+    
+    .movie img {
+    width: 100%;
+    }
+    
+    .movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    }
+    
+    .movie-info h3 {
+    margin-top: 0;
+    }
+    
+    .movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    }
+    
+    .movie-info span.green {
+    color: lightgreen;
+    }
+    
+    .movie-info span.orange {
+    color: orange;
+    }
+    
+    .movie-info span.red {
+    color: red;
+    }
+    
+    .overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in;
+    }
+    
+    .movie:hover .overview {
+    transform: translateY(0);
+    }
+    
+    .footer p {
+    color: #eee;
+    text-align: center;
+    }
+    
+    @media (max-width: 580px) {
+    header {
+    flex-direction: column;
+    }
+    
+    header h1 {
+    padding: 0.5rem 1rem;
+    }
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Should I watch it?</h1>
+      <form id="form">
+        <input type="text" placeholder="Search" id="search" class="search" />
+      </form>
+    </header>
+    <main id="main"></main>
+    <center>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-2.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-3.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-4.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-5.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-blue-2.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-blue-3.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-blue-6.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <a href="https://trakteer.id/awfanspage" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-blue-5.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+    <p><script type='text/javascript' src='https://cdn.trakteer.id/js/embed/trbtn.min.js'></script><script type='text/javascript'>(function(){var trbtnId=trbtn.init('Dukung Saya di Trakteer','#be1e2d','https://trakteer.id/awfanspage/tip','https://cdn.trakteer.id/images/mix/coffee.png','40');trbtn.draw(trbtnId);})();</script></p>
+    <p><script type='text/javascript' src='https://cdn.trakteer.id/js/embed/trbtn.min.js'></script><script type='text/javascript'>(function(){var trbtnId=trbtn.init('Dukung Saya di Trakteer','#be1e2d','https://trakteer.id/awfanspage/tip','https://trakteer.id/images/mix/cendol.png','40');trbtn.draw(trbtnId);})();</script></p>
+    <p><script type='text/javascript' src='https://cdn.trakteer.id/js/embed/trbtn.min.js'></script><script type='text/javascript'>(function(){var trbtnId=trbtn.init('Dukung Saya di Trakteer','#be1e2d','https://trakteer.id/awfanspage/tip','https://trakteer.id/images/mix/ice-cream.png','40');trbtn.draw(trbtnId);})();</script></p>
+    <p><script type='text/javascript' src='https://cdn.trakteer.id/js/embed/trbtn.min.js'></script><script type='text/javascript'>(function(){var trbtnId=trbtn.init('Dukung Saya di Trakteer','#be1e2d','https://trakteer.id/awfanspage/tip','https://trakteer.id/images/mix/mie-ayam.png','40');trbtn.draw(trbtnId);})();</script></p>
+    <p><script type='text/javascript' src='https://cdn.trakteer.id/js/embed/trbtn.min.js'></script><script type='text/javascript'>(function(){var trbtnId=trbtn.init('Dukung Saya di Trakteer','#be1e2d','https://trakteer.id/awfanspage/tip','https://trakteer.id/images/mix/pizza.png','40');trbtn.draw(trbtnId);})();</script></p>
+    <p><img alt="buka lencana kolektif" src="https://opencollective.com/wahyu9kdl/tiers/backer/badge.svg?label=backer&color=brightgreen" /></p>
+    <center><object type="image/svg+xml" data="https://opencollective.com/wahyu9kdl/tiers/backer.svg?avatarHeight=36&width=600"></object></center>
+    <p><script src="https://opencollective.com/wahyu9kdl/banner.js"></script></p>
+    </center>
+    <footer class="footer">
+      <p>
+        This project uses the TMDb API but is not endorsed or certified by TMDb.
+      </p>
+    </footer>
+    <script>const KEY = "3fd2be6f0c70a2a598f084ddfb75487c";
+    // For educational purposes only - DO NOT USE in production
+    // Request your own key for free: https://developers.themoviedb.org/3
+    const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${KEY}&page=1`;
+    const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
+    const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=`;
+    
+    const main = document.getElementById("main");
+    const form = document.getElementById("form");
+    const search = document.getElementById("search");
+    
+    const getClassByRate = (vote) => {
+    if (vote >= 7.5) return "green";
+    else if (vote >= 7) return "orange";
+    else return "red";
+    };
+    
+    const showMovies = (movies) => {
+    main.innerHTML = "";
+    movies.forEach((movie) => {
+    const { title, poster_path, vote_average, overview } = movie;
+    const movieElement = document.createElement("div");
+    movieElement.classList.add("movie");
+    movieElement.innerHTML = `
+    <img
+    src="${IMG_PATH + poster_path}"
+    alt="${title}"
+    />
+    <div class="movie-info">
+    <h3>${title}</h3>
+    <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+    </div>
+    <div class="overview">
+    <h3>Overview</h3>
+    ${overview}
+    </div>
+    `;
+    main.appendChild(movieElement);
+    });
+    };
+    
+    const getMovies = async (url) => {
+    const res = await fetch(url);
+    const data = await res.json();
+    showMovies(data.results);
+    };
+    
+    getMovies(API_URL);
+    
+    form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchTerm = search.value;
+    if (searchTerm && searchTerm !== "") {
+    getMovies(SEARCH_API + searchTerm);
+    search.value = "";
+    } else history.go(0);
+    });</script>
+    
+  </body>
+</html>
