@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>YouTube Loop Version 1</title>
+  <meta name="keywords" content="Youtube Loop" />
+  <meta name="description" content=" Youtube Loop Versi 01 Desaign Awfanpage Creative Design wahyu9kdl via github projects." />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+  <meta content='2f898b29394a4156964b39f56d9f579e5a97dd1e' name='Open Collective GraphQL API'/>
+  <meta content='general' name='rating'/>
+  <meta content='https://www.facebook.com/Awgroupchannel/' property='article:publisher'/><meta content='https://www.blogger.com/profile/13665508756481372754' property='article:author'/>
+  <meta content='https://www.facebook.com/AwGroupChannel/' property='article:author'/>
+  <meta expr:content='data:blog.title' property='og:site_name'/>
+  <meta content='5674641545910991' property='fb:app_id'/>
+  <meta content='118205510448983' property='fb:admins'/>
+  <meta content='en_US' property='og:locale'/>
+  <meta content='en_GB' property='og:locale:alternate'/>
+  <meta content='https://id.quora.com/profile/Ahmad-Wahyudi-25' property='article:author'/>
+  <meta content='Ahmad wahyudi' name='Author-Qoura'/><meta content='https://id.pinterest.com/blanzcye' property='article:author'/>
+  <meta content='Ahmad wahyudi' name='Author'/><meta content='all' name='spiders'/>
+  <meta content='index, follow, noodp, noydir' name='robots'/><meta content='Index, Follow' name='robots'/>
+  <script async='async' custom-element='amp-ad' src='https://cdn.ampproject.org/v0/amp-ad-0.1.js'/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'G-VSD8HWB5RG');
+  </script>
+  <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <style type="text/css">
+  .nav {
+    padding-right: 0;
+  }
+  .nav-tabs .nav-item + .nav-item {
+    margin-right: 0.2rem;
+  }
+  .nav-pills .nav-item + .nav-item {
+    margin-right: 0.2rem;
+  }
+  .nav-stacked .nav-item + .nav-item {
+    margin-right: 0;
+  }
+  .navbar-nav .nav-link + .nav-link {
+    margin-right: 1rem;
+  }
+  .navbar-nav .nav-item + .nav-item {
+    margin-right: 1rem;
+  }
+  
+  @media (max-width: 543px) {
+    .navbar-toggleable .navbar-nav .nav-item {
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .navbar-toggleable-sm .navbar-nav .nav-item {
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    .navbar-toggleable-md .navbar-nav .nav-item {
+      margin-right: 0;
+    }
+  }
+
+  #wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #wrapper.toggled {
+    padding-right: 300px;
+  }
+  #sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 300px;
+    width: 0;
+    height: 100%;
+    margin-right: -300px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 300px;
+  }
+  #page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: 0px;
+  }
+  
+  /* Sidebar Styles */
+  
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    margin: 0;
+    padding: 8px 0 0 0;
+    list-style: none;
+  }
+  
+  .sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+  }
+
+  .sidebar-nav li:last-child {
+    text-indent: 0px;
+  }
+  
+  .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+  }
+  
+  .sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+  }
+  
+  .sidebar-nav>.sidebar-brand {
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .sidebar-nav>.sidebar-brand a {
+    color: #999999;
+  }
+  
+  .sidebar-nav>.sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+  }
+  
+  @media(min-width:768px) {
+    #wrapper {
+      padding-left: 0;
+    }
+    #wrapper.toggled {
+      padding-right: 300px;
+    }
+    #sidebar-wrapper {
+      width: 0;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+      width: 300px;
+    }
+    #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+    }
+  }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <style>
+    #player {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 27px auto 0;
+    }
+    body {
+      background:url(background.jpg) no-repeat !important;
+      background-size:cover;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+<a href="https://wahyu9kdl.github.io" ><h1><center>Copyrigth ©️ 2021 Wahyu9kdl</center></div>
+      </h1></a>
+  <center>    
+  <script src="https://apis.google.com/js/platform.js"></script>       
+  <div class="g-ytsubscribe" data-channelid="UCyp-Fn_0Ek4_aXIFbcWaq0w" data-layout="full" data-count="default"></div>
+  <div class="g-ytsubscribe" data-channelid="UC7CRa3nkxakAZx_aRsMwRyA" data-layout="full" data-count="default"></div>
+  </center> 
+ <marquee>
+ <b>DAFTAR LINK YOUTUBE LOOP</b>
+ <b>
+ 🔗
+ <a href="https://youtu.be/_ZQrNzHK6gs" >
+ https://youtu.be/_ZQrNzHK6gs
+ </a>🔗
+ <a href="https://youtu.be/FdxezBUJpf0" >
+ https://youtu.be/FdxezBUJpf0
+ </a>©️
+ <a href="https://youtu.be/gAxIFPagd4s" >
+ https://youtu.be/gAxIFPagd4s
+ </a>©️
+ <a href="https://youtu.be/_ZQrNzHK6gs" >
+ https://youtu.be/_ZQrNzHK6gs
+ </a>©️
+ <a href="https://youtu.be/LlfqzADGcF0" >
+ https://youtu.be/LlfqzADGcF0
+ </a>🏅
+ <a href="https://youtu.be/k1hJrh09RGg" >
+ https://youtu.be/k1hJrh09RGg
+ </a>🏅
+ <a href="https://youtu.be/vzIAToNCWR0" >
+ https://youtu.be/vzIAToNCWR0
+ </a>🏅
+ <a href="https://youtu.be/twq6zIBYnis" >
+ https://youtu.be/twq6zIBYnis
+ </a>📡
+ <a href="https://youtu.be/thLGeHCZPcQ" >
+ https://youtu.be/thLGeHCZPcQ
+ </a>📡
+ <a href="https://youtu.be/mDzoG66bnIU" >
+ https://youtu.be/mDzoG66bnIU
+ </a>📡
+ <a href="https://youtu.be/1D8x2SvHb8w" >
+ https://youtu.be/1D8x2SvHb8w
+ </a>🛡
+ <a href="https://youtu.be/JMzBMqlaDhI" >
+ https://youtu.be/JMzBMqlaDhI
+ </a>🛡
+ <a href="https://youtu.be/P-Ko2exjawo" >
+ https://youtu.be/P-Ko2exjawo
+ </a>🛡
+ <a href="https://youtu.be/4dIRWzDLjFM" >
+ https://youtu.be/4dIRWzDLjFM
+ </a>🔗
+ <a href="https://youtu.be/KHOekzsKAfE" >
+ https://youtu.be/KHOekzsKAfE
+ </a>🔗
+ <a href="https://youtu.be/MtBrRUwLoJY" >
+ https://youtu.be/MtBrRUwLoJY
+ </a>🔗
+ <a href="https://youtu.be/QQM7gm27rd4" >
+ https://youtu.be/QQM7gm27rd4
+ </a>🏹
+ <a href="https://youtu.be/QQM7gm27rd4" >
+ https://youtu.be/QQM7gm27rd4
+ </a>🏹
+ <a href="https://youtu.be/H2ZKn4aMaAQ" >
+ https://youtu.be/H2ZKn4aMaAQ
+ </a>🏹
+ <a href="https://youtu.be/zWxcv6hkpbE" >
+ https://youtu.be/zWxcv6hkpbE
+ </a>🛡
+ <a href="https://youtu.be/In7lmwxrB5k" >
+ https://youtu.be/In7lmwxrB5k
+ </a>
+ </b>
+ </marquee>
+  <nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
+      <span class="navbar-toggler-icon"></span>
+    </a> 
+
+    <button class="navbar-toggler" type="button" 
+      data-toggle="collapse" 
+      data-target="#navbarsExample02" 
+      aria-controls="navbarsExample02" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"> 
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> 
+          <a class="nav-link" href="#">
+            Youtube Loop
+          </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-md-0"> </form>
+    </div>
+  </nav>
+
+  <div id="wrapper" class="toggled">
+    <div id="sidebar-wrapper">
+      <form id="form-setting">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand px-1"> 
+            <a>Enter Video URL</a> 
+          </li>
+          <li class="px-4 mb-2">
+            <input id="youtube-url" type="text" class="form-control" placeholder="Ex: https://youtu.be/8ekq5T21euU" spellcheck="false">
+          </li>
+          <li class="sidebar-brand px-1"> 
+            <a>Start</a> 
+          </li>
+          <li class="px-4 mb-2">
+            <input id="start" type="number" class="form-control" placeholder="start time in seconds">
+          </li>
+          <li class="sidebar-brand px-1"> 
+            <a>End</a> 
+          </li>
+          <li class="px-4 mb-2">
+            <input id="end" type="number" class="form-control" placeholder="end time in seconds">
+          </li>
+          <li class="px-4 mt-4"> 
+            <button type="submit" class="btn btn-primary w-100">
+              Refresh
+            </button>
+          </li>
+        </ul>
+      </form>
+      
+    </div>
+
+<div id="page-content-wrapper">
+      <div class="container-fluid">
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        
+        <div id="player">
+        
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+
+ </script> 
+  <script>
+    var defaultUrl = 'https://youtu.be/_ZQrNzHK6gs';
+    var defaultVideoId = extractVideoId(defaultUrl);
+    var defaultSection = {
+      start: 10,
+      end: 100
+    }
+
+    // https://stackoverflow.com/questions/3452546/how-do-i-get-the-youtube-video-id-from-a-url/9102270#9102270
+    function extractVideoId(url) {
+      var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+      var match = url.match(regExp);
+      if (match && match[2].length == 11) {
+        return match[2];
+      } else {
+        return defaultVideoId;
+      }
+    }
+
+    var player;
+    var videoId = extractVideoId(defaultVideoId);
+    var section = defaultSection;
+    
+    // Initialize your application or run some code.
+    var elForm = document.getElementById('form-setting');
+    var elUrl = document.getElementById('youtube-url');
+    var elStart = document.getElementById('start');
+    var elEnd = document.getElementById('end');
+
+    elUrl.value = defaultUrl;
+    elStart.value = defaultSection.start;
+    elEnd.value = defaultSection.end;
+
+    var submit = function(e) {
+      e.preventDefault();
+      section.start = elStart.value || 0;
+      section.end = elEnd.value || 0;
+      videoId = extractVideoId(elUrl.value);
+
+      // Reload player
+      player.loadVideoById(videoId, section.start, "default");
+    }
+    elForm.addEventListener("submit", submit, false);
+
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player(
+        'player', {
+          height: window.innerHeight - 115,
+          width: window.innerWidth - 50 - (window.innerWidth <= 768 ? 0 : 300),
+          videoId: defaultVideoId,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        }
+      );
+    }
+
+    function onPlayerReady(event) {
+      player.seekTo(section.start);
+      player.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING) {
+        var duration = section.end - section.start;
+        setTimeout(restartVideoSection, duration * 1000);
+      }
+    }
+
+    function restartVideoSection() {
+      player.seekTo(section.start);
+    }
+  </script>
+  <script>
+    $(function(){
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+
+      $(window).resize(function(e) {
+        $('#player').height(window.innerHeight - 115);
+        if ($(window).width() <= 768) {
+          $("#wrapper").removeClass("toggled");
+          $('#player').width(window.innerWidth - 50);
+          console.log(window.innerWidth - 50);
+        } else{
+          $("#wrapper").addClass("toggled");
+          $('#player').width(window.innerWidth - 350);
+          console.log(window.innerWidth - 350);
+        }
+      });
+    });
+  </script>
+  <a href="HTTPS://wahyu9kdl.github.io/faq.html" >FAQ ©️ 2021 DESIGN</a>
+<!--
+Copyright (c) 2021, Aw Score Code - AL HIKMAH [ Desain by : Awgrouchannel ]
+Page github : wahyu9kdl.github.io
+All rights reserved.
+For licensing, see LICENSE.html or https://www.alhikmah.my.id/p/license.html-->
+<!--
+Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved.
+For licensing, see LICENSE.html or https://www.awgroupchannel.my.id/p/license.html
+-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+    crossorigin="anonymous"></script>
+    <!-- Penelusuran bersponsor -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-5295583488737876"
+    data-ad-slot="6655071980"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
