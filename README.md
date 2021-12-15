@@ -1,7 +1,9 @@
 # wahyu9kdl.github.io
-Profile github
+<p>
+My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
+</p>
 
-<h1>FUNDING.yml</h1>
+## FUNDING.yml
 
 🏅<a href="https://www.patreon.com/bePatron?u=65164893" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
 🎗<a href="https://sociabuzz.com/wahyu9kdl/donate">SOCIABUZZ</a>
@@ -10,7 +12,7 @@ Profile github
 🏅<a href="https://saweria.co/AwGroupChannel">SAWERIA</a>
 
 
-<h1>Kinerja</h1>
+## 🏅 open collective badge
 <img alt="open collective badge" src="https://opencollective.com/animation/tiers/layanan-exclusive/badge.svg?label=Layanan%20Exclusive&color=brightgreen" />
 <object type="image/svg+xml" data="https://opencollective.com/animation/tiers/layanan-exclusive.svg?avatarHeight=36&width=600"></object>
 
