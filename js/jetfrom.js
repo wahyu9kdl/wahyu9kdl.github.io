@@ -1,4 +1,6 @@
-var JFL_211958944889075 = new JotformFeedback({
+<script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script><script type="text/javascript">
+        
+        var JFL_211958944889075 = new JotformFeedback({
           formId: '211958944889075',
           base: 'https://form.jotform.com/',
           windowTitle: 'Formulir',
@@ -10,7 +12,8 @@ var JFL_211958944889075 = new JotformFeedback({
            openOnLoad:true
           
         });
-    
+    </script>
+    <script language="JavaScript">
     
     var delayseconds = 5;
     
@@ -20,6 +23,6 @@ var JFL_211958944889075 = new JotformFeedback({
     
     setTimeout(function(){document.querySelector('.jt-dimmer').click();}, delayseconds*5000);
     
+    }
     
-    
-    });
+    </script>
