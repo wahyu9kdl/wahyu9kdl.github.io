@@ -1,4 +1,7 @@
 # wahyu9kdl.github.io
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=blod&color=%2336BCF7&size=30&lines=%F0%9F%91%8B+Hi%2C+I%E2%80%99m+%40wahyu9kdl+;%F0%9F%98%8A+I'm+Developer+;%E2%98%BA+I'm+Desaigner;%F0%9F%8F%85+I'm+Programing)](https://git.io/typing-svg)
+
 <p>
 My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
 </p>
