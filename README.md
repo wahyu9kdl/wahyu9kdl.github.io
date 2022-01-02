@@ -23,6 +23,9 @@ My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
 <img alt="open collective badge" src="https://opencollective.com/animation/tiers/layanan-exclusive/badge.svg?label=Layanan%20Exclusive&color=brightgreen" />
 <object type="image/svg+xml" data="https://opencollective.com/animation/tiers/layanan-exclusive.svg?avatarHeight=36&width=600"></object>
 
+## MARKDOWN
+
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Wahyu9kdl&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&currStreakLabel=DD452B)](https://git.io/streak-stats)
 
 ## 🛠️ My favorite tools
 
