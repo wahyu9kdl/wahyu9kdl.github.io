@@ -24,6 +24,9 @@ My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
 <img alt="open collective badge" src="https://opencollective.com/animation/tiers/layanan-exclusive/badge.svg?label=Layanan%20Exclusive&color=brightgreen" />
 <object type="image/svg+xml" data="https://opencollective.com/animation/tiers/layanan-exclusive.svg?avatarHeight=36&width=600"></object>
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C57S9WF)
+
+
 ## 📊 Github Readme Streak Stats
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Wahyu9kdl&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&currStreakLabel=DD452B)](https://github.com/wahyu9kdl/wahyu9kdl.github.io/blob/main/README.md)
