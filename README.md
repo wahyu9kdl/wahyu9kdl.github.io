@@ -4,7 +4,7 @@
 
 <p>
 My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
-</p>
+</p>Follow <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fwahyu9kdl">@wahyu9kdl</a>
 
 ## 🧰 SERVICE
 
