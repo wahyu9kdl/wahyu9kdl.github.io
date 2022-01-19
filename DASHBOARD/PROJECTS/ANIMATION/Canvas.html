@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas 3D Isometric</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+  crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">  
+  <meta name="keywords" content="Canvas" />
+  <meta name="description" content="Canvas 3D Isometric" />
+  <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="offcanvasmenu.css" />
+  <meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'G-VSD8HWB5RG');
+  </script>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 400;
+      height: 1200;
+    }
+    canvas {
+      /* outline: 1px solid black; */
+    }
+
+    .ui {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(255,255,255,0.5) ;
+      padding: 10px;
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  
+  <canvas id="c"></canvas>
+
+  <div class="ui">
+    <label>
+      Base Height Canvas
+      <input type="range" id="base" value="1" min="-10" max="10" />
+    </label>
+  </div>
+
+  <script>
+  class Tile {
+  constructor(x, y, color) {
+  this.tileWidth = 50;
+  this.tileHeight = 25;
+  this.x = (x - y) * this.tileWidth / 2;
+  this.y = (x + y) * this.tileHeight / 2;
+  this.color = color;
+  }
+  
+  
+  render() {
+  ctx.save();
+  ctx.translate(this.x, this.y);
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.lineTo(this.tileWidth / 2, this.tileHeight / 2);
+  ctx.lineTo(0, this.tileHeight);
+  ctx.lineTo(-this.tileWidth / 2, this.tileHeight / 2);
+  ctx.closePath();
+  ctx.fillStyle = this.color;
+  ctx.fill();
+  
+  ctx.restore();
+  }
+  
+  }</script>
+  <script>class Block {
+  constructor(x, y, z, tileWidth) {
+  this.top = '#eeeeee';
+  this.right = '#cccccc';
+  this.left = '#999999';
+  this.tileWidth = tileWidth || 50;
+  this.tileHeight = this.tileWidth/2;
+  this.x = (x - y) * this.tileWidth / 2;
+  this.y = (x + y) * this.tileHeight / 2;
+  this.z = z;
+  }
+  
+  setZ(value) {
+  this.z = value || 0;
+  }
+  
+  render() {
+  ctx.save();
+  ctx.translate(this.x, this.y);
+  
+  // draw top
+  ctx.beginPath();
+  ctx.moveTo(0, -this.z * this.tileHeight);
+  ctx.lineTo(this.tileWidth/2, this.tileHeight/2 - this.z * this.tileHeight);
+  ctx.lineTo(0, this.tileHeight - this.z * this.tileHeight);
+  ctx.lineTo(-this.tileWidth/2, this.tileHeight/2 - this.z * this.tileHeight);
+  ctx.closePath();
+  ctx.fillStyle = this.top;
+  ctx.fill();
+  
+  // left 
+  ctx.beginPath();
+  ctx.moveTo(-this.tileWidth/2, this.tileHeight/2 - this.z*this.tileHeight)  
+  ctx.lineTo(0,this.tileHeight - this.z*this.tileHeight);
+  ctx.lineTo(0, this.tileHeight);
+  ctx.lineTo(-this.tileWidth / 2, this.tileHeight/2)
+  ctx.closePath();
+  ctx.fillStyle = this.left;
+  ctx.fill();
+  
+  // right 
+  ctx.beginPath();
+  ctx.moveTo(this.tileWidth/2, this.tileHeight/2 - this.z*this.tileHeight)  
+  ctx.lineTo(0,this.tileHeight - this.z*this.tileHeight);
+  ctx.lineTo(0, this.tileHeight);
+  ctx.lineTo(this.tileWidth / 2, this.tileHeight/2)
+  ctx.closePath();
+  ctx.fillStyle = this.right;
+  ctx.fill();
+  
+  ctx.restore();
+  
+  }
+  }</script>
+  <script>class Grid {
+  constructor(cols, rows, tsw) {
+  this.blocks = [];
+  this.cols = cols;
+  this.rows = rows;
+  this.tileWidth = tsw;
+  
+  for (let i = 0; i < this.cols; i++) {
+  for (let j = 0; j < this.rows; j++) {
+  this.blocks.push(new Block(i, j, 1, this.tileWidth));
+  }
+  }
+  }
+  
+  
+  createGrid(cols, rows) {
+  let grid = [];
+  for (let i = 0; i < cols; i++) {
+  grid[i] = [];
+  for (let j = 0; j < rows; j++) {
+  grid[i][j] = 0;
+  }
+  }
+  return grid;
+  }
+  
+  applyHeightMap(map) {
+  for (let y = 0; y < map.length; y++) {
+  let row = map[y];
+  for (let x = 0; x < row.length; x++) {
+  this.blocks[x * map.length + y].setZ(row[x]);
+  }
+  }
+  
+  }
+  
+  render() {
+  for (let i = 0; i < this.blocks.length; i++) {
+  this.blocks[i].render();
+  }
+  }
+  }</script>
+  <!-- <script>
+  // Canvas 2
+  norm = function(value, min, max) {
+  return (value - min) / (max - min);
+  }
+  
+  let coords = [];
+  
+  let canvas2 = document.getElementById('c2');
+  let ctx2 = canvas2.getContext('2d');
+  canvas2.width = 5;
+  canvas2.height = 5;
+  
+  let isDown = false;
+  canvas2.addEventListener('mousedown', function () {
+  isDown = true;
+  })
+  canvas2.addEventListener('mouseup', function () {
+  isDown = false;
+  })
+  canvas2.addEventListener('mousemove', function (e) {
+  if(isDown) {
+  ctx2.beginPath();
+  ctx2.fillStyle = 'black';
+  ctx2.arc(e.offsetX, e.offsetY, 1, 0, Math.PI*2);
+  ctx2.fill();
+  ctx.closePath();
+  
+  var idata = ctx2.getImageData(0, 0, canvas2.width , canvas2.height);
+  var buffer32 = new Array(idata.data);
+  
+  // for (let i = 0; i < idata.data.length; i+=4) {
+  //   if (idata.data[i + 3] >= 0) {
+  //     coords.push([norm(x, 0, 10), norm(y, 0, 10)]);
+  //     // for (var y = 0; y < canvas2.height; y += 10) {
+  //     //   for (var x = 0; x < canvas2.width; x += 10) {
+  //     //     if (buffer32[(y * width + x)]) {
+  //     //       coords.push([norm(x, 0, 10), norm(y, 0, 10)]);
+  //     //     }
+  //     //   }
+  //     // }
+  //   }
+  // }
+  coords = buffer32;
+  console.log(coords)
+  grid.applyHeightMap(coords);
+  
+  }
+  
+  })
+  </script> -->
+  <script>
+  let width = window.innerWidth-1;
+  let height = window.innerHeight-5;
+  let canvas = document.getElementById('c');
+  let ctx = canvas.getContext('2d');
+  canvas.width = width;
+  canvas.height = height;
+  
+  ctx.translate(width / 2 , height/2);
+  
+  
+  let baseSlider = document.getElementById('base');
+  let mouseX;
+  let mouseY;
+  canvas.addEventListener('mousemove', function (e) {
+  mouseX = e.offsetX;
+  mouseY = e.offsetY;
+  });
+  
+  canvas.addEventListener('touchmove', function (e) {
+  mouseX = e.touches[0].clientY;
+  mouseY = e.touches[0].clientX;
+  })
+  // let map = [
+  //   [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0],
+  //   [2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0],
+  //   [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0],
+  // ];
+  let grid = new Grid(15, 15, 50);
+  let map = grid.createGrid(15, 15);
+  
+  let angle = 0;
+  function animate() {
+  ctx.fillStyle = '#555555';
+  ctx.fillRect(-width/2,-height/2, width, height);
+  
+  angle = mouseX/10;
+  
+  let baseHeight = parseFloat(-baseSlider.value)
+  for (let i = 0; i < map.length; i++) {
+  let row = map[i];
+  for (let j = 0; j < row.length; j++) {
+  map[i][j] = Math.abs(i/j+Math.sin(angle/j+i)+baseHeight)
+  }
+  }
+  grid.applyHeightMap(map);
+  grid.render();
+  
+  requestAnimationFrame(animate)
+  }
+  animate();</script>
+<h1>Subcribe And Follow</h1>
+ 
+ <p align="left"> <img src="https://komarev.com/ghpvc/?username=wahyu9kdl&label=Profile%20views&color=00ffff&style=flat" alt="wahyu9kdl" /> </p>
+ 
+ <p align="left"> <a href="https://twitter.com/awfanspage" target="blank"><img src="https://img.shields.io/twitter/follow/awfanspage?logo=twitter&style=for-the-badge" alt="awfanspage" /></a> </p>
+ 
+ 
+ <h3 align="left">Connect with me:</h3>
+ <p align="left">
+ <a href="https://codepen.io/san3" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="san3" height="30" width="40" /></a>
+ <a href="https://dev.to/wahyu9kdl" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+ <a href="https://twitter.com/Awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="awfanspage" height="30" width="40" /></a>
+ <a href="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" height="30" width="40" /></a>
+ <a href="https://fb.com/awgroupchannel" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="awgroupchannel" height="30" width="40" /></a>
+ <a href="https://instagram.com/awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="awfanspage" height="30" width="40" /></a>
+ <a href="https://dribbble.com/wahyu9kdl" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+ <a href="https://wahyu9kdl.medium.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+ <a href="https://m.youtube.com/channel/UC7CRa3nkxakAZx_aRsMwRyA/playlists" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="aw youtube channel" height="30" width="40" /></a>
+ <a href="https://open.spotify.com/show/4UoPUn3e0VhJ6MGOwdsrHV" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="http://feedproxy.google.com/~r/blogspot/ghpgr/~3/vyr1fhc7dbi/informasi-cara-mendapatkan-ribuan.html" height="30" width="40" /></a>
+ </p>
+ 
+ <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=wahyu9kdl" alt="wahyu9kdl" /></a> </p>
+ 
+ <footer style="background-color: #222; color: #ddd;padding: 24px 30px; text-align: right;font-weight: bold;">
+    <span id="year"></span> <a style="text-decoration: none; color: #ddd;" href="https://wahyu9kdl.github.io">Wahyu9kdl ©️ TOOLS</a>
+ </footer>
+</body>
+</html>
