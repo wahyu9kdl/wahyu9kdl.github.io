@@ -2,7 +2,7 @@
 
 	var canvas, ctx, tileSize = 30, qnt_bombas = 40, tabuleiro;
 
-	var url_image = 'assets/img/minesweeper_graphs.png', content = document.getElementById('mineSweeper');
+	var url_image = 'https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl.github.io/main/img/minesweeper_graphs.png', content = document.getElementById('mineSweeper');
 
 	var graphs = {};
 
