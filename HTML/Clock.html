@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+      <title>Neumorphism Clock</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+    crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">  
+    <meta name="keywords" content="Game Minesweeper" />
+    <meta name="description" content="Game Minesweeper free game online" />
+    <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
+    <meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-VSD8HWB5RG');
+    </script>
+    <style>
+    .multicolortext {
+    background-image: linear-gradient(to right, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    }
+    </style>
+    <style type="text/css">
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #dde1e7;
+    }
+    .clock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dde1e7;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: -3px -3px 7px #ffffff73 , 3px 3px 5px rgba(94,104,121,0.288);
+    }
+    .clock::before {
+    content: '';
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    background-color: #dde1e7;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 7px #ffffff73 , inset 3px 3px 5px rgba(94,104,121,0.288);
+    }
+    .clock::after {
+    content: '';
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    background-color: #dde1e7;
+    border-radius: 50%;
+    box-shadow: -1px -1px 5px #ffffff73 , 1px 1px 3px rgba(94,104,121,0.288);
+    }
+    .center--hr {
+    height: 15px;
+    width: 15px;
+    background-color: #404040;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    }
+    .center--hr2 {
+    height: 9px;
+    width: 9px;
+    background-color: #c0392b;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 20;
+    }
+    .indicators span {
+    position: absolute;
+    width: 2px;
+    height: 5px;
+    background-color: #404040;
+    }
+    .indicators span:nth-child(1) {
+    transform: rotate(30deg) translateY(-100px);
+    }
+    .indicators span:nth-child(2) {
+    transform: rotate(60deg) translateY(-100px);
+    }
+    .indicators span:nth-child(3) {
+    background-color: #c0392b;
+    transform: rotate(90deg) translateY(-100px);
+    }
+    .indicators span:nth-child(4) {
+    transform: rotate(120deg) translateY(-100px);
+    }
+    .indicators span:nth-child(5) {
+    transform: rotate(150deg) translateY(-100px);
+    }
+    .indicators span:nth-child(6) {
+    background-color: #c0392b;
+    transform: rotate(180deg) translateY(-100px);
+    }
+    .indicators span:nth-child(7) {
+    transform: rotate(210deg) translateY(-100px);
+    }
+    .indicators span:nth-child(8) {
+    transform: rotate(240deg) translateY(-100px);
+    }
+    .indicators span:nth-child(9) {
+    background-color: #c0392b;
+    transform: rotate(270deg) translateY(-100px);
+    }
+    .indicators span:nth-child(10) {
+    transform: rotate(300deg) translateY(-100px);
+    }
+    .indicators span:nth-child(11) {
+    transform: rotate(330deg) translateY(-100px);
+    }
+    .indicators span:nth-child(12) {
+    background-color: #c0392b;
+    transform: rotate(360deg) translateY(-100px);
+    }
+    .sec--hand , .min--hand , .hr--hand {
+    position: absolute;
+    }
+    .sec--hand , .sec {
+    height: 180px;
+    width: 180px;
+    z-index: 6;
+    }
+    .min--hand , .min {
+    height: 140px;
+    width: 140px;
+    z-index: 5;
+    }
+    .hr--hand , .hr {
+    height: 110px;
+    width: 110px;
+    z-index: 4;
+    }
+    .sec , .min , .hr {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    }
+    .sec::before {
+    position: absolute;
+    content: '';
+    height: 110px;
+    width: 3px;
+    background-color: #c0392b;
+    }
+    .sec::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #c0392b;
+    border-radius: 50%;
+    top: 105px;
+    }
+    .min::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #2980b9;
+    top: 4px;
+    }
+    .hr::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 50px;
+    top: 0;
+    border-radius: 50px;
+    background-color: #303030;
+    }
+    .clock--num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 22px;
+    font-family: 'Orbitron' , sans-serif;
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    background-color: #3688cf;
+    background: linear-gradient(to right , #3688cf 15% , #cf2b2b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #ffffff73 , 3px 3px 5px rgba(94,104,121,0.288);
+    }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="center--hr"></div>
+        <div class="center--hr2"></div>
+        <div class="indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="sec--hand">
+            <div class="sec"></div>
+        </div>
+        <div class="min--hand">
+            <div class="min"></div>
+        </div>
+        <div class="hr--hand">
+            <div class="hr"></div>
+        </div>
+    </div>
+    <div class="clock--num"></div>
+    <script>
+        const sec = document.querySelector('.sec');
+        const min = document.querySelector('.min');
+        const hr = document.querySelector('.hr')
+        const clockNum = document.querySelector('.clock--num')
+        setInterval(function() {
+            let time = new Date();
+            let seconds = time.getSeconds();
+            let minutes = time.getMinutes();
+            let hours = time.getHours();
+            let dayNight = 'AM';
+            sec.style.transform = `rotate(${seconds * 6}deg)`;
+            min.style.transform = `rotate(${minutes * 6}deg)`;
+            hr.style.transform = `rotate(${hours * 30 + (minutes/2)}deg)`;
+
+            if(hours > 12) {
+                dayNight = 'PM';
+                hours = hours -12;
+            }
+            if(seconds <10) {
+                seconds = '0' + seconds;
+            }
+            if(minutes < 10) {
+                minutes = '0' + minutes;
+            }
+            if(hours < 10) {
+                hours = '0' +hours;
+            }
+
+            clockNum.textContent = hours + ':' + minutes + ':' + seconds + ' ' + dayNight;
+        })
+    </script>
+    <footer style="background-color: transparant; color: #ddd;padding: 24px 30px; text-align: right;font-weight: bold;">
+    <span id="year"></span> <a style="text-decoration: none; color: #ddd;" href="https://wahyu9kdl.github.io"><span class="multicolortext" >Wahyu9kdl ©️ TOOLS</a>
+    </footer>
+</body>
+</html>
