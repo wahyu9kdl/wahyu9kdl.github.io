@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Puzzle Game</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+    crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">  
+    <meta name="keywords" content="Game Puzzle" />
+    <meta name="description" content="Game Puzzle free game online" />
+    <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
+    <meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-VSD8HWB5RG');
+    </script>
+    <style>
+    .multicolortext {
+    background-image: linear-gradient(to right, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    }
+    </style>
+     <style type="text/css">
+  html {
+  height: 150%;
+  }
+  
+  body {
+  height: 100%;
+  background-image:  linear-gradient(to right, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+  
+  .game {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  background-color: #ff1493;
+  border-radius: 5px;
+  }
+  
+  .grid {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px 80px;
+  border: 1px solid #550000;
+  }
+  
+  .grid button {
+  background-color: #cfcfcf;
+  color: #003333;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #550000;
+  outline: none;
+  cursor: pointer;
+  }
+  
+  .footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .footer button {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  width: 80px;
+  background-color: #D4EE9F;
+  color: #003333;
+  outline: none;
+  cursor: pointer;
+  }
+  
+  .footer button:hover {
+  color: #D4EE9F;
+  background-color: #003333;
+  }
+  
+  .footer span {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  color: #D4EE9F;
+  font-weight: bold;
+  margin: auto 0;
+  }
+  
+  .message {
+  color:#AA3939;
+  height: 80px;
+  }
+  </style>
+  </head>
+
+  <body>
+  
+ <center> <h1>GAME PUZZEL</h1></center>
+    <div class="game">
+      <div class="grid">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>10</button>
+        <button>11</button>
+        <button>12</button>
+        <button>13</button>
+        <button>14</button>
+        <button>15</button>
+        <button></button>
+      </div>
+
+      <div class="footer">
+        <button>Play</button>
+        <span id="move">Move: 100</span>
+        <span id="time">Time: 100</span>
+      </div>
+    </div>
+    <h1 class="message">You win!</h1>
+
+
+    <script type="text/javascript">
+    class Box {
+    constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    }
+    
+    getTopBox() {
+    if (this.y === 0) return null;
+    return new Box(this.x, this.y - 1);
+    }
+    
+    getRightBox() {
+    if (this.x === 3) return null;
+    return new Box(this.x + 1, this.y);
+    }
+    
+    getBottomBox() {
+    if (this.y === 3) return null;
+    return new Box(this.x, this.y + 1);
+    }
+    
+    getLeftBox() {
+    if (this.x === 0) return null;
+    return new Box(this.x - 1, this.y);
+    }
+    
+    getNextdoorBoxes() {
+    return [
+    this.getTopBox(),
+    this.getRightBox(),
+    this.getBottomBox(),
+    this.getLeftBox()
+    ].filter(box => box !== null);
+    }
+    
+    getRandomNextdoorBox() {
+    const nextdoorBoxes = this.getNextdoorBoxes();
+    return nextdoorBoxes[Math.floor(Math.random() * nextdoorBoxes.length)];
+    }
+    }
+    
+    const swapBoxes = (grid, box1, box2) => {
+    const temp = grid[box1.y][box1.x];
+    grid[box1.y][box1.x] = grid[box2.y][box2.x];
+    grid[box2.y][box2.x] = temp;
+    };
+    
+    const isSolved = grid => {
+    return (
+    grid[0][0] === 1 &&
+    grid[0][1] === 2 &&
+    grid[0][2] === 3 &&
+    grid[0][3] === 4 &&
+    grid[1][0] === 5 &&
+    grid[1][1] === 6 &&
+    grid[1][2] === 7 &&
+    grid[1][3] === 8 &&
+    grid[2][0] === 9 &&
+    grid[2][1] === 10 &&
+    grid[2][2] === 11 &&
+    grid[2][3] === 12 &&
+    grid[3][0] === 13 &&
+    grid[3][1] === 14 &&
+    grid[3][2] === 15 &&
+    grid[3][3] === 0
+    );
+    };
+    
+    const getRandomGrid = () => {
+    let grid = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]];
+    
+    // Shuffle
+    let blankBox = new Box(3, 3);
+    for (let i = 0; i < 1000; i++) {
+    const randomNextdoorBox = blankBox.getRandomNextdoorBox();
+    swapBoxes(grid, blankBox, randomNextdoorBox);
+    blankBox = randomNextdoorBox;
+    }
+    
+    if (isSolved(grid)) return getRandomGrid();
+    return grid;
+    };
+    
+    class State {
+    constructor(grid, move, time, status) {
+    this.grid = grid;
+    this.move = move;
+    this.time = time;
+    this.status = status;
+    }
+    
+    static ready() {
+    return new State(
+    [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+    0,
+    0,
+    "ready"
+    );
+    }
+    
+    static start() {
+    return new State(getRandomGrid(), 0, 0, "playing");
+    }
+    }
+    
+    class Game {
+    constructor(state) {
+    this.state = state;
+    this.tickId = null;
+    this.tick = this.tick.bind(this);
+    this.render();
+    this.handleClickBox = this.handleClickBox.bind(this);
+    }
+    
+    static ready() {
+    return new Game(State.ready());
+    }
+    
+    tick() {
+    this.setState({ time: this.state.time + 1 });
+    }
+    
+    setState(newState) {
+    this.state = { ...this.state, ...newState };
+    this.render();
+    }
+    
+    handleClickBox(box) {
+    return function() {
+    const nextdoorBoxes = box.getNextdoorBoxes();
+    const blankBox = nextdoorBoxes.find(
+    nextdoorBox => this.state.grid[nextdoorBox.y][nextdoorBox.x] === 0
+    );
+    if (blankBox) {
+    const newGrid = [...this.state.grid];
+    swapBoxes(newGrid, box, blankBox);
+    if (isSolved(newGrid)) {
+    clearInterval(this.tickId);
+    this.setState({
+    status: "won",
+    grid: newGrid,
+    move: this.state.move + 1
+    });
+    } else {
+    this.setState({
+    grid: newGrid,
+    move: this.state.move + 1
+    });
+    }
+    }
+    }.bind(this);
+    }
+    
+    render() {
+    const { grid, move, time, status } = this.state;
+    
+    // Render grid
+    const newGrid = document.createElement("div");
+    newGrid.className = "grid";
+    for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+    const button = document.createElement("button");
+    
+    if (status === "playing") {
+    button.addEventListener("click", this.handleClickBox(new Box(j, i)));
+    }
+    
+    button.textContent = grid[i][j] === 0 ? "" : grid[i][j].toString();
+    newGrid.appendChild(button);
+    }
+    }
+    document.querySelector(".grid").replaceWith(newGrid);
+    
+    // Render button
+    const newButton = document.createElement("button");
+    if (status === "ready") newButton.textContent = "Play";
+    if (status === "playing") newButton.textContent = "Reset";
+    if (status === "won") newButton.textContent = "Play";
+    newButton.addEventListener("click", () => {
+    clearInterval(this.tickId);
+    this.tickId = setInterval(this.tick, 1000);
+    this.setState(State.start());
+    });
+    document.querySelector(".footer button").replaceWith(newButton);
+    
+    // Render move
+    document.getElementById("move").textContent = `Move: ${move}`;
+    
+    // Render time
+    document.getElementById("time").textContent = `Time: ${time}`;
+    
+    // Render message
+    if (status === "won") {
+    document.querySelector(".message").textContent = "You win!";
+    } else {
+    document.querySelector(".message").textContent = "";
+    }
+    }
+    }
+    
+    const GAME = Game.ready();
+    </script>
+    
+    <iframe src="https://player.rss.com/alhikmah/346782?theme=dark" style="width: 100%" title="1001 KISAH [ ALHIKMAH ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/alhikmah/346782/">TWITTER - GET PAGE CHANNEL - AL HIKMAH - API KEY ©️2022-2030 | RSS.com Podcasting</a></iframe>		<h3 align="left">
+    <span class="multicolortext" >Connect with me:</span></h3>
+    <p align="left">
+    <a href="https://codepen.io/san3" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="san3" height="30" width="40" /></a>
+    <a href="https://dev.to/wahyu9kdl" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+    <a href="https://twitter.com/Awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="awfanspage" height="30" width="40" /></a>
+    <a href="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" height="30" width="40" /></a>
+    <a href="https://fb.com/awgroupchannel" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="awgroupchannel" height="30" width="40" /></a>
+    <a href="https://instagram.com/awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="awfanspage" height="30" width="40" /></a>
+    <a href=" https://dribbble.com/wahyu9kdl/shots " target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+    <a href="https://wahyu9kdl.medium.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+    <a href="https://m.youtube.com/channel/UC7CRa3nkxakAZx_aRsMwRyA/playlists" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="aw youtube channel" height="30" width="40" /></a>
+    <a href="https://open.spotify.com/show/4UoPUn3e0VhJ6MGOwdsrHV" target="blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="http://feedproxy.google.com/~r/blogspot/ghpgr/~3/vyr1fhc7dbi/informasi-cara-mendapatkan-ribuan.html" height="30" width="40" /></a>
+    <a href=" https://wahyu9kdl.github.io/wahyu9kdl" ><img align="center" src=" https://camo.githubusercontent.com/5b09aa408358eda7cba977c95dccaf65b070ed679c9be064297a11161058d1f2/68747470733a2f2f312e62702e626c6f6773706f742e636f6d2f2d735749774852616b54744d2f594a7068586a65796f46492f41414141414141414339632f37747230382d4d665f387379524457346c4c30514e7042564431773734772d6841434c63424741735948512f733630302f6c6f676f355f31315f31353330322e706e67 " height="30" width="40" /></a>		
+    <a href="https://www.alhikmah.my.id" ><img align="center" src="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl/main/logo.png" height="30" width="40" /></a>
+    </p>
+    
+    <footer style="background-color: #222; color: #ddd;padding: 24px 30px; text-align: right;font-weight: bold;">
+    <span id="year"></span> <a style="text-decoration: none; color: #ddd;" href="https://wahyu9kdl.github.io"> <span class="multicolortext" >Wahyu9kdl ©️ TOOLS</a></span>
+    </footer>
+    </center>
+  </body>
+</html>
