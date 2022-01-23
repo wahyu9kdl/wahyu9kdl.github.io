@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Newton's Css Cradle Animation </title>
+    
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl.github.io/main/css/stylesheet.css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+    crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">  
+    <meta name="keywords" content=" Newton's Css Cradle Animation " />
+    <meta name="description" content=" Newton's Css Cradle Animation online" />
+    <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
+    <meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-VSD8HWB5RG');
+    </script>
+    <style>
+    .multicolortext {
+    background-image: linear-gradient(to right, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    }
+    </style>
+      <style type="text/css">
+  *,
+  *::before,
+  *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  }
+  
+  body {
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  perspective: 800px;
+  perspective-origin: center calc(50% - 2.4em);
+  overflow: hidden;
+  }
+  
+  .cradle {
+  position: relative;
+  animation: rotate 60s infinite linear;
+  }
+  
+  @keyframes rotate {
+  to {
+  transform: rotateY(360deg);
+  }
+  }
+  .floor {
+  position: absolute;
+  width: 20em;
+  height: 20em;
+  background-color: #fff;
+  background-image: radial-gradient(#012a, #111 66%), url("./img/marble.jpg");
+  background-size: 20em, 10em;
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
+  }
+  .floor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.5em;
+  height: 4.5em;
+  background-color: #000;
+  filter: blur(0.3em);
+  }
+  
+  .wood {
+  --width: 0;
+  --height: 0;
+  --depth: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  transform: translate(-50%, -50%);
+  }
+  .wood.base {
+  --width: 8em;
+  --height: 1em;
+  --depth: 4em;
+  transform: translate(-50%, calc(-50% + 2.5em));
+  }
+  .wood.poll {
+  --width: 0.25em;
+  --height: 3em;
+  --depth: 0.25em;
+  }
+  .wood.poll:nth-child(3) {
+  transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), 1.5em);
+  }
+  .wood.poll:nth-child(4) {
+  transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), -1.5em);
+  }
+  .wood.poll:nth-child(5) {
+  transform: translate3d(calc(-50% + -3.5em), calc(-50% + 0.5em), 1.5em);
+  }
+  .wood.poll:nth-child(6) {
+  transform: translate3d(calc(-50% + -3.5em), calc(-50% + 0.5em), -1.5em);
+  }
+  .wood.strecher {
+  --width: 8em;
+  --height: 0.25em;
+  --depth: 1em;
+  }
+  .wood.strecher:nth-child(7) {
+  transform: translate3d(-50%, calc(-50% - 1em), 1.5em);
+  }
+  .wood.strecher:nth-child(8) {
+  transform: translate3d(-50%, calc(-50% - 1em), -1.5em);
+  }
+  .wood.strecher .dots::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 76% 50%, #777 0px, #7770 2px), radial-gradient(circle at 63% 50%, #777 0px, #7770 2px), radial-gradient(circle at 50% 50%, #777 0px, #7770 2px), radial-gradient(circle at 37% 50%, #777 0px, #7770 2px), radial-gradient(circle at 24% 50%, #777 0px, #7770 2px);
+  }
+  .wood > * {
+  position: absolute;
+  box-shadow: 0 0 1em #0007 inset;
+  background-size: 5em;
+  background-image: url("https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl.github.io/main/img/wood.png ");
+  }
+  .wood > .top {
+  width: var(--width);
+  height: var(--depth);
+  transform: translateY(-50%) rotateX(90deg);
+  background-color: #6f463f;
+  }
+  .wood > .left {
+  width: var(--depth);
+  height: var(--height);
+  transform: translateX(-50%) rotateY(90deg);
+  background-color: #5f3c35;
+  }
+  .wood > .right {
+  width: var(--depth);
+  height: var(--height);
+  right: 0;
+  transform: translateX(50%) rotateY(90deg);
+  background-color: #1d1211;
+  }
+  .wood > .front {
+  width: var(--width);
+  height: var(--height);
+  transform: translateZ(calc(var(--depth) / 2));
+  background-color: #3e2723;
+  }
+  .wood > .back {
+  width: var(--width);
+  height: var(--height);
+  transform: translateZ(calc(var(--depth) / -2));
+  background-color: #3e2723;
+  }
+  
+  .ballPlate {
+  position: absolute;
+  top: -1em;
+  width: 2em;
+  height: 3em;
+  transform: translate(-50%, 0%) rotateY(90deg);
+  transform-origin: top;
+  }
+  .ballPlate:nth-child(9) {
+  left: -2.05em;
+  animation: ballPlateStart 3s infinite;
+  }
+  .ballPlate:nth-child(9) .ballWrapper {
+  animation: ballWrapperStart 3s infinite;
+  }
+  .ballPlate:nth-child(9) .ball {
+  background-position-y: 0%;
+  }
+  .ballPlate:nth-child(10) {
+  left: -1.025em;
+  animation: ballPlateSwing 3s linear infinite;
+  }
+  .ballPlate:nth-child(10) .ballWrapper {
+  animation: ballWrapperSwing 3s linear infinite;
+  }
+  .ballPlate:nth-child(10) .ball {
+  background-position-y: 25%;
+  }
+  .ballPlate:nth-child(11) {
+  left: 0;
+  animation: ballPlateSwing 3s linear infinite;
+  }
+  .ballPlate:nth-child(11) .ballWrapper {
+  animation: ballWrapperSwing 3s linear infinite;
+  }
+  .ballPlate:nth-child(11) .ball {
+  background-position-y: 50%;
+  }
+  .ballPlate:nth-child(12) {
+  left: 1.025em;
+  animation: ballPlateSwing 3s linear infinite;
+  }
+  .ballPlate:nth-child(12) .ballWrapper {
+  animation: ballWrapperSwing 3s linear infinite;
+  }
+  .ballPlate:nth-child(12) .ball {
+  background-position-y: 75%;
+  }
+  .ballPlate:nth-child(13) {
+  left: 2.05em;
+  animation: ballPlateEnd 3s infinite;
+  }
+  .ballPlate:nth-child(13) .ballWrapper {
+  animation: ballWrapperEnd 3s infinite;
+  }
+  .ballPlate:nth-child(13) .ball {
+  background-position-y: 100%;
+  }
+  @keyframes ballPlateSwing {
+  0%, 100% {
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+  }
+  @keyframes ballPlateStart {
+  0%, 100% {
+  animation-timing-function: ease-out;
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+  animation-timing-function: ease-out;
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+  75% {
+  animation-timing-function: ease-in;
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(-80deg);
+  }
+  }
+  @keyframes ballPlateEnd {
+  0%, 100% {
+  animation-timing-function: ease-out;
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  25% {
+  animation-timing-function: ease-in;
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(80deg);
+  }
+  50% {
+  animation-timing-function: ease-out;
+  transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+  }
+  @keyframes ballWrapperSwing {
+  0%, 100% {
+  transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+  transform: rotateY(90deg) rotate(5deg);
+  }
+  }
+  @keyframes ballWrapperStart {
+  0%, 100% {
+  animation-timing-function: ease-out;
+  transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+  animation-timing-function: ease-out;
+  transform: rotateY(90deg) rotate(5deg);
+  }
+  75% {
+  animation-timing-function: ease-in;
+  transform: rotateY(90deg) rotate(80deg);
+  }
+  }
+  @keyframes ballWrapperEnd {
+  0%, 100% {
+  animation-timing-function: ease-out;
+  transform: rotateY(90deg) rotate(-5deg);
+  }
+  25% {
+  animation-timing-function: ease-in;
+  transform: rotateY(90deg) rotate(-80deg);
+  }
+  50% {
+  animation-timing-function: ease-out;
+  transform: rotateY(90deg) rotate(5deg);
+  }
+  }
+  .ballPlate .ballWrapper {
+  position: absolute;
+  bottom: 0.1em;
+  left: calc(50% - 0.5em);
+  width: 1em;
+  height: 1em;
+  }
+  .ballPlate .ball {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at top, #fff, #678a, #000), url(" https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl.github.io/main/img/marble.jpg ");
+  background-size: 1em, 5em;
+  box-shadow: 0 0 10px #000a inset;
+  animation: backPos 120s infinite linear, rotate 60s infinite linear reverse;
+  }
+  @keyframes backPos {
+  from {
+  background-position-x: center, 5em;
+  }
+  to {
+  background-position-x: center, 0;
+  }
+  }
+  .ballPlate .line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 2.15em;
+  background-color: #fff7;
+  transform-origin: top;
+  }
+  .ballPlate .line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff7;
+  transform: rotateY(90deg);
+  }
+  .ballPlate .line:nth-child(2) {
+  transform: translateX(-1px) rotate(-20deg);
+  }
+  .ballPlate .line:nth-child(3) {
+  right: 0;
+  transform: translateX(1px) rotate(20deg);
+  }
+  
+  .shadow {
+  position: absolute;
+  top: 50%;
+  width: 3em;
+  height: 3em;
+  background-image: radial-gradient(#0006, #0000 50%);
+  }
+  .shadow:nth-child(1) {
+  animation: shadowSwing 3s ease-out infinite, shadowStart 3s ease-out infinite;
+  }
+  .shadow:nth-child(2) {
+  left: 2.975em;
+  animation: shadowSwing 3s linear infinite;
+  }
+  .shadow:nth-child(3) {
+  left: 4em;
+  animation: shadowSwing 3s linear infinite;
+  }
+  .shadow:nth-child(4) {
+  left: 5.025em;
+  animation: shadowSwing 3s linear infinite;
+  }
+  .shadow:nth-child(5) {
+  animation: shadowSwing 3s ease-out infinite, shadowEnd 3s ease-out infinite;
+  }
+  @keyframes shadowSwing {
+  0%, 100% {
+  transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(10px);
+  }
+  50% {
+  transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(-10px);
+  }
+  }
+  @keyframes shadowStart {
+  0%, 50%, 100% {
+  left: 1.95em;
+  opacity: 1;
+  }
+  75% {
+  left: 0;
+  opacity: -0.5;
+  animation-timing-function: ease-in;
+  }
+  }
+  @keyframes shadowEnd {
+  0%, 50%, 100% {
+  left: 6.05em;
+  opacity: 1;
+  }
+  25% {
+  left: 8em;
+  opacity: -0.5;
+  animation-timing-function: ease-in;
+  }
+  }
+  
+  .twitterLink {
+  font-size: 24px;
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  </style>
+  </head>
+  <body>
+    <div><center>
+    <span class="multicolortext" >Connect with me:</span>
+  <p align="left">
+  <a href="https://codepen.io/san3" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="san3" height="30" width="40" /></a>
+  <a href="https://dev.to/wahyu9kdl" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+  <a href="https://twitter.com/Awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="awfanspage" height="30" width="40" /></a>
+  <a href="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" height="30" width="40" /></a>
+  <a href="https://fb.com/awgroupchannel" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="awgroupchannel" height="30" width="40" /></a>
+  <a href="https://instagram.com/awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="awfanspage" height="30" width="40" /></a>
+  <a href=" https://dribbble.com/wahyu9kdl/shots " target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+  <a href="https://wahyu9kdl.medium.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+  <a href="https://m.youtube.com/channel/UC7CRa3nkxakAZx_aRsMwRyA/playlists" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="aw youtube channel" height="30" width="40" /></a>
+  <a href="https://open.spotify.com/show/4UoPUn3e0VhJ6MGOwdsrHV" target="blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="http://feedproxy.google.com/~r/blogspot/ghpgr/~3/vyr1fhc7dbi/informasi-cara-mendapatkan-ribuan.html" height="30" width="40" /></a>
+  <a href=" https://wahyu9kdl.github.io/wahyu9kdl" ><img align="center" src=" https://camo.githubusercontent.com/5b09aa408358eda7cba977c95dccaf65b070ed679c9be064297a11161058d1f2/68747470733a2f2f312e62702e626c6f6773706f742e636f6d2f2d735749774852616b54744d2f594a7068586a65796f46492f41414141414141414339632f37747230382d4d665f387379524457346c4c30514e7042564431773734772d6841434c63424741735948512f733630302f6c6f676f355f31315f31353330322e706e67 " height="30" width="40" /></a>		
+  <a href="https://www.alhikmah.my.id" ><img align="center" src="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl/main/logo.png" height="30" width="40" /></a>
+  </p>  
+  <span id="year"></span> <a style="text-decoration: none; color: #ddd;" href="https://wahyu9kdl.github.io">Wahyu9kdl ©️ TOOLS</a>
+ </center>
+ </div>
+ 
+    <div class="cradle">
+      <div class="floor"></div>
+
+      <div class="wood base">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="top">
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div class="wood poll">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+      <div class="wood poll">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+      <div class="wood poll">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+      <div class="wood poll">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+      <div class="wood strecher">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="front dots"></div>
+        <div class="back"></div>
+        <div class="top"></div>
+      </div>
+      <div class="wood strecher">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="front"></div>
+        <div class="back dots"></div>
+        <div class="top"></div>
+      </div>
+
+      <div class="ballPlate">
+        <div class="ballWrapper">
+          <div class="ball"></div>
+        </div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="ballPlate">
+        <div class="ballWrapper">
+          <div class="ball"></div>
+        </div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="ballPlate">
+        <div class="ballWrapper">
+          <div class="ball"></div>
+        </div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="ballPlate">
+        <div class="ballWrapper">
+          <div class="ball"></div>
+        </div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="ballPlate">
+        <div class="ballWrapper">
+          <div class="ball"></div>
+        </div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
