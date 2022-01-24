@@ -80,7 +80,7 @@
 <font face="Ubuntu" color="red" size="4px">
 <?php
 if (!$_GET) die();
-require("https://wahyu9kdl.github.io/DASHBOARD/TOOLS/AUTO VISITOR/autovisitor.class.php");
+require("https://wahyu9kdl.github.io/DASHBOARD/TOOLS/AUTO%20VISITOR/index.html");
 $url = $_GET["url"]; 
 $max = $_GET["max"];
 
