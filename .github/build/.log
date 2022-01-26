@@ -1,0 +1,63 @@
+2022-01-25T00:44:26.8792961Z Found online and idle hosted runner in the current repository's organization account that matches the required labels: 'ubuntu-latest'
+2022-01-25T00:44:26.9413144Z Waiting for a Hosted runner in the 'organization' to pick this job...
+2022-01-25T00:44:27.0578849Z Job is waiting for a hosted runner to come online.
+2022-01-25T00:44:30.4028340Z Job is about to start running on the hosted runner: Hosted Agent (hosted)
+2022-01-25T00:44:34.1795726Z Current runner version: '2.286.1'
+2022-01-25T00:44:34.1823118Z ##[group]Operating System
+2022-01-25T00:44:34.1823622Z Ubuntu
+2022-01-25T00:44:34.1823858Z 20.04.3
+2022-01-25T00:44:34.1824211Z LTS
+2022-01-25T00:44:34.1824519Z ##[endgroup]
+2022-01-25T00:44:34.1824802Z ##[group]Virtual Environment
+2022-01-25T00:44:34.1825189Z Environment: ubuntu-20.04
+2022-01-25T00:44:34.1825475Z Version: 20220119.1
+2022-01-25T00:44:34.1826022Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20220119.1/images/linux/Ubuntu2004-Readme.md
+2022-01-25T00:44:34.1826693Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20220119.1
+2022-01-25T00:44:34.1827100Z ##[endgroup]
+2022-01-25T00:44:34.1827458Z ##[group]Virtual Environment Provisioner
+2022-01-25T00:44:34.1827779Z 1.0.0.0-main-20211214-1
+2022-01-25T00:44:34.1828119Z ##[endgroup]
+2022-01-25T00:44:34.1828742Z ##[group]GITHUB_TOKEN Permissions
+2022-01-25T00:44:34.1829263Z Contents: read
+2022-01-25T00:44:34.1829770Z Metadata: read
+2022-01-25T00:44:34.1830139Z Pages: write
+2022-01-25T00:44:34.1830443Z ##[endgroup]
+2022-01-25T00:44:34.1834026Z Secret source: Actions
+2022-01-25T00:44:34.1834516Z Prepare workflow directory
+2022-01-25T00:44:34.2676097Z Prepare all required actions
+2022-01-25T00:44:34.2862396Z Getting action download info
+2022-01-25T00:44:34.4698519Z Download action repository 'actions/deploy-pages@v1-beta' (SHA:8ba3e73e6437d7ddecaf27b8c8b70e8beed0d912)
+2022-01-25T00:44:35.2904998Z ##[group]Run actions/deploy-pages@v1-beta
+2022-01-25T00:44:35.2905526Z with:
+2022-01-25T00:44:35.2906029Z   token: ***
+2022-01-25T00:44:35.2906362Z   timeout: 600000
+2022-01-25T00:44:35.2906677Z   error_count: 10
+2022-01-25T00:44:35.2906963Z   reporting_interval: 1000
+2022-01-25T00:44:35.2907343Z ##[endgroup]
+2022-01-25T00:44:36.8781274Z Sending telemetry for run id 1742957945
+2022-01-25T00:44:37.7419205Z ##[group]Run actions/deploy-pages@v1-beta
+2022-01-25T00:44:37.7419449Z with:
+2022-01-25T00:44:37.7419808Z   token: ***
+2022-01-25T00:44:37.7420008Z   timeout: 600000
+2022-01-25T00:44:37.7420202Z   error_count: 10
+2022-01-25T00:44:37.7420411Z   reporting_interval: 1000
+2022-01-25T00:44:37.7420604Z ##[endgroup]
+2022-01-25T00:44:37.8919377Z Actor: github-pages[bot]
+2022-01-25T00:44:37.8920318Z Action ID: 1742957945
+2022-01-25T00:44:37.8921549Z Artifact URL: https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/pipelines/workflows/1742957945/artifacts?api-version=6.0-preview
+2022-01-25T00:44:37.9970396Z {"count":1,"value":[{"containerId":6741737,"size":4966400,"signedContent":null,"fileContainerResourceUrl":"https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/resources/Containers/6741737","type":"actions_storage","name":"github-pages","url":"https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/pipelines/1/runs/163/artifacts?artifactName=github-pages","expiresOn":"2022-04-25T00:44:22.5045364Z","items":null}]}
+2022-01-25T00:44:37.9987236Z Creating deployment with payload:
+2022-01-25T00:44:37.9987520Z {
+2022-01-25T00:44:37.9988627Z 	"artifact_url": "https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/pipelines/1/runs/163/artifacts?artifactName=github-pages&%24expand=SignedContent",
+2022-01-25T00:44:37.9989348Z 	"pages_build_version": "39fa52179df69dca6a94f467d88a178a69146f8a",
+2022-01-25T00:44:38.0029445Z 	"oidc_token": "***"
+2022-01-25T00:44:38.0029735Z }
+2022-01-25T00:44:38.8663774Z Created deployment for 39fa52179df69dca6a94f467d88a178a69146f8a
+2022-01-25T00:44:38.8664353Z {"page_url":"https://wahyu9kdl.github.io/","status_url":"https://api.github.com/repos/wahyu9kdl/wahyu9kdl.github.io/pages/deployment/status/39fa52179df69dca6a94f467d88a178a69146f8a"}
+2022-01-25T00:44:38.8666915Z 
+2022-01-25T00:44:40.0667287Z Reported success!
+2022-01-25T00:44:40.0667540Z 
+2022-01-25T00:44:40.0679194Z Sending telemetry for run id 1742957945
+2022-01-25T00:44:40.7604631Z Evaluate and set environment url
+2022-01-25T00:44:40.7609172Z Evaluated environment url: https://wahyu9kdl.github.io/
+2022-01-25T00:44:40.7609639Z Cleaning up orphan processes
