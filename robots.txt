@@ -20,5 +20,6 @@ Disallow: /cgi-bin/
 Disallow: /
 User-agent: *
 Page : https://wahyu9kdl.github.io
+Sitemap : https://wahyu9kdl.github.io/sitemap.xml
 Sitemap : https://wahyu9kdl.github.io/news-sitemap.xml
 Sitemap: http://wahyu9kdl.github.io/feeds/posts/default?orderby=updated
