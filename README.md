@@ -38,7 +38,7 @@ My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
 
 ## 📊 Github Readme Streak Stats
 
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Wahyu9kdl&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&currStreakLabel=DD452B)](https://github.com/wahyu9kdl/wahyu9kdl.github.io/blob/main/README.md)
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=wahyu9kdl&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&currStreakLabel=DD452B)](https://github.com/wahyu9kdl/wahyu9kdl.github.io/blob/main/README.md)
 
 ## 🛠️ My favorite tools
 
