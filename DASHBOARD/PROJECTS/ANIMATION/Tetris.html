@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+			<title>Game Tetris</title>
+		<link rel="stylesheet" href="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl.github.io/main/css/stylesheet.css" media="all" />
+		<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+	crossorigin="anonymous"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">  
+	<meta name="keywords" content="Game Tetris" />
+	<meta name="description" content="Game Tetris free game online desaign wahyu9kdl" />
+	<link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
+		<meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	gtag('config', 'G-VSD8HWB5RG');
+	</script>
+	<style>
+	.multicolortext {
+	background-image: linear-gradient(to right, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	}
+	</style>
+<style type="text/css">
+body {
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: none;
+	-webkit-user-select: none;
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-size:12px;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	overflow: hidden;
+	background-color: black;
+}
+
+canvas {
+	height: 79vh;
+	width: auto;
+}
+
+#background {
+	position: absolute;
+	top: 0;
+	z-index: -2;
+}
+
+#playfield {
+	z-index: -1;
+}
+
+.hidden {
+	display: none;
+}
+
+.buttons {
+	position: absolute;
+	top: 0;
+}
+
+.UI {
+	font-weight: bold;
+	color: white;
+}
+
+button {
+	margin: 0 0.4cm;
+	border-width: 2px;
+	border-radius: 10px;
+	height: 6vh;
+	width: 9vh;
+	background-color: black;
+	font-weight: inherit;
+	color: inherit;
+}
+
+p {
+	font-weight: inherit;
+	color: inherit;
+}
+
+#start_btn {
+	position: absolute;
+	top: 40vh;
+	left: center;
+}
+</style>	
+	
+	</head>
+	
+	<body onclick="start()">
+		<div class="app">
+			<center>
+				<canvas id="background" width="1000" height="2000"></canvas>
+				<canvas id="playfield" width="1000" height="2000"></canvas>
+				<div class="UI">			
+					<button onclick="move(-1, playfield, falling, true)">&larr;</button>
+					<button onclick="rotate(playfield, falling, true)">&#8635;</button>
+					<button onclick="move(1, playfield, falling, true)">&rarr;</button>
+					<br>
+					<p> Start </p>
+					<span class="multicolortext" >Connect with me:</span></h3>
+					<p align="left">
+					<a href="https://codepen.io/san3" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="san3" height="30" width="40" /></a>
+					<a href="https://dev.to/wahyu9kdl" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+					<a href="https://twitter.com/Awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="awfanspage" height="30" width="40" /></a>
+					<a href="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" height="30" width="40" /></a>
+					<a href="https://fb.com/awgroupchannel" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="awgroupchannel" height="30" width="40" /></a>
+					<a href="https://instagram.com/awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="awfanspage" height="30" width="40" /></a>
+					<a href=" https://dribbble.com/wahyu9kdl/shots " target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+					<a href="https://wahyu9kdl.medium.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+					<a href="https://m.youtube.com/channel/UC7CRa3nkxakAZx_aRsMwRyA/playlists" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="aw youtube channel" height="30" width="40" /></a>
+					<a href="https://open.spotify.com/show/4UoPUn3e0VhJ6MGOwdsrHV" target="blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="http://feedproxy.google.com/~r/blogspot/ghpgr/~3/vyr1fhc7dbi/informasi-cara-mendapatkan-ribuan.html" height="30" width="40" /></a>
+					<a href=" https://wahyu9kdl.github.io/wahyu9kdl" ><img align="center" src=" https://camo.githubusercontent.com/5b09aa408358eda7cba977c95dccaf65b070ed679c9be064297a11161058d1f2/68747470733a2f2f312e62702e626c6f6773706f742e636f6d2f2d735749774852616b54744d2f594a7068586a65796f46492f41414141414141414339632f37747230382d4d665f387379524457346c4c30514e7042564431773734772d6841434c63424741735948512f733630302f6c6f676f355f31315f31353330322e706e67 " height="30" width="40" /></a>		
+					<a href="https://www.alhikmah.my.id" ><img align="center" src="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl/main/logo.png" height="30" width="40" /></a>
+					</p>
+					
+					<footer style="background-color: #222; color: #ddd;padding: 24px 30px; text-align: right;font-weight: bold;">
+					<span id="year"></span> <a style="text-decoration: none; color: #ddd;" href="https://wahyu9kdl.github.io">Wahyu9kdl ©️ TOOLS</a>
+					</footer>
+				</div>
+			</center>
+		</div>
+		<div class="hidden">
+			<img id="square" src="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl.github.io/main/img/Aw_square.png" width="100" height="100">
+		</div>
+		
+		
+	<script type="text/javascript">
+	function Noise(c) {
+	this.complexity = c;
+	this.noise = new Array(this.complexity);
+	this.initialize = function() {
+	for (var i = 0; i < this.complexity; ++i) {
+	this.noise[i] = new Array(this.complexity);
+	for (var j = 0; j < this.complexity; ++j) {
+	this.noise[i][j] = new Array(this.complexity);
+	for (var k = 0; k < this.complexity; ++k) {
+	this.noise[i][j][k] = Math.random();
+	}
+	}
+	}
+	};
+	this.initialize();
+	this.lerp = function(a, b, t) {
+	return (1.0 - t) * a + b * t;
+	};
+	this.sample = function(x, y, z) {
+	if (x < 0) x = 0;
+	if (y < 0) y = 0;
+	if (z < 0) z = 0;
+	var dx = (this.complexity - 1) * x / 1.0;
+	var dy = (this.complexity - 1) * y / 1.0;
+	var dz = (this.complexity - 1) * z / 1.0;
+	const x_index = Math.floor(Math.abs(dx - 0.0001));
+	const y_index = Math.floor(Math.abs(dy - 0.0001));
+	const z_index = Math.floor(Math.abs(dz - 0.0001));
+	dx = Math.abs(dx - x_index);
+	dy = Math.abs(dy - y_index);
+	dz = Math.abs(dz - z_index);
+	const cube = { // [front/back][left/right][top/bot]
+	top_front_left: this.noise[z_index][y_index][x_index],
+	top_front_right: this.noise[z_index][y_index + 1][x_index],
+	bot_front_left: this.noise[z_index][y_index][x_index + 1],
+	bot_front_right: this.noise[z_index][y_index + 1][x_index + 1],
+	
+	top_back_left: this.noise[z_index + 1][y_index][x_index],
+	top_back_right: this.noise[z_index + 1][y_index + 1][x_index],
+	bot_back_left: this.noise[z_index + 1][y_index][x_index + 1],
+	bot_back_right: this.noise[z_index + 1][y_index + 1][x_index + 1]
+	};
+	const top_front = this.lerp(cube.top_front_left, cube.top_front_right, dy);
+	const bot_front = this.lerp(cube.bot_front_left, cube.bot_front_right, dy);
+	const front = this.lerp(top_front, bot_front, dx);
+	const top_back = this.lerp(cube.top_back_left, cube.top_back_right, dy);
+	const bot_back = this.lerp(cube.bot_back_left, cube.bot_back_right, dy);
+	const back = this.lerp(top_back, bot_back, dx);
+	return this.lerp(front, back, dz);
+	};
+	this.wrapz = function() {
+	const temp = this.noise.pop();
+	this.noise.splice(0, 0, temp);
+	};
+	}
+	</script>	
+	<script type="text/javascript">
+	var game_interval = 0;
+	
+	const canvas = document.getElementById("playfield");
+	const width = canvas.width, height = canvas.height, main = canvas.getContext("2d"), bg = document.getElementById("background").getContext("2d");
+	main.fillStyle = "rgba(255, 0, 0, 0.6)";
+	bg.lineWidth = 5;
+	
+	const square_img = document.getElementById("square");
+	
+	var playfield = new Array(22), dirty_rows = new Array(20), dirty = false, t = 0;
+	
+	const set_field = function(){
+	for (let i = 0; i < playfield.length; ++i){ playfield[i] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];}
+	for (let i = 0; i < dirty_rows.length; ++i){ dirty_rows[i] = true;}
+	dirty = true;
+	};
+	set_field();
+	
+	const R = new Noise(10), G = new Noise(10), B = new Noise(10), A = new Noise(10);
+	
+	var falling = {
+	shape: [],
+	rot: 0,
+	loc: [],
+	color: "",
+	width: 0
+	};
+	
+	const check_clear = function(max){ // todo: check and clear up to max
+	for (var row = 0; row <= max && row < playfield.length; ++row){
+	if (playfield[row][0] > 0 &&
+	playfield[row][1] > 0 &&
+	playfield[row][2] > 0 &&
+	playfield[row][3] > 0 &&
+	playfield[row][4] > 0 &&
+	playfield[row][5] > 0 &&
+	playfield[row][6] > 0 &&
+	playfield[row][7] > 0 &&
+	playfield[row][8] > 0 &&
+	playfield[row][9] > 0){
+	playfield.splice(row, 1);
+	playfield.splice(0, 0, [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+	for (var i = 0; i <= row; ++i){
+	if (i > 1 && !dirty_rows[i-2]){
+	dirty_rows[i-2] = true;
+	if (!dirty) dirty = true;
+	}
+	}
+	}
+	}
+	}
+	
+	const draw = function(){
+	bg.clearRect(0,0,width,height);
+	for (var i = 0; i < 10; ++i){
+	for (var j = 19; j < 40; ++j){
+	const x = i*width/10 + 10, y = (j-20)*(height)/20 + 10;
+	bg.strokeStyle = "rgba(" + (255*R.sample((x + 40)/width, (y + 40)/height, t)).toString() + "," + (255*G.sample((x + 40)/width, (y + 40)/height, t)).toString() + "," + (255*B.sample((x + 40)/width, (y + 40)/height, t)).toString() + "," + Math.max(Math.pow(A.sample((x + 40)/width, (y + 40)/height, t), 4), 0.1).toString() + ")";
+	bg.strokeRect(x, y, 80, 80);
+	}
+	}
+	t += 0.0015;
+	if (t > 1){t -= 1;R.wrapz();G.wrapz();B.wrapz();A.wrapz();}
+	if (dirty){
+	for (var i = 0; i < 20; ++i){
+	if (dirty_rows[i]){
+	main.clearRect(0, i * 100, width, 100);
+	for (var j = 0; j < 10; ++j){
+	if (playfield[i+2][j] > 0){
+	main.drawImage(square_img, j * 100, i * 100);
+	switch(playfield[i+2][j]){ // note: static colors looks dull
+	case(1): // cyan
+	main.fillStyle = "rgba(0, 255, 255, 0.65)"
+	break;
+	case(2): // blue
+	main.fillStyle = "rgba(0, 0, 255, 0.65)"
+	break;
+	case(3): // orange
+	main.fillStyle = "rgba(255, 165, 0, 0.65)"
+	break;
+	case(4): // yellow
+	main.fillStyle = "rgba(255, 255, 0, 0.65)"
+	break;
+	case(5): // green
+	main.fillStyle = "rgba(0, 255, 0, 0.65)"
+	break;
+	case(6): // purple
+	main.fillStyle = "rgba(128, 0, 128, 0.65)"
+	break;
+	case(7): // red
+	main.fillStyle = "rgba(255, 0, 0, 0.65)"
+	break;
+	}
+	main.fillRect(j*100, i*100, 100, 100);
+	}
+	}
+	dirty_rows[i] = false;
+	}
+	}
+	dirty = false;
+	}
+	window.requestAnimationFrame(draw);
+	}
+	
+	window.requestAnimationFrame(draw);
+	
+	
+	const spawn = function(type){
+	switch (type){
+	case "I":
+	falling.shape = [[	[0, 0, 0, 0],
+	[1, 1, 1, 1],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0]],
+	[	[0, 0, 1, 0],
+	[0, 0, 1, 0],
+	[0, 0, 1, 0],
+	[0, 0, 1, 0]],
+	[	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[1, 1, 1, 1],
+	[0, 0, 0, 0]],
+	[	[0, 1, 0, 0],
+	[0, 1, 0, 0],
+	[0, 1, 0, 0],
+	[0, 1, 0, 0]]];
+	falling.rot = 0;
+	falling.loc = [0, 3];
+	falling.color = "cyan";
+	falling.width = 4;
+	// playfield[1][3] = playfield[1][4] = playfield[1][5] = playfield[1][6] = 1; // add checks for collision -> fail
+	break;
+	case "J":
+	falling.shape = [[	[2, 0, 0],
+	[2, 2, 2],
+	[0, 0, 0]],
+	[	[0, 2, 2],
+	[0, 2, 0],
+	[0, 2, 0]],
+	[	[0, 0, 0],
+	[2, 2, 2],
+	[0, 0, 2]],
+	[	[0, 2, 0],
+	[0, 2, 0],
+	[2, 2, 0]]];
+	falling.rot = 0;
+	falling.loc = [0, 3];
+	falling.color = "blue";
+	falling.width = 3;
+	break;
+	case "L":
+	falling.shape = [[	[0, 0, 3],
+	[3, 3, 3],
+	[0, 0, 0]],
+	[	[0, 3, 0],
+	[0, 3, 0],
+	[0, 3, 3]],
+	[	[0, 0, 0],
+	[3, 3, 3],
+	[3, 0, 0]],
+	[	[3, 3, 0],
+	[0, 3, 0],
+	[0, 3, 0]]];
+	falling.rot = 0;
+	falling.loc = [0, 3];
+	falling.color = "orange";
+	falling.width = 3;
+	break;
+	case "O":
+	falling.shape = [[	[4, 4],
+	[4, 4]],
+	[	[4, 4],
+	[4, 4]],
+	[	[4, 4],
+	[4, 4]],
+	[	[4, 4],
+	[4, 4]]];
+	falling.rot = 0;
+	falling.loc = [0, 4];
+	falling.color = "yellow";
+	falling.width = 2;
+	break;
+	case "S":
+	falling.shape = [[	[0, 5, 5],
+	[5, 5, 0],
+	[0, 0, 0]],
+	[	[0, 5, 0],
+	[0, 5, 5],
+	[0, 0, 5]],
+	[	[0, 0, 0],
+	[0, 5, 5],
+	[5, 5, 0]],
+	[	[5, 0, 0],
+	[5, 5, 0],
+	[0, 5, 0]]];
+	falling.rot = 0;
+	falling.loc = [0, 3];
+	falling.color = "green";
+	falling.width = 3;
+	break;
+	case "T":
+	falling.shape = [[	[0, 6, 0],
+	[6, 6, 6],
+	[0, 0, 0]],
+	[	[0, 6, 0],
+	[0, 6, 6],
+	[0, 6, 0]],
+	[	[0, 0, 0],
+	[6, 6, 6],
+	[0, 6, 0]],
+	[	[0, 6, 0],
+	[6, 6, 0],
+	[0, 6, 0]]];
+	falling.rot = 0;
+	falling.loc = [0, 3];
+	falling.color = "purple";
+	falling.width = 3;
+	break;
+	case "Z":
+	falling.shape = [[	[7, 7, 0],
+	[0, 7, 7],
+	[0, 0, 0]],
+	[	[0, 0, 7],
+	[0, 7, 7],
+	[0, 7, 0]],
+	[	[0, 0, 0],
+	[7, 7, 0],
+	[0, 7, 7]],
+	[	[0, 7, 0],
+	[7, 7, 0],
+	[7, 0, 0]]];
+	falling.rot = 0;
+	falling.loc = [0, 3];
+	falling.color = "red";
+	falling.width = 3;
+	break;
+	}
+	for (var i = 0; i < falling.shape[0].length; ++i){
+	const row = falling.loc[0] + i;
+	for (var j = 0; j < falling.shape[0][i].length; ++j){
+	const col = falling.loc[1] + j;
+	if (falling.shape[0][i][j] > 0){
+	if (playfield[row][col] > 0){
+	clearInterval(game_interval);
+	started = false;
+	set_field();
+	break;
+	}
+	else if (falling.shape[0][i][j] > 0){
+	playfield[row][col] = falling.shape[0][i][j];
+	if (row > 1 && !dirty_rows[row - 2]){
+	dirty_rows[row - 2] = true;
+	dirty = true;
+	}
+	}
+	}
+	}
+	}
+	}
+	
+	var spawn_rand = function(){
+	const type = Math.random() * 7; // [0, 7) = ijlostz
+	if (type < 1){
+	spawn("I");
+	}
+	else if (type < 2){
+	spawn("J");
+	}
+	else if (type < 3){
+	spawn("L");
+	}
+	else if (type < 4){
+	spawn("O");
+	}
+	else if (type < 5){
+	spawn("S");
+	}
+	else if (type < 6){
+	spawn("T");
+	}
+	else{
+	spawn("Z");
+	}
+	}
+	
+	var test = function(row, col){
+	dirty_rows[row] = true;
+	playfield[row+2][col] = 1;
+	dirty = true;
+	}
+	
+	var fall = function(field, piece, render){
+	if (piece.shape.length != 4) return;
+	var valid = true;
+	for (var i = 0; i < piece.shape[piece.rot].length; ++i){
+	const row = piece.loc[0] + i;
+	for (var j = 0; j < piece.shape[piece.rot][i].length; ++j){
+	const col = piece.loc[1] + j;
+	if (col < 0 || col > 9){
+	continue;
+	}
+	if (piece.shape[piece.rot][i][j] > 0){
+	if (!((i+1 < piece.shape[piece.rot].length && piece.shape[piece.rot][i+1][j] > 0) ||
+	(row+1 < field.length && field[row+1][col] == 0))){
+	valid = false;
+	piece.shape = [];
+	break;
+	}
+	}
+	}
+	if (!valid) break;
+	}
+	if (valid){
+	for (var i = piece.shape[piece.rot].length-1; i >= 0; i--){
+	const row = piece.loc[0] + i;
+	for (var j = 0; j < piece.shape[piece.rot][i].length; ++j){
+	const col = piece.loc[1] + j;
+	if (col < 0 || col > 9){
+	continue;
+	}
+	if (piece.shape[piece.rot][i][j] > 0){
+	field[row][col] = 0;
+	field[row+1][col] = piece.shape[piece.rot][i][j];
+	if (render && row > 1 && !dirty_rows[row-2]){
+	dirty_rows[row - 2] = true;
+	}
+	if (render && row+1 > 1 && !dirty_rows[row-1]){
+	dirty_rows[row - 1] = true;
+	}
+	}
+	}
+	}
+	piece.loc[0] += 1;
+	if (render) dirty = true;
+	}
+	else{
+	check_clear(piece.loc[0] + piece.width - 1);
+	spawn_rand();
+	}
+	return valid;
+	}
+	
+	// rot 90deg clockwise
+	const rotate = function(field, piece, render){
+	if (piece.shape.length != 4) return;
+	var rot = 1;
+	while (rot < 4){
+	var check = piece.rot + rot;
+	if (check > 3) check -= 4;
+	var valid = true;
+	for (var i = 0; i < piece.width; ++i){
+	const row = piece.loc[0] + i;
+	for (var j = 0; j < piece.width; ++j){
+	if (piece.shape[check][i][j] > 0){
+	const col = piece.loc[1] + j;
+	if ((row >= field.length)){
+	valid = false;
+	break;
+	}
+	if (col < 0 || col > 9){
+	valid = false;
+	break;
+	}
+	if (piece.shape[piece.rot][i][j] == 0 && row < field.length && field[row][col] > 0){
+	valid = false;
+	break;
+	}
+	}
+	}
+	if (!valid) break;
+	}
+	if (!valid) rot++;
+	else break;
+	}
+	if (rot < 4){
+	for (var i = 0; i < piece.width; ++i){
+	const row = piece.loc[0] + i;
+	for (var j = 0; j < piece.width; ++j){
+	const col = piece.loc[1] + j;
+	if (col < 0 || col > 9){
+	continue;
+	}
+	if (piece.shape[piece.rot][i][j] > 0 && piece.shape[check][i][j] == 0){
+	field[row][col] = 0;
+	if (render && row > 1 && !dirty_rows[row-2]){
+	dirty_rows[row - 2] = true;
+	}
+	}
+	else if (field[row][col] == 0 && piece.shape[check][i][j] > 0){
+	field[row][col] = piece.shape[check][i][j];
+	if (render && row > 1 && !dirty_rows[row-2]){
+	dirty_rows[row - 2] = true;
+	}
+	}
+	}
+	}
+	piece.rot = check;
+	if (render) dirty = true;
+	}
+	return rot < 4;
+	}
+	
+	const move = function(x, field, piece, render){ // input x: -1, 1
+	if (piece.shape.length != 4) return;
+	var valid = true;
+	for (var i = 0; i < piece.width; ++i){
+	const row = piece.loc[0] + i;
+	for (var j = 0; j < piece.width; ++j){
+	if (piece.shape[piece.rot][i][j] > 0){
+	const col = piece.loc[1] + j + x;
+	if (col < 0 || col > 9){
+	valid = false;
+	break;
+	}
+	else if (field[row][col] > 0){
+	if ((j + x < piece.width && piece.shape[piece.rot][i][j + x] == 0) ||
+	(j + x < 0 || j + x >= piece.width)){
+	valid = false;
+	break;
+	}
+	}
+	}
+	}
+	if (!valid) break;
+	}
+	if (valid){
+	for (var i = 0; i < piece.width; ++i){
+	const row = piece.loc[0] + i;
+	for (var j = 0; j < piece.width; ++j){
+	const col = piece.loc[1] + j;
+	if (piece.shape[piece.rot][i][j] > 0){
+	field[row][col] =  0;
+	}
+	}
+	}
+	for (var i = 0; i < piece.width; ++i){
+	const row = piece.loc[0] + i;
+	for (var j = 0; j < piece.width; ++j){
+	const col = piece.loc[1] + j + x;
+	if (piece.shape[piece.rot][i][j] > 0){
+	field[row][col] =  piece.shape[piece.rot][i][j];
+	if (render && row > 1 && !dirty_rows[row - 2]){
+	dirty_rows[row - 2] = true;
+	}
+	}
+	}
+	}
+	piece.loc[1] += x;
+	if (render) dirty = true;
+	}
+	}
+	
+	var started = false;
+	const start = function(){
+	if (!started){
+	spawn_rand();
+	game_interval = setInterval(function(){fall(playfield, falling, true);}, 450);
+	started = true;
+	}
+	}
+	</script>	
+			
+			</body>
+</html>
