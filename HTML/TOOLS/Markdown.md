@@ -2,6 +2,8 @@
 
 Add badges to your Profile and Projects.
 
+[Markdown Editing](https://wahyu9kdl.github.io/HTML/TOOLS/Markdown.html)
+
 ## How to Use
 
 Copy the appropriate `![Name](link)` element and paste it in your Markdown file (e.g., `README.md`)
@@ -809,7 +811,7 @@ The project has a separate contribution file. Please adhere to the steps listed 
 
 ## Contact
 
-You can reach me on [Twitter @ileriayooo](https://twitter.com/Ileriayooo)
+You can reach me on [Twitter @Awfanspage](https://twitter.com/Awfanspage)
 
 ## License
 
