@@ -19,7 +19,10 @@ User-agent: Mediapartners-Google Allow: / blog-admin/admin-ajax.php
 Disallow: /cgi-bin/
 Disallow: /
 User-agent: *
-Page : https://wahyu9kdl.github.io
-Sitemap : https://wahyu9kdl.github.io/sitemap.xml
-Sitemap : https://wahyu9kdl.github.io/news-sitemap.xml
+Disallow: /search
+Disallow: /?m=0
+Disallow: /?m=1
+Sitemap: https://wahyu9kdl.github.io/sitemap.xml
+Sitemap: https://wahyu9kdl.github.io/news-sitemap.xml
 Sitemap: http://wahyu9kdl.github.io/feeds/posts/default?orderby=updated
+Sitemap: https://wahyu9kdl.github.io/sitemapimages.xml
