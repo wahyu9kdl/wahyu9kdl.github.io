@@ -249,6 +249,27 @@ $( document ).ready(function() {
 <img alt="open collective badge" src="https://opencollective.com/wahyu9kdl/tiers/sponsor/badge.svg?label=sponsor&color=brightgreen" />
 <object type="image/svg+xml" data="https://opencollective.com/wahyu9kdl/tiers/backer.svg?avatarHeight=36&width=400"></object>
 <script src="https://opencollective.com/wahyu9kdl/banner.js"></script>
+<div id="paypal-button-container-P-4WF80797503132036MIXUZVI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AeOdKtJbDLbt0CW5jVHQFk0UNnTxhqDnlsoPvdzzeEJQ8MF2YU6KjYxRSZGC_ft57oxQt-rDKn0_H4Fn&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-4WF80797503132036MIXUZVI'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-4WF80797503132036MIXUZVI'); // Renders the PayPal button
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
      crossorigin="anonymous"></script>
 <!-- Penelusuran bersponsor -->
