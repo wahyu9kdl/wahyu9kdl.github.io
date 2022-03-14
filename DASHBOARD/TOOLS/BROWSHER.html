@@ -308,7 +308,27 @@
 
 <h1><span class="multicolortext" >IN BROWSHER</h1></span>
 <script async src="https://cse.google.com/cse.js?cx=792e1c207270e2810"></script>
-<div class="gcse-search"></div>	
+<div class="gcse-search"></div>	<div id="paypal-button-container-P-4WF80797503132036MIXUZVI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AeOdKtJbDLbt0CW5jVHQFk0UNnTxhqDnlsoPvdzzeEJQ8MF2YU6KjYxRSZGC_ft57oxQt-rDKn0_H4Fn&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-4WF80797503132036MIXUZVI'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-4WF80797503132036MIXUZVI'); // Renders the PayPal button
+</script>
 	<footer style="background-color:none; color: #ddd;padding: 100px 20px; text-align: right;font-weight: bold;">
 	<span class="multicolortext">Connect with me:</span></h3>
 	<p align="left">
