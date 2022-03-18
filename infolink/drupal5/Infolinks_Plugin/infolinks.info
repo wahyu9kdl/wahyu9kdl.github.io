@@ -1,0 +1,10 @@
+; $Id: account_reminder.info,v 1.1.2.1 2008/03/21 09:32:21 jaydub Exp $
+name = Infolinks In Text Ads
+description = This module will automatically add your Infolinks script to your website pages.
+core = 5.x
+; Information added by drupal.org packaging script on 2008-10-09
+version = "5.x"
+core = "5.x"
+project = "infolinks"
+datestamp = "1223528403"
+
