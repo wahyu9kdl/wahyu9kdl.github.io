@@ -1,0 +1,34 @@
+package main
+
+import (
+    "io"
+    "log"
+    "net/http"
+
+    "github.com/Unleash/unleash-client-go/v3"
+)
+
+type metricsInterface struct {
+}
+
+func init() {
+    unleash.Initialize(
+        unleash.WithUrl("https://gitlab.com/api/v4/feature_flags/unleash/34603021"),
+        unleash.WithInstanceId("SagKSfs1tszzYzWeiMYt"),
+        unleash.WithAppName("AWDEV"), // Set to the running environment of your application
+        unleash.WithListener(&metricsInterface{}),
+    )
+}
+
+func helloServer(w http.ResponseWriter, req *http.Request) {
+    if unleash.IsEnabled("my_feature_name") {
+        io.WriteString(w, "Feature enabled\n")
+    } else {
+        io.WriteString(w, "hello, world!\n")
+    }
+}
+
+func main() {
+    http.HandleFunc("/", helloServer)
+    log.Fatal(http.ListenAndServe(":8080", nil))
+}
