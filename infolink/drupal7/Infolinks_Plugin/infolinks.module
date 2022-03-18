@@ -1,0 +1,231 @@
+<?php
+// $Id: infolinks.module $
+
+/**
+ *
+ *
+ * configured under "/admin/settings/infolinks" .
+ *
+ */
+
+/**
+ * Implementation of hook_help().
+ */
+/**
+ * Implementation of hook_permission().
+ */
+define('INFOLINKS_VERSION',"D_1.1.2.1");
+
+function infolinks_permission() {
+    return array(
+        "administer infolinks" => array(
+            'title' => t('administer infolinks'),
+            'description' => t('Perform administration tasks for infolinks module.')
+        )
+    );
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function infolinks_menu() {
+    $items = array();
+
+    $items[ 'admin/settings/infolinks' ] = array(
+        'title' => 'Infolinks In Text Ads',
+        'description' => 'This module will automatically add your Infolinks script to your website pages.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array( 'infolinks_settings' ),
+        'access callback' => 'user_access',
+        'access arguments' => array( 'administer infolinks' ),
+    );
+    return $items;
+}
+
+/**
+ * For the admin/settings/infolinks page
+ */
+function infolinks_settings() {
+
+    global $base_url;
+
+    $module_path = drupal_get_path('module', 'infolinks');
+
+    drupal_add_css($module_path . '/infolinks.css');
+
+    $form = array();
+
+    $form[ 'infolinks_initials' ] = array(
+        '#value' => t('This module will automatically add your Infolinks script to your website pages.'),
+    );
+    $variables = array(
+        'path' => $module_path . '/Bubble.gif',
+        'alt' => '',
+        'title' => '',
+        'attributes' => array( 'style' => 'float:right;' ),
+    );
+    $form[ 'infolinks_image' ] = array(
+        '#value' => theme_image($variables),
+    );
+
+    $form[ 'infolinks_status' ] = array(
+        '#type' => 'radios',
+        '#title' => t('Infolinks in Text Ads'),
+        '#options' => array( 1 => t('On'), 0 => t('Off') ),
+        '#default_value' => variable_get('infolinks_status', 1),
+        '#size' => 10,
+        '#required' => TRUE,
+    );
+
+    $form[ 'infolinks_publisher' ] = array(
+        '#type' => 'textfield',
+        '#title' => t('Publisher ID'),
+        '#default_value' => variable_get('infolinks_publisher', ''),
+        '#description' => t('Please enter your infolinks pid'),
+        '#required' => TRUE,
+        '#size' => 10,
+    );
+
+    $form[ 'infolinks_website' ] = array(
+        '#type' => 'textfield',
+        '#title' => t('Website ID'),
+        '#default_value' => variable_get('infolinks_website', ''),
+        '#description' => t('Please enter your website wsid'),
+        '#required' => TRUE,
+        '#size' => 10,
+    );
+    $form[ 'infolinks_excludes' ] = array(
+        '#type' => 'textfield',
+        '#title' => t('Exclude from the following pages'),
+        '#default_value' => variable_get('infolinks_excludes', ''),
+        '#description' => t("Please enter page's nids (comma separated). Infolinks will not be added to these pages."),
+        '#size' => 40,
+    );
+
+    $form[ 'infolinks_registered_members' ] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Disable ads for registered members'),
+        '#default_value' => variable_get('infolinks_registered_members', 0),
+    );
+
+    $form[ 'infolinks_show_search' ] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Show ads in search results'),
+        '#default_value' => variable_get('infolinks_show_search', 0),
+    );
+
+    $form[ 'infolinks_show_forums' ] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Show ads in forums'),
+        '#default_value' => variable_get('infolinks_show_forums', 0),
+    );
+
+    $form[ 'infolinks_show_polls' ] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Show ads in polls'),
+        '#default_value' => variable_get('infolinks_show_polls', 0),
+    );
+
+    $form[ 'infolinks_keytag' ] = array(
+        '#type' => 'radios',
+        '#title' => t('Show in header / titles'),
+        '#options' => array( 1 => t('On'), 0 => t('Off') ),
+        '#default_value' => variable_get('infolinks_keytag', 0),
+        '#size' => 10,
+        '#required' => TRUE,
+    );
+
+    $form[ 'infolinks_end' ] = array(
+        '#value' => t('To view or edit your Infolinks account settings, please visit the') . ' ' . l(t('Integration guide'), 'http://www.infolinks.com/signin/implementation.html', array( 'attributes' => array( 'target' => '_blank' ) )) . ' ' . t('and') . ' ' . l(t('our FAQs'), 'http://www.infolinks.com/faq.html', array( 'attributes' => array( 'target' => '_blank' ) )) . t(', or contact us at') . ' ' . l('support@infolinks.com', 'mailto:support@infolinks.com', array( 'absolute' => TRUE )) . '<div style="clear:both;"></div>'
+    );
+
+    return system_settings_form($form);
+}
+
+/**
+ * module settings form validation
+ */
+function infolinks_settings_validate( $form, &$form_state ) {
+    if ( !is_numeric($form_state[ 'values' ][ 'infolinks_publisher' ]) ) {
+        form_set_error('infolinks_publisher', t('You must enter a number for "Pulisher ID".'));
+    }
+
+    if ( !is_numeric($form_state[ 'values' ][ 'infolinks_website' ]) ) {
+        form_set_error('infolinks_website', t('You must enter a number for "Website ID".'));
+    }
+}
+
+//*********** user side script generation ***********//
+function infolinks_page_build( &$page ) {
+
+    $status = variable_get('infolinks_status', 0);
+    $publisher_id = variable_get('infolinks_publisher', 0);
+    $website_id = variable_get('infolinks_website', 0);
+    $registered_members = variable_get('infolinks_registered_members', 0);
+    $show_search = variable_get('infolinks_show_search', 0);
+    $show_forums = variable_get('infolinks_show_forums', 0);
+    $show_polls = variable_get('infolinks_show_polls', 0);
+    $excludes = variable_get('infolinks_excludes', 0);
+    $keytag = variable_get('infolinks_keytag', 0);
+
+    global $base_url;
+
+    $module_path = drupal_get_path('module', 'infolinks');
+    $output = '';
+    if ( $keytag == 0 ) {
+        $classArray = array( ".breadcrumb" );
+        $IdArray = array( "#headerimgss" );
+        $KeyArray = array( "h1", "h2", "h3" );
+        $cJoin = '';
+        $idJoin = '';
+        $keyJoin = '';
+        for ( $c = 0; $c < count($classArray); $c++ ) {
+            $cJoin .= "jQuery('" . $classArray[ $c ] . "').before('<!--INFOLINKS_OFF-->');";
+            $cJoin .= "jQuery('" . $classArray[ $c ] . "').after('<!--INFOLINKS_ON-->');";
+        }
+
+        for ( $i = 0; $i < count($IdArray); $i++ ) {
+            $idJoin .= "jQuery('" . $IdArray[ $i ] . "').before('<!--INFOLINKS_OFF-->');";
+            $idJoin .= "jQuery('" . $IdArray[ $i ] . "').after('<!--INFOLINKS_ON-->');";
+        }
+
+        for ( $k = 0; $i < count($KeyArray); $i++ ) {
+            $keyJoin .= "jQuery('" . $KeyArray[ $k ] . "').before('<!--INFOLINKS_OFF-->');";
+            $keyJoin .= "jQuery('" . $KeyArray[ $k ] . "').after('<!--INFOLINKS_ON-->');";
+        }
+
+        $output = '
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+		' . $cJoin . $idJoin . $keyJoin . '
+			});
+		</script>';
+		
+    }
+
+    $excludes = explode(',', $excludes);
+
+    $output .= '<script type="text/javascript"> var infolink_pid = ' . $publisher_id . '; var infolink_wsid = ' . $website_id . '; var infolinks_plugin_version = "'. INFOLINKS_VERSION .'";</script> <script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>';
+
+    global $user, $node;
+    $request = arg();
+
+    if ( $request[ 0 ] == 'node' and  array_key_exists(1, $request) and $request[ 1 ] > 0 ) {
+        $node = node_load($request[ 1 ]);
+
+        if ( ( $node->type == 'poll' and $show_polls == 0 ) or ( $node->type == 'forum' and $show_forums == 0 ) ) {
+            $output = '';
+        } // disable for polls and forum
+
+        if ( in_array($node->nid, $excludes) ) {
+            $output = '';
+        } // disable for excluded nodes
+    }
+    //
+    if ( $status == 0 or ( $user->uid && $registered_members == 1 )  or ( $request[ 0 ] == 'search' and $show_search == 0 ) or ( $user->uid && $user->uid == 1 ) ) {
+        $output = '';
+    }
+    $page[ 'content' ][ 'devel' ] = array(
+        '#markup' => $output,
+    );
+}

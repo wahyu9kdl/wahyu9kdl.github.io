@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ */
+
+
+/**
+ * Implementation of hook_install().
+ */
+function infolinks_install() {
+
+	variable_set('infolinks_status', 1);
+	variable_set('infolinks_show_search', 1);
+	variable_set('infolinks_show_forums', 1);
+	variable_set('infolinks_show_polls', 1);
+    variable_set('infolinks_publisher', 3361208);
+	variable_set('infolinks_website', 0);
+}
+
+
+/**
+ * Implementation of hook_uninstall().
+ */
+ 
+function infolinks_uninstall() {
+
+	variable_set('infolinks_status',0);
+	variable_set('infolinks_publisher','');
+	variable_set('infolinks_website','');
+	variable_set('infolinks_show_search',0);
+	variable_set('infolinks_show_forums',0);
+	variable_set('infolinks_show_polls',0);
+}
+
