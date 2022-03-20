@@ -1,0 +1,8 @@
+on: pull_request
+
+jobs:
+  open_in_codesandbox:
+    name: AWDEV
+    runs-on: ubuntu-latest
+    steps:
+    - uses: codesandbox/awdev@v1
