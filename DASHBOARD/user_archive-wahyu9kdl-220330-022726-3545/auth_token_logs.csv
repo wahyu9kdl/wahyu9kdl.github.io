@@ -1,0 +1,5 @@
+id,action,user_auth_token_id,client_ip,auth_token_hash,created_at,path,user_agent
+1100495,generate,118921,140.213.58.51,Xs3GN...,2022-03-30 01:38:20 UTC,/u,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"
+1100510,rotate,118921,140.213.58.51,JsiZ/...,2022-03-30 02:11:54 UTC,/t/thank-you-for-spending-time-with-us/241769/1,"Mozilla/5.0 (Linux; Android 10; SM-A015F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36"
+1100516,rotate,118921,140.213.58.51,qwb4S...,2022-03-30 02:22:25 UTC,/u/wahyu9kdl.json,"Mozilla/5.0 (Linux; Android 10; SM-A015F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36"
+1100502,rotate,118921,140.213.58.51,BVWCJ...,2022-03-30 01:48:42 UTC,/notifications,"Mozilla/5.0 (Linux; Android 10; SM-A015F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36"
