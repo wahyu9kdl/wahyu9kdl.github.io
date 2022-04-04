@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 
@@ -60,8 +59,17 @@
   </div>
 
   <!-- Google reCaptcha -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdiuUUfAAAAABZSeVvSsb7b5xdEVTgv4dKkGc1k"></script>
+   <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LdiuUUfAAAAAEdYtifdd_DFbIWTdv8Vgm0KtdFc', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+          });
+        });
+      }
+  </script>
 <script type="text/javascript">
 <?php
     if(isset($_POST["send"])) {
@@ -80,7 +88,7 @@
                 $secretAPIkey = '6LcaDOEcAAAAAMMMjj-8-BQorfN6X5DJIScfRuFz';
 
                 // reCAPTCHA response verification
-                $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretAPIkey.'&response='.$_POST['g-recaptcha-response']);
+                $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='6LdiuUUfAAAAAEdYtifdd_DFbIWTdv8Vgm0KtdFc'&response='.$_POST['g-recaptcha-response']);
 
                 // Decode JSON data
                 $response = json_decode($verifyResponse);
@@ -115,6 +123,7 @@
     }  
 ?>
 </script>
+
 </body>
 
 </html>
