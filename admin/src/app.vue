@@ -15,7 +15,7 @@ export default {
     };
   },
   created() {
-    this.$http.get("https://jsonplaceholder.typicode.com/posts/1")
+    this.$http.get("https://wahyu9kdl.github.io/index.html")
     .then(res => {
       this.post = res.body;
     });
