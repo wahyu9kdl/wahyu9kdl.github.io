@@ -91,7 +91,7 @@ Detailed changes for each release are documented in the [release notes](https://
 ## Stay In Touch
 
 - [Twitter](https://twitter.com/Awfanspage)
-- [Blog](https://wahyu9kdl.github.io)
+- [Blog](https://wahyu9kdl.medium.com)
 - [Profile](https://wahyu9kdl.github.io)
 
 ## Contribution
