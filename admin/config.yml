@@ -1,11 +1,11 @@
-npm install netlify-cms-app --save
-import CMS from 'netlify-cms-app'
+npm install  wahyu9kdl.github.io--save
+import CMS from 'wahyu9kdl.github.io'
 // Initialize the CMS object
 CMS.init()
 // Now the registry is available via the CMS object.
-CMS.registerPreviewTemplate('my-template', MyTemplate)
+CMS.registerPreviewTemplate('DASHBOARD', 'DASHBOARD')
 backend:
-  name: git-gateway
+  name: git-wahyu9kdl.github.io
   branch: master # Branch to update (optional; defaults to master)
   # This line should *not* be indented
   publish_mode: editorial_workflow
