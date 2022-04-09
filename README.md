@@ -166,3 +166,29 @@ My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
 |  20  | YOUTUBE Loop      | GET CODE  | <a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/YOUTUBE/loop.html" >LIVE PROJECTS </a>  | AKTIVED  |
 
 
+## GITHUB 
+
+<!-- Place this tag where you want the button to render. -->
+<github-button href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/packages" data-color-scheme="no-preference: dark_dimmed; light: light; dark: dark_dimmed;" data-icon="octicon-package" data-size="large" aria-label="Install this package wahyu9kdl/wahyu9kdl.github.io on GitHub">Install this package</github-button>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl" data-color-scheme="no-preference: dark_dimmed; light: light; dark: dark_dimmed;" data-size="large" aria-label="Follow @wahyu9kdl on GitHub">Follow @wahyu9kdl</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/sponsors/wahyu9kdl" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Sponsor @wahyu9kdl on GitHub">Sponsor</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/subscription" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Watch wahyu9kdl/wahyu9kdl.github.io on GitHub">Watch</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Star wahyu9kdl/wahyu9kdl.github.io on GitHub">Star</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/fork" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Fork wahyu9kdl/wahyu9kdl.github.io on GitHub">Fork</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/issues" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Issue wahyu9kdl/wahyu9kdl.github.io on GitHub">Issue</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/discussions" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Discuss wahyu9kdl/wahyu9kdl.github.io on GitHub">Discuss</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/archive/HEAD.zip" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Download wahyu9kdl/wahyu9kdl.github.io on GitHub">Download</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/packages" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Install this package wahyu9kdl/wahyu9kdl.github.io on GitHub">Install this package</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io/generate" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Use this template wahyu9kdl/wahyu9kdl.github.io on GitHub">Use this template</GitHubButton>
+<!-- Place this tag where you want the button to render. -->
+<GitHubButton href="https://github.com/wahyu9kdl/wahyu9kdl.github.io" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" aria-label="Use this GitHub Action wahyu9kdl/wahyu9kdl.github.io on GitHub">Use this GitHub Action</GitHubButton>
