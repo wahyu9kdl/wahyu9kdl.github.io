@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website downloader - Take any website offline.</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="socket.io/socket.io.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+  </head>
+  <body>
+    
+
+<!-- partial:index.partial.html -->
+<header>
+  <div aria-busy="true" id="progress" hidden aria-label="Loading, please wait." role="progressbar"></div>
+</header>
+<main role="main">
+  <img src="https://www.google.com/inbox/assets/images/intro/intro-logo.png" width="100" alt="" />
+  <h1>Website Downloader</h1>
+  <p>Download all the source code and assets of any website </p>
+   <div class="container">
+  <div class="row">
+    <div class="col-lg-12" style="float: none; margin: 0 auto;">
+      <div id="custom-search-input">
+          <form method="get" class="form" action="https://site-dwloader.herokuapp.com/search">
+        <div class="input-group col-md-12">
+                <input type="text" class="form-control input-lg" id="website" placeholder="https://www.google.com" />
+                <span class="input-group-btn">
+                    <button class="btn btn-info btn-lg" id="download" type="button">
+                        <i class="glyphicon glyphicon-download"></i>
+                    </button>
+                </span><br>
+              </form>
+
+        </div><br>
+          <center><!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/Ahmadibrahiim/Website-downloader" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Ahmadibrahiim/Website-downloader on GitHub">Star</a></center>
+              
+      </div>
+      <br>
+    </div>
+  </div>
+  <h5 hidden id='nFilesP'>Total Downloaded file: <span  id='nFiles' style="color: red;font-weight: bold">10</span></h5>
+  <p  class="log" id='log'></p>
+  <button style="display: none" class="btn btn-success">Download website assets</button>
+</div> 
+
+
+  
+</main>
+<!-- partial -->
+  
+
+  </body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120895783-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120895783-4');
+</script>
+
+<script>
+  var numberOfFiles = 0;
+  const downloadWebsite = document.getElementsByClassName('btn-success')[0];
+  // connect to current socket.io server
+  var socket = io.connect(document.URL);
+  if(!localStorage['token'])
+  localStorage['token']=generateToken(20);
+  
+  // wait for events for this token
+  socket.on(localStorage['token'],(event)=>{
+  console.log(event)
+  document.getElementById('progress').hidden=false;
+  if(event.progress=="Converting")
+  {
+    log.innerHTML=(`<h5>100%! Compressing your website...</h5><br>`)
+
+  }
+   else if(event.progress=="Completed")
+   {
+        document.getElementById('progress').hidden=true;
+        log.innerHTML=(`<code>Compressing completed successfully !</code><br>`)
+        downloadWebsite.style='display:'
+        downloadWebsite.onclick=function()
+        {
+         window.location='/sites/'+event.file+".zip";
+        }
+
+   }
+   else
+   {
+        const log = document.getElementById('log');
+        if(event.progress.includes('200 OK'))
+        numberOfFiles++;
+        document.getElementById('nFilesP').hidden=false;
+        document.getElementById('nFiles').innerHTML=numberOfFiles
+        log.innerHTML=(`<code> ${event.progress}</code><br>`)
+   }
+  })
+  
+  // Download a website on click
+   const downloadBtn =  document.getElementById("download");
+   downloadBtn.onclick=()=>{
+        var website = document.getElementById('website').value
+        console.log("Now downloading the website ... %s",website)
+        socket.emit('request', { token: localStorage['token'] , website});
+   }
+
+
+
+
+
+  // Generate token for each user for the first time.
+  function generateToken(n) {
+    var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var token = '';
+    for(var i = 0; i < n; i++) {
+        token += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return token;
+}
+</script>
+
+
+</html>
+
