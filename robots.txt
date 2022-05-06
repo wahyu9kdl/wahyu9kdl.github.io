@@ -15,7 +15,8 @@ User-agent: Slurp
 Allow: /
 User-agent: bingbot
 Allow: /
-User-agent: Mediapartners-Google Allow: / blog-admin/admin-ajax.php
+User-agent: *
+Mediapartners-Google Allow: / blog-admin/admin-ajax.php
 Disallow: /cgi-bin/
 Disallow: /
 User-agent: *
@@ -26,3 +27,8 @@ Sitemap: https://wahyu9kdl.github.io/sitemap.xml
 Sitemap: https://wahyu9kdl.github.io/news-sitemap.xml
 Sitemap: http://wahyu9kdl.github.io/feeds/posts/default?orderby=updated
 Sitemap: https://wahyu9kdl.github.io/sitemapimages.xml
+Sitemap: https://www.google.com/ping?sitemap=https://wahyu9kdl.github.io/sitemap.xml
+Sitemap: https://www.bing.com/ping?sitemap=https://wahyu9kdl.github.io/sitemap.xml
+Sitemap: https://www.yahoo.com/ping?sitemap=https://wahyu9kdl.github.io/sitemap.xml
+Sitemap: https://www.yandex.com/ping?sitemap=https://wahyu9kdl.github.io/sitemap.xml
+Sitemap: https://www.duckdugo.com/ping?sitemap=https://wahyu9kdl.github.io/sitemap.xml
