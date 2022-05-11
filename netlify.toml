@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://awdev.netlify.app"
+  to = "https://wahyu9kdl.github.io.com"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/old-path"
+  to = "/new-path"
+  status = 301
+  force = false
+  query = {path = ":path"} #  apply this rule for /old-path?path=example
+  conditions = {Language = ["en","es"], Country = ["US"]}
+
+[[redirects]]
+  from = "/DASHBOARD/"
+  to = "/dashboard/"
