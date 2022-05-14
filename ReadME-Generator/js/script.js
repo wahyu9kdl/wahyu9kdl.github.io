@@ -22,7 +22,7 @@ new Vue({
             data: {
                 tableOfContent: true,
                 enableHeaderImage: true,
-                userName: "ShaanCoding",
+                userName: "wahyu9kdl",
                 repoName: "ReadME-Generator",
                 logoURL: "images/logo.png",
                 headLine: "ReadME Generator",
@@ -84,15 +84,15 @@ new Vue({
     methods: {
         initalizeButtons() {
             this.data.authors.push({
-                authorName: 'Wahyu9kdl',
+                authorName: 'wahyu9kdl',
                 authorDesc: 'Comp Sci Student',
-                authorURL: 'https://github.com/wahyu9kdl/',
+                authorURL: 'https://wahyu9kdl.github.io/',
                 authorContribution: 'Built ReadME Template'
             });
 
             this.data.acknowledgements.push({
-                acknowledgementName: 'ShaanCoding',
-                acknowledgementURL: 'https://github.com/wahyu9kdl/'
+                acknowledgementName: ' wahyu9kdl ',
+                acknowledgementURL: ' https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fwahyu9kdl '
             });
 
             this.data.acknowledgements.push({
