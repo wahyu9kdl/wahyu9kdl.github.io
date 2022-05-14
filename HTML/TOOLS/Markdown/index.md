@@ -57,6 +57,22 @@ Copy the appropriate `![Name](link)` element and paste it in your Markdown file 
   - [Contact](#contact)
   - [License](#license)
 
+<script async src="https://cse.google.com/cse.js?cx=db5f08cfff3041318"></script>
+<div class="gcse-search"></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+     crossorigin="anonymous"></script>
+<!-- HIKMAH BELAJAR -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5295583488737876"
+     data-ad-slot="2408597411"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 ### Artificial Intelligence and Bots
 
 | Name             | Badge                                                                                                                                   | Markdown                                                                                                                                  |
