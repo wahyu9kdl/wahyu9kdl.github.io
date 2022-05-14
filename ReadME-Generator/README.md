@@ -19,7 +19,10 @@
     .
     <a href="https://wahyu9kdl.github.io/issues">Report Bug</a>
     .
-    <a href="https://wahyu9kdl.github.io/issues">Request Feature</a>
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown.html ">Markdown Editing</a>
+    .
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown/">Markdown Badges</a>
+    
   </p>
 </p>
 
@@ -99,6 +102,21 @@ Coming Soon!
 
 See the [open issues](https://github.com/wahyu9kdl/wahyu9kdl.github.io/ReadME-Generator/issues) for a list of proposed features (and known issues).
 
+
+<script async src="https://cse.google.com/cse.js?cx=db5f08cfff3041318"></script>
+<div class="gcse-search"></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-5295583488737876"
+     data-ad-slot="1819124764"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -121,7 +139,7 @@ Distributed under the MPL-2.0 License. See [LICENSE](https://github.com/wahyu9kd
 
 ## Authors
 
-* **@wahyu9kdl** - *Comp Sci Student* - [wahyu9kdl](https://github.com/wahyu9kdl/) - *All Work*
+* **wahyu9kdl** - *Comp Sci Student* - [wahyu9kdl](https://github.com/wahyu9kdl/) - *All Work*
 
 ## Acknowledgements
 
