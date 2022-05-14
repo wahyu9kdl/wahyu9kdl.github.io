@@ -121,7 +121,7 @@ Distributed under the MPL-2.0 License. See [LICENSE](https://github.com/wahyu9kd
 
 ## Authors
 
-* **Shaan Khan** - *Comp Sci Student* - [wahyu9kdl](https://github.com/wahyu9kdl/) - *All Work*
+* **@wahyu9kdl** - *Comp Sci Student* - [wahyu9kdl](https://github.com/wahyu9kdl/) - *All Work*
 
 ## Acknowledgements
 
