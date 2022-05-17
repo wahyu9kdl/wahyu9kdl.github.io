@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<meta name ="description" content="A free online HTML5 template page generator with multiple options and export functionality.">
+ 	<meta name="author" content="Awdev">
+ 	<meta name="keywords" content="html5, template page generator, html, template, generator,awdev,wahyu9kdl">
+ 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/htmltempgen.min.js"></script>
+	<link rel="stylesheet" href="css/htmltempgen.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<script type="text/javascript" src="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/js/bootstrap-extend.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/css/bootstrap-extend.min.css"/>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <title>HTML5 Template Generator - Awdev.eu.org - Wahyu9kdl </title>
+  <link rel="icon" type="image/png" href="favicon.png">
+ <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png"> 
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://wahyu9kdl.github.io/faq.html">
+ <meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+ <meta content='2f898b29394a4156964b39f56d9f579e5a97dd1e' name='Open Collective GraphQL API'/>
+ <meta content='general' name='rating'/>
+ <meta content='https://www.facebook.com/Awgroupchannel/' property='article:publisher'/><meta content='https://www.blogger.com/profile/13665508756481372754' property='article:author'/>
+ <meta content='https://www.facebook.com/AwGroupChannel/' property='article:author'/>
+ <meta expr:content='data:blog.title' property='og:site_name'/>
+ <meta content='5674641545910991' property='fb:app_id'/>
+ <meta content='118205510448983' property='fb:admins'/>
+ <meta content='en_US' property='og:locale'/>
+ <meta content='en_GB' property='og:locale:alternate'/>
+ <meta content='https://id.quora.com/profile/Ahmad-Wahyudi-25' property='article:author'/>
+ <meta content='Ahmad wahyudi' name='Author-Qoura'/><meta content='https://id.pinterest.com/blanzcye' property='article:author'/>
+ <meta content='Ahmad wahyudi' name='Author'/><meta content='all' name='spiders'/>
+ <meta content='index, follow, noodp, noydir' name='robots'/><meta content='Index, Follow' name='robots'/>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+ crossorigin="anonymous"></script>
+ <script async='async' custom-element='amp-ad' src='https://cdn.ampproject.org/v0/amp-ad-0.1.js'/>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ 
+ gtag('config', 'G-VSD8HWB5RG');
+ </script>
+ <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
+ 
+ </head>
+ <body>
+ 	<div class="container-fluid">
+ 		<div class="row">
+ 			<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+ 				<h1>HTML<i class="fa fa-html5 fa-lg" aria-hidden="true"></i> Template Generator <small class="versionNumbering"></small></h1><br>
+ 			</div>
+ 		</div>
+<!-- Modal dialog for reset -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Reset template</h4>
+          </div>
+          <div class="modal-body">
+            All your changes will be lost. Are you sure you want to continue?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary" id="reset-confirm">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Modal dialog for first time users -->
+    <div class="modal fade" id="newUserModal" tabindex="-1" role="dialog" aria-labelledby="newUserModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="newUserModalLabel">Quick start guide</h4>
+          </div>
+          <div class="modal-body">
+            <ul>
+            <li>Use each of the tabs at the top to specify your HTML page's content, libraries, metadata and resources. All changes are applied immediately to your generated template.</li>
+            <li>View your generated template under the <span class="bg-info">Result</span> tab.</li>
+            <li>When satisfied with the results, copy it to your clipboard or export it to JSFiddle or Codepen using the buttons at the very top of the <span class="bg-info">Result</span> tab.</li>
+            <li>If you need help, check the <span class="bg-info">Help &amp; Info</span> tab.</li>
+          </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok, got it!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Navigation -->
+  		<div class="row">
+	  		<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+	  			<ul class="nav nav-tabs">
+	  				<li role="presentation" class="active" id="content-tab"><a href="javascript:void(0);" title="Content"><h5><i class="fa fa-code fa-fw" aria-hidden="true"></i><span class="tab-title">&nbsp;Content</span></h5></a></li>
+	  				<li role="presentation" id="libraries-tab"><a href="javascript:void(0);" title="Libraries"><h5><i class="fa fa-archive fa-fw" aria-hidden="true"></i><span class="tab-title">&nbsp;Libraries&nbsp;<span class="badge" id="libraries-badge">1</span></span></h5></a></li>
+	  				<li role="presentation" id="metadata-tab"><a href="javascript:void(0);" title="Metadata"><h5><i class="fa fa-tags fa-fw" aria-hidden="true"></i><span class="tab-title">&nbsp;Metadata</span></h5></a></li>
+	  				<li role="presentation" id="resources-tab"><a href="javascript:void(0);" title="Resources"><h5><i class="fa fa-sticky-note-o fa-fw" aria-hidden="true"></i><span class="tab-title">&nbsp;Resources</span></h5></a></li>
+	  				<li role="presentation" id="result-tab"><a href="javascript:void(0);" title="Result"><h5><i class="fa fa-download fa-fw" aria-hidden="true"></i><span class="tab-title">&nbsp;Result</span></h5></a></li>
+            <li role="presentation" id="help-tab"><a href="javascript:void(0);" title="Help &amp; Info"><h5><i class="fa fa-question-circle fa-fw" aria-hidden="true"></i><span class="tab-title">&nbsp;Help &amp; Info</span></h5></a></li>
+            <li style="float:right;" id="reset-li"><button class="btn btn-default" id="reset-btn" data-toggle="modal" data-target="#myModal">Reset</button></li>
+				  </ul>
+			</div>
+  		</div>
+  		
+  		<!-- Sponsored -->
+  		<center>
+  		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+  		crossorigin="anonymous"></script>
+  		<ins class="adsbygoogle"
+  		style="display:block"
+  		data-ad-format="fluid"
+  		data-ad-layout-key="+39+qh+4e-5w+3b"
+  		data-ad-client="ca-pub-5295583488737876"
+  		data-ad-slot="9633191715"></ins>
+  		<script>
+  		(adsbygoogle = window.adsbygoogle || []).push({});
+  		</script>
+  		<amp-ad width="100vw" height="320"
+  		type="adsense"
+  		data-ad-client="ca-pub-5295583488737876"
+  		data-ad-slot="1819124764"
+  		data-auto-format="mcrspv"
+  		data-full-width="">
+  		<div overflow=""></div>
+  		</amp-ad>
+  		</center>
+  		<!--And Sponsored -->
+<!-- Content tab -->
+  		<div class="row activeRow" id="content">
+  			<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+  				<h2>Define base content for your page</h2>
+          <p>Specify the basic information for your template page, such as title, body classes and/or body content. You can use the <strong>Simple pages</strong> template base and write your own HTML to customize it, pick a pre-defined template and alter its variables to suit your specific needs or do both if you want. <span class="text-info"><strong>The custom HTML body you input will always be part of the resulting page</strong></span>, you can change its position (before or after the template's generated content) by flipping the corresponding switch below.</p><br>		
+          <form class="form-horizontal" autocomplete="off">
+              <div class="form-group">
+                <label for="content-title" class="col-sm-offset-0 col-sm-2 control-label">Title</label>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                  <input type="text" class="form-control" id="content-title" placeholder="Title">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="content-classes" class="col-sm-offset-0 col-sm-2 control-label">Body classes</label>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                  <input type="text" class="form-control" id="content-classes" placeholder="Body classes (space separated)">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="content-body" class="col-sm-offset-0 col-sm-2 control-label">Body</label>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                  <textarea class="form-control" rows="3" id="content-body" placeholder="Body (HTML)"></textarea>
+                </div>
+                <div class="alert alert-warning hidden col-lg-5 col-md-5 col-sm-3" id="content-body-alert" role="alert">You are using tags that are deprecated in HTML5. <strong>Your template will still be generated</strong>, however we suggest you refer to the <a href="https://www.w3.org/TR/html5/obsolete.html" class="alert-link">HTML5 specification</a> to fix this.</div>
+              </div>
+              <div class="form-group">
+              <label for="content-pos-selector" class="col-sm-offset-0 col-sm-2 control-label">Add custom body before or after generated body</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                 <input type="radio" class="rdbtn rdbtn-info" id="con-before" name="content-pos-selector" checked><label for="con-before">Before</label>&nbsp;&nbsp;
+                <input type="radio" class="rdbtn rdbtn-info" id="con-after" name="content-pos-selector"><label for="con-after">After</label>
+              </div>
+            </div>
+              <div class="form-group">
+                <label for="content-templates" class="col-sm-offset-0 col-sm-2 control-label">Choose a template base (customize below)</label>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                  <select name="content-templates" class="slct">
+                    <option value="page-template" selected>Simple pages</option>
+                    <option value="form-template">Simple forms</option>
+                    <option value="error-template">Error pages</option>
+                  </select>     
+                </div>
+              </div>
+              <div class="form-group">
+              <label for="commenter" class="col-sm-offset-0 col-sm-2 control-label">Add comments to generated code</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                 <input id="commenter" class="switch switch-rect-info switch-on-off" type="checkbox"> <label for="commenter"></label>
+              </div>
+            </div>
+          </form>
+          <hr>
+          <h3>Customize your template base</h3>
+          <p>You can customize variables specific to your chosen template base below. <span class="text-warning"><strong>If you change your template base, some of the below changes might be lost.</strong></span></p><br> 
+          <form class="form-horizontal templates-customizer" id="content-page-template-customize" autocomplete="off">
+            <div class="form-group">
+              <label for="content-page-template-selector" class="col-sm-offset-0 col-sm-2 control-label">Choose a template</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <input type="radio" class="rdbtn rdbtn-primary" id="page-template-empty" name="content-page-template-selector"><label for="page-template-empty">Empty page</label><br>
+                <input type="radio" class="rdbtn rdbtn-primary" id="page-template-min" name="content-page-template-selector" checked><label for="page-template-min">Page with minimal content</label><br>
+                <input type="radio" class="rdbtn rdbtn-primary" id="page-template-sample" name="content-page-template-selector"><label for="page-template-sample">Page with sample content</label><br>
+                <input type="radio" class="rdbtn rdbtn-primary" id="page-template-showcase" name="content-page-template-selector"><label for="page-template-showcase">Content showcase page</label><br>
+                <input type="radio" class="rdbtn rdbtn-primary" id="page-template-twocol" name="content-page-template-selector"><label for="page-template-twocol">Minimal content page with two-column layout</label>
+              </div>
+            </div>
+          </form>
+          <form class="form-horizontal hidden templates-customizer" id="content-form-template-customize" autocomplete="off">
+            <div class="form-group">
+              <label for="content-form-template-selector" class="col-sm-offset-0 col-sm-2 control-label">Choose a template</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <input type="radio" class="rdbtn rdbtn-success" id="form-template-empty" name="content-form-template-selector"><label for="form-template-empty">Empty form</label><br>
+                <input type="radio" class="rdbtn rdbtn-success" id="form-template-login" name="content-form-template-selector" checked><label for="form-template-login">Login form</label><br>
+                <input type="radio" class="rdbtn rdbtn-success" id="form-template-register" name="content-form-template-selector"><label for="form-template-register">Registration form</label><br>
+                <input type="radio" class="rdbtn rdbtn-success" id="form-template-payment" name="content-form-template-selector"><label for="form-template-payment">Payment form</label>
+              </div>
+            </div>
+          </form>
+          <form class="form-horizontal hidden templates-customizer" id="content-error-template-customize" autocomplete="off">
+            <div class="form-group">
+              <label for="content-error-selector" class="col-sm-offset-0 col-sm-2 control-label">Choose a template</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-400" name="content-error-template-selector"><label for="error-template-400">400: Bad Request</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-401" name="content-error-template-selector"><label for="error-template-401">401: Authorization Required</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-403" name="content-error-template-selector"><label for="error-template-403">403: Forbidden</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-404" name="content-error-template-selector" checked><label for="error-template-404">404: Not Found</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-408" name="content-error-template-selector"><label for="error-template-408">408: Request Time-Out</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-410" name="content-error-template-selector"><label for="error-template-410">410: Gone</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-500" name="content-error-template-selector"><label for="error-template-500">500: Internal Server Error</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-502" name="content-error-template-selector"><label for="error-template-502">502: Bad Gateway</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-503" name="content-error-template-selector"><label for="error-template-503">503: Service Temporarily Unavailable</label><br>
+                <input type="radio" class="rdbtn rdbtn-danger" id="error-template-504" name="content-error-template-selector"><label for="error-template-504">504: Gateway Time-Out</label>
+              </div>
+            </div>
+          </form>
+        </div>
+  		</div>
+<!-- Libraries tab -->
+  		<div class="row hidden" id="libraries">
+  			<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+  				<h2>Load hosted libraries</h2>
+  				<p>Choose the libraries you want to include in your template. We strongly recommend including <a href="http://jquery.com/"><strong>jQuery</strong></a> to help you write Javascript more efficiently. After you choose the libraries you want, you can customize some of them in the section below, so that you don't need to write any boilerplate code for them.</p><br>
+  				<span id="lib-loader"></span>
+          <div class="alert alert-info hidden" id="lib-loader-reqs-alert" role="alert" style="white-space:pre-wrap;"><span id="lib-loader-reqs"></span></div>
+          <hr>
+          <h3>Customize loaded libraries</h3>
+          <p>You can customize your included libraries below. We recommend enabling boilerplate code for your preferred library to help get you started. <span class="text-warning"><strong>If you change your loaded libraries, some of the below changes might be lost.</strong></span></p><br>
+          <form class="form-horizontal" autocomplete="off" id="boilerplate-form-jQuery">
+            <div class="form-group">
+              <label for="boilerplate-jQuery-selector" class="col-sm-offset-0 col-sm-2 control-label">Boilerplate code for jQuery</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <input type="radio" class="rdbtn rdbtn-primary" id="boilerplate-jQuery-no" name="boilerplate-jQuery-selector"><label for="boilerplate-jQuery-no">No boilerplate code</label><br>
+                 <input type="radio" class="rdbtn rdbtn-primary" id="boilerplate-jQuery-yes" name="boilerplate-jQuery-selector" checked><label for="boilerplate-jQuery-yes">Boilerplate code for document ready</label><br>
+                <input type="radio" class="rdbtn rdbtn-primary" id="boilerplate-jQuery-noConflict" name="boilerplate-jQuery-selector"><label for="boilerplate-jQuery-noConflict">Boilerplate code for document ready (no conflict)</label><br>
+              </div>
+            </div>
+          </form>
+          <form class="form-horizontal hidden" autocomplete="off" id="boilerplate-form-Bootstrap">
+            <div class="form-group">
+              <label for="boilerplate-Bootstrap" class="col-sm-offset-0 col-sm-2 control-label">Use Bootstrap to style template</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <input id="boilerplate-Bootstrap" class="switch switch-rect-primary switch-yes-no" type="checkbox"> <label for="boilerplate-Bootstrap"></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="boilerplate-Bootstrap-lockscale" class="col-sm-offset-0 col-sm-2 control-label">Disable zoom</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <input id="boilerplate-Bootstrap-lockscale" class="switch switch-rect-primary switch-yes-no" type="checkbox"> <label for="boilerplate-Bootstrap-lockscale"></label>
+              </div>
+              <div class="alert alert-info hidden col-lg-5 col-md-5 col-sm-3" id="boilerplate-Bootstrap-lockscale-alert" role="alert">Disabling zoom will only apply if the metadata <em>Include viewport tag</em> option is enabled.</div>
+            </div>
+          </form>
+          <span id="lib-loader-customizers"></span>
+  			</div>
+  		</div>
+  		<div class="row hidden" id="metadata">
+  			<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+  				<h2>Define metadata tags</h2>
+          <p>Choose metadata tags for your HTML document. Leave a field blank if you don't want to include that specific tag. We strongly recommend setting a <strong>Description</strong> for your page, so that search engines can pick it up when indexing your page and show it along with search results.</p><br>
+          <form class="form-horizontal" autocomplete="off">
+            <div class="form-group">
+              <label for="meta-charset" class="col-sm-offset-0 col-sm-2 control-label">Character encoding</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <select name="meta-charset" class="slct">
+                  <option value="UTF-8" selected>UTF-8</option>
+                  <option value="ISO-8859-1">ISO-8859-1</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meta-author" class="col-sm-offset-0 col-sm-2 control-label">Author</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <input type="text" class="form-control" id="meta-author" placeholder="Author">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meta-desc" class="col-sm-offset-0 col-sm-2 control-label">Description</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <textarea class="form-control" rows="3" id="meta-desc" placeholder="Description"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meta-keys" class="col-sm-offset-0 col-sm-2 control-label">Keywords</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                 <input type="text" class="form-control" rows="3" id="meta-keys" placeholder="Keywords (comma-separated)">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meta-gen" class="col-sm-offset-0 col-sm-2 control-label">Include generator tag</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                 <input id="meta-gen" class="switch switch-rect-success switch-yes-no" type="checkbox" checked> <label for="meta-gen"></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meta-vp" class="col-sm-offset-0 col-sm-2 control-label">Include viewport tag</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                 <input id="meta-vp" class="switch switch-rect-info switch-yes-no" type="checkbox" checked> <label for="meta-vp"></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meta-fav" class="col-sm-offset-0 col-sm-2 control-label">Decare favicon</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                 <input id="meta-fav" class="switch switch-rect-primary switch-yes-no" type="checkbox"> <label for="meta-fav"></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meta-old" class="col-sm-offset-0 col-sm-2 control-label">Old browser warning</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                 <input id="meta-old" class="switch switch-rect-warning switch-yes-no" type="checkbox"> <label for="meta-old"></label>
+              </div>
+            </div>
+          </form>
+  			</div>
+  		</div>
+<!-- Resources tab -->
+  		<div class="row hidden" id="resources">
+  			<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+  				<h2>Add external resource links</h2>
+          <p>Add relative links to local resources or absolute links to external, online resources. <span class="text-warning"><strong>Please only write one link per line of the corresponding input areas</strong></span>, otherwise there might be errors with the generated template page.</p><br>
+          <form class="form-horizontal" autocomplete="off">
+            <div class="form-group">
+              <label for="res-js" class="col-sm-offset-0 col-sm-2 control-label">Javascript resources</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <textarea class="form-control" rows="5" id="res-js" placeholder="Javascript resources (one per line)"></textarea>
+              </div>
+              <div class="alert alert-warning hidden col-lg-5 col-md-5 col-sm-3" id="res-js-alert" role="alert">There seem to be commas or spaces in your javascript resources. Please specify every file's location in its own line. <strong>Your template will still be generated</strong>, however it might not work properly.</div>
+            </div>
+            <div class="form-group">
+              <label for="res-css" class="col-sm-offset-0 col-sm-2 control-label">CSS resources</label>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <textarea class="form-control" rows="5" id="res-css" placeholder="CSS resources (one per line)"></textarea>
+              </div>
+              <div class="alert alert-warning hidden col-lg-5 col-md-5 col-sm-3" id="res-css-alert" role="alert">There seem to be commas or spaces in your javascript resources. Please specify every file's location in its own line. <strong>Your template will still be generated</strong>, however it might not work properly.</div>
+            </div>
+          </form>
+  			</div>
+  		</div>
+<!-- Result tab -->
+  		<div class="row hidden" id="result">
+  			<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+  				<h2>Get your generated template</h2>
+          <p>The following is the template page generated based on your choices in the other tabs; use the buttons below to copy it to clipboard or export it wherever you want. If you are not satisfied with the results, you can always tweak the specified settings in the other tabs to better suit your needs.</p><br>
+          <div class="btn-group btn-group-justified" role="group" aria-label="result-button-group">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-success" id="clipboard"><i class="fa fa-clipboard fa-fw" aria-hidden="true"></i><span class="res-button">
+              &nbsp;Copy to clipboard</span></button>
+            </div><div class="btn-group" role="group">
+              <button type="button" class="btn btn-success" id="codepen"><i class="fa fa-codepen fa-fw" aria-hidden="true"></i><span class="res-button">
+              &nbsp;Edit in Codepen</span></button>
+            </div><div class="btn-group" role="group">
+              <button type="button" class="btn btn-success" id="fiddle"><i class="fa fa-jsfiddle fa-fw" aria-hidden="true"></i><span class="res-button">
+              &nbsp;Edit in JSFiddle</span></button>       
+            </div>
+          </div><br>
+            <div id="result-box">&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;!-- You shouldn't be seeing this, there has been an error!--&gt;&lt;/html&gt;</div>
+            <script src="https://cdn.rawgit.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+            <script>
+                var path = "js/modules/ace/build/src";  ace.config.set("workerPath", path); var editor = ace.edit("result-box");
+                editor.getSession().setMode("ace/mode/html"); editor.setReadOnly(true);   editor.setShowPrintMargin(false);        
+                editor.getSession().setUseWrapMode(true); editor.$blockScrolling = Infinity;
+            </script>
+  			</div>
+  		</div>
+<!-- Info and Help tab -->
+      <div class="row hidden" id="help">
+        <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+          <h2>How to use</h2>
+          <h4>Quick start guide <small>Simple as 1, 2, 3</small></h4>
+          <ol>
+            <li>Use each of the tabs at the top to specify your HTML page's content, libraries, metadata and resources. All changes are applied immediately to your generated template.</li>
+            <li>View your generated template under the <span class="bg-info">Result</span> tab.</li>
+            <li>When satisfied with the results, copy it to your clipboard or export it to JSFiddle or Codepen using the buttons at the very top of the <span class="bg-info">Result</span> tab.</li>
+          </ol><br>
+          <h4>Extended guide <small>For the demanding user</small></h4>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><h4 class="panel-title">Content tab</h4></a>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <ul>
+                  <li>The <span class="bg-info">Content</span> tab allows you to specify your page's content and customize your template. You can define a title for your page's <code>&lt;head&gt;</code>, classes for the  <code>&lt;body&gt;</code>, as well as your own customized content for the <code>&lt;body&gt;</code> element. Your user-defined content can be placed before or after the generated template.</li>
+                  <li>We offer a variety of simple templates, ranging from simple empty pages, showcases and clean layouts to basic form templates and error pages for all your needs. Most template bases can be customized in the second section of the <span class="bg-info">Content</span> tab. </li>
+                  <li>Finally, you can enable the automated comments, so that you know what is what in the final results.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">       
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><h4 class="panel-title">Libraries</h4></a>              
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  <ul>
+                  <li>The <span class="bg-info">Libraries</span> tab offers a wide variety of popular Javascript and CSS libraries from which to choose for your template. By default, your template will have <strong>jQuery 3.1.0</strong> included, along with a minimal boilerplate code snippet in the page's <code>&lt;head&gt;</code> to help get you started.</li>
+                  <li>You can enable as few or as many libraries as you like. The counter at the top of the <span class="bg-info">Libraries</span> tab will keep track of the amount of loaded libraries. Be careful not to add too many libraries, otherwise your page might be slow.</li>
+                  <li>Dependencies will be resolved automatically, although you will be notified which libraries will be included based on your selection. If two or more libraries are mutually exclusive (i.e. different versions of the same library), they last one selected will automatically cause the others to deselect.</li>
+                  <li>Some libraries allow you to include a snippet of boilerplate code in the page's <code>&lt;head&gt;</code> to help get you started. You can choose if you want this enabled for each library you include, using the second section of the <span class="bg-info">Libraries</span> tab.</li>
+                  <li>Some other libraries will offer different options, such as the different versions of <strong>Bootstrap</strong>, which allow you to style your generated template using some of their styles.</li> 
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">         
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><h4 class="panel-title">Metadata</h4></a>               
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  <ul>
+                  <li>The <span class="bg-info">Metadata</span> tab allows you to specify your page's metadata tags, such as character encoding, author, description, keywords, generator, as well as some other properties for your page's <code>&lt;head&gt;</code>, such as viewport, favicon and warning for older browsers. </li>
+                  <li>Some options are selected by default (such the inclusion of <strong>generator</strong> and <strong>viewport</strong> tags), but you can turn them off if you do not want them.</li>
+                  <li>The different versions of <strong>Bootstrap</strong> require the <strong>viewport</strong> tag to be included to work properly, so remember to toggle it on if you include any of them.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFour">         
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><h4 class="panel-title">Resources</h4></a>               
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                  <ul>
+                  <li>The <span class="bg-info">Resources</span> tab lets you specify your page's external Javascript and CSS resources, using either relative or absolute paths.</li>
+                  <li>For each of the two types of resource, use the corresponding textarea and specify one resource's location per line.</li>
+                  <li>If any commas or spaces are found in your input, you will be notified, however the generated template will include those resources, even if they do not work properly.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFive">         
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><h4 class="panel-title">Result</h4></a>               
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="panel-body">
+                  <ul>
+                  <li>The <span class="bg-info">Result</span> tab allows you to view your generated page. It updates instantly after you make any changes in the other tabs to reflect them. The code itself, however, cannot be edited.</li>
+                  <li>You can use the buttons at the very top of the panel to copy the resulting template page to your clipboard or export the template page to JSFiddle or Codepen.</li>
+                  <li>If you export to JSFiddle or Codepen, some changes like resources with relative paths might be omitted.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingSix">         
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><h4 class="panel-title">Miscellaneous</h4></a>               
+              </div>
+              <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                <div class="panel-body">
+                  <ul>
+                  <li>Clicking the <span class="bg-info">Reset</span> button will present you with a dialog, asking if you are sure you want to reset the generator. All changes will be lost and you will have to start over.</li>
+                  <li>The <span class="bg-info">Help &amp; Info</span> tab shows you the page's quick start and extended guides, as well as the <strong>About</strong> section, which includes information about the project itself. If you find this tool useful, please Star it on Github.</li>
+                  <li>For any errors encountered or feature requests, use the <strong>Issue</strong> button in the <strong>About</strong> section of the <span class="bg-info">Help &amp; Info</span> tab.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h3>About</h3>
+          <div class="col-md-6 col-md-offset-0 col-sm-12 col-xs-12" style="margin-left: -15px;">
+            <p><strong>Current version: </strong><span class="versionNumbering"></span>&nbsp;-&nbsp;
+            <strong>Last updated: </strong>Feb, 22, 2022</p>
+            <p><strong>Disclaimer: </strong>Designed and built by
+             <a href="https://github.com/wahyu9kdl">@wahyu9kdl</a>, licensed under the 
+             <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+          </div>
+          <!-- Footer -->
+          <footer class="pt-3 mt-4">
+          <div class="container py-4 border-top d-lg-flex justify-content-between">
+          <p class="text-muted">
+          <span class="mx-1">
+          <script>document.write(new Date().getFullYear())</script><noscript>2021</noscript></span>
+          <a href="https://wahyu9kdl.github.io" class="text-muted text-decoration-none">
+          CodeSandbox ©️ AWDEV
+          </a>
+          
+          <br>
+          <a href="https://wahyu9kdl.github.io" class="text-muted text-decoration-none" target="_blank">
+          My Projects - Free Oppen Score Desain
+          </a>
+          <a href="https://wahyu9kdl.github.io" class="text-muted text-decoration-none" target="_blank">
+          <br>©️ LICENSE
+          <br>Creative Commons License
+          <br>Work is distributed under the Creative Commons Attribution 4.0 International License .
+          Copyright (c) 2022, 
+          Aw Score Code - <a href="https://www.alhikmah.my.id/p/license.html" > AL HIKMAH </a>[ Design by : <a href="https://wahyu9kdl.github.io" >AWDEV </a>] All rights reserved. For licensing, <a href="https://www.alhikmah.my.id/p/license.html" > see LICENSE.</a>
+          
+          Copyright (c) 2022, Awdev Oppen Score Code - Desain by :<a href="https://wahyu9kdl.github.io" > AWDEV All rights reserved.</a> For licensing, <a href="http://creativecommons.org/licenses/by/4.0/" >see LICENSE.</a>
+          
+          <br>Support:
+          Loved the tool? Please consider <a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Ftransfer%2Fhomepage%2Fexternal%2Fprofile%3FflowContextData%3DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%26amount%3D25%26currencyCode%3DAUD&onboardData=%7B%22country.x%22%3A%22ID%22%2C%22locale.x%22%3A%22id_ID%22%2C%22intent%22%3A%22paypalme%22%2C%22redirect_url%22%3A%22https%253A%252F%252Fwww.paypal.com%252Fmyaccount%252Ftransfer%252Fhomepage%252Fexternal%252Fprofile%253FflowContextData%253DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%2526amount%253D25%2526currencyCode%253DAUD%22%2C%22sendMoneyText%22%3A%22Anda%2520mengirimkan%2520Ahmad%2520wahyudi%22%7D" > donating</a> 💸 to help it improve!				
+          <br>Sponsor github My Projects 
+          <br><a href="https://link.dana.id/minta/2q0q9b535cw" >Buy Coffee </a>
+          <br><a href="https://saweria.co/AwGroupChannel" >Support</a>
+          <br><a href="https://ko-fi.com/awfanspage#checkoutModal" >Donation Awfanspage</a>
+          <br><a href="https://youtu.be/SsKCOm49zhs" >Subcribe Vidio Youtube Channel</a>
+          <br>wahyu9kdl maintains <a href="https://link.dana.id/minta/2q0q9b535cw" >wahyu9kdl Send Donation </a>				
+          <span class="mx-2 text-muted">|</span>
+          <a href="https://wahyu9kdl.github.io" class="text-muted text-decoration-none" target="_blank">
+          UI Desain @ wahyu9kdl
+          </a>
+          <a href="#" class="mx-2 text-muted text-decoration-none">&uarr; Top</a>
+          </p>
+          </div>
+          </p>
+          <p>
+          </a>
+          <!-- Sponsored -->
+          <center>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+          crossorigin="anonymous"></script>
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-format="fluid"
+          data-ad-layout-key="+39+qh+4e-5w+3b"
+          data-ad-client="ca-pub-5295583488737876"
+          data-ad-slot="9633191715"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          <amp-ad width="100vw" height="320"
+          type="adsense"
+          data-ad-client="ca-pub-5295583488737876"
+          data-ad-slot="1819124764"
+          data-auto-format="mcrspv"
+          data-full-width="">
+          <div overflow=""></div>
+          </amp-ad>
+          </center>
+          <!--And Sponsored -->
+          </footer>
+            </div>
+        </div>
+      </div>
+<!-- Empty row to fill in the gap -->
+      <div class="row">
+        <br><br><br>
+      </div>
+	</div>
+ </body>
+</html>
