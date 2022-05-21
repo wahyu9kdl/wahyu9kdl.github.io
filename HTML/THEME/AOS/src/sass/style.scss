@@ -1,0 +1,230 @@
+body {
+    font-family: Helvetica,Tahoma;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+/**
+ * Backgrounds
+ */
+.backgrounds {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transform: translateZ(0);
+    z-index: -1;
+
+    .background {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        position: absolute;
+        left: 0; top: 0;
+        background-attachment: fixed;
+    }
+}
+
+.overlay {
+    &:after{
+        content: '';
+        position: absolute; left: 0; right: 0; bottom: 0; top: 0;
+        background: $primary-color;
+        opacity: 0.8;
+    }
+}
+
+/**
+ * Hero
+ */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+}
+
+.hero-center {
+    width: 100%;
+    position: absolute;
+    top: 40%; left: 0;
+    transform: translate(0, -50%);
+}
+
+.hero__logo {
+    font-size: 60px; color: rgba(0,0,0,0.5);
+}
+
+.hero__text {
+    font-weight: normal; opacity: 0.8;
+}
+
+.hero__scroll {
+    position: absolute;
+    bottom: 60px;
+    width: 200px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    padding-bottom: 40px;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    .chevron {
+        margin-top: 20px;
+        display: block;
+        animation: pulse 2s infinite;
+        color: $accent-color;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.octocat {
+    position: absolute; top: 20px; right: 20px; width: 80px;
+    img {
+        display: block; width: 100%;
+    }
+}
+
+.chevron::before {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 20px;
+}
+
+.chevron.right:before {
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.chevron.left:before {
+    left: 0.25em;
+    transform: rotate(-135deg);
+}
+
+/**
+ * Sections
+ */
+.section {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.section-title{
+    text-align: center; color: #FFF; text-transform: uppercase; font-weight: normal;
+    padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(255,255,255,0.3);
+    width: 100%; clear: both;
+}
+
+.container {
+    width: 970px;
+    margin: 0 auto;
+    max-width: 90%;
+    transform: translateZ(1000px);
+}
+
+.code {
+    width: 40%;
+    clear: both;
+    height: 200px;
+    background: #FFF;
+    border-radius: 2px;
+    margin: 12vh 0;
+    padding: 10px;
+    pre, code {
+        height: 100%; margin: 0;
+    }
+    code {
+        padding: 20px 0 0 20px;
+    }
+
+    &--small {
+        code {padding-top: 75px;}
+    }
+
+    &--left {
+        float: left;
+    }
+
+    &--right {
+        float: right;
+    }
+
+    &--wider {
+        width: 60%;
+        code {padding-top: 60px;}
+    }
+}
+
+.section--more {
+    color: #FFF; background: #0E0F34; padding: 20px 0 40px 0;
+}
+
+.section-group {
+    border-bottom: 1px solid rgba(255,255,255,0.2); padding: 30px 0;
+
+    h3 {
+        margin: 0 0 20px 0; text-transform: uppercase;
+    }
+    h4 {
+        font-weight: normal; color: rgba(255,255,255,0.6);
+    }
+
+    code {
+        padding: 20px; font-size: 1.2em;
+    }
+
+    .btn {
+        margin-right: 20px;
+    }
+}
+
+.btn {
+    padding: 10px 20px; border: 1px solid $accent-color; display: inline-block; position: relative; transition: all 0.2s ease; overflow: hidden;
+    &:before {
+        content: ''; position: absolute; left: 0; right: 0; width: 1px; top: 0; bottom: 0; margin: auto; background: $accent-color; transition: transform 0.2s ease; z-index: 0; opacity: 0;
+    }
+
+    span {position: relative; z-index: 5;}
+
+    &:hover {
+        color: #FFF;
+        &:before {transform: scaleX(200); opacity: 1;}
+    }
+}
