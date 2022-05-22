@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Blinker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+// all the variables and mixins will be here in the top
+
+$mainColor: #ff0078;
+
+@mixin flexColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// end of variables and mixins
+
+// scroll bar customisation
+::-webkit-scrollbar {
+  width: 7px;
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: $mainColor;
+  border-radius: 10px;
+  &:active {
+    background: white;
+  }
+}
+
+::selection {
+  background: #180000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: #23272a;
+}
+
+body,
+html {
+  overflow-x: hidden !important;
+}
+
+a,
+button,
+img {
+  user-select: none;
+}
+
+// The container of every section
+.Container {
+  width: 950px;
+  margin: auto;
+}
+
+section {
+  border-bottom: 1px solid #000;
+  &:nth-child(odd) {
+    background: #202325;
+  }
+}
+
+// section titles
+.section_title {
+  text-align: center;
+  margin: 10px 0px 40px 0px;
+  h2 {
+    margin-bottom: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    color: $mainColor;
+    text-shadow: 1px 1px 2px black;
+  }
+  p {
+    margin-bottom: 5px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    color: rgb(233, 233, 233);
+    letter-spacing: 1.5px;
+  }
+  .line {
+    width: 60px;
+    margin: 10px auto;
+    height: 5px;
+    background: $mainColor;
+    border-radius: 10px;
+  }
+}
+
+// these classes are for toggling the nav in the mobile type devices
+.nav-active {
+  transform: translate(0) !important;
+}
+.toogle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toogle .line2 {
+  opacity: 0;
+}
+.toogle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+//
+
+// a button which will take you to the top of the page onclicking on it
+.top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  background: $mainColor;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  z-index: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background: #23272a;
+  }
+}
+
+.floatingShareButtons {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  .a2a_kit {
+    display: flex;
+    flex-direction: column-reverse;
+    a {
+      margin: 5px 0px;
+    }
+  }
+}
+
+// for the loading animation
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #23272a;
+  z-index: 400;
+  @include flexColumn();
+  color: white;
+  transition: 0.5s;
+  h2 {
+    margin: 10px 0px;
+    font-family: "Redressed", cursive;
+    letter-spacing: 5px;
+    text-shadow: 1px 2px 5px black;
+  }
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+}
+
+// styles for the nav bar
+nav {
+  @include flexAround();
+  background: #23272a;
+  padding: 10px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  .nav_title {
+    font-family: "Redressed", cursive;
+    color: $mainColor;
+    text-shadow: 1px 2px 5px black;
+  }
+  .nav_links {
+    @include flexBetween();
+    li {
+      margin: 0px 15px;
+      list-style: none;
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        transition: 0.5s;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+  .bars {
+    display: none;
+    z-index: 200;
+    .line {
+      height: 3px;
+      width: 30px;
+      background: white;
+      margin: 5px 0px;
+    }
+  }
+}
+
+// styles for the header
+header {
+  min-height: 100vh;
+  padding: 50px 0px;
+  display: grid;
+  align-items: center;
+  background: #23272a;
+  position: relative;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  .HeaderContentWrapper {
+    @include flexBetween();
+    .HeaderDesc {
+      width: 400px;
+      z-index: 1;
+      h1 {
+        font-size: 2.5rem;
+        color: $mainColor;
+        font-family: "Dancing Script", cursive;
+        letter-spacing: 5px;
+        text-shadow: 1px 2px 1px black;
+      }
+      p {
+        font-size: 1.4rem;
+        color: white;
+        padding: 5px 0px;
+        font-family: "Blinker", sans-serif;
+      }
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 20px;
+        text-decoration: none;
+        color: $mainColor;
+        border: 2px solid $mainColor;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        transition: 0.3s;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: $mainColor;
+          z-index: -1;
+          transform: translateX(-100%);
+          transition: 0.3s;
+        }
+        &:hover:before {
+          transform: translateX(0);
+        }
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .HeaderImg {
+      width: 450px;
+      z-index: 1;
+      img {
+        width: 100%;
+        filter: drop-shadow(1px 2px 10px black);
+        animation: headerImage 2s ease alternate infinite;
+        @keyframes headerImage {
+          from {
+            transform: translateY(-10px);
+          }
+          to {
+            transform: translateY(10px);
+          }
+        }
+      }
+    }
+    // the small wave you can see in the top of the header
+    .header_waves {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// start of about section
+#About {
+  padding: 70px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left;
+  // background: #2f3235;
+  background: url(../img/about_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  .AboutContentWrapper {
+    @include flexBetween();
+    .aboutImg {
+      width: 250px;
+      position: relative;
+      img {
+        width: 100%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border: 2px solid $mainColor;
+        box-shadow: 1px 10px 10px black;
+        transition: 0.5s;
+        &:hover {
+          border-radius: 100%;
+        }
+      }
+    }
+    .aboutDesc {
+      width: 650px;
+      h2 {
+        font-family: "Kurale", serif;
+        font-size: 2rem;
+        color: #fff;
+        text-shadow: 1px 1px 1px $mainColor;
+      }
+      p {
+        padding: 5px 0px;
+        font-family: "Source Sans Pro", sans-serif;
+        text-align: justify;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 24px;
+        span {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+// start of works section
+#recent_works {
+  padding: 50px 0px;
+  .recent_works_content_Wrapper {
+    @include flexBetween();
+    .singleWork {
+      width: 460px;
+      margin: 10px 5px;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 1px 2px 5px black;
+      overflow: hidden;
+      &:hover .projectDesc {
+        opacity: 3;
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .projectDesc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        background: #ff0077e8;
+        @include flexColumn();
+        text-align: center;
+        color: white;
+        opacity: 0;
+        transition: 0.6s;
+        h2 {
+          font-family: "Kurale", serif;
+        }
+        p {
+          font-family: "Source Sans Pro", sans-serif;
+          padding: 10px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          line-height: 24px;
+        }
+        a {
+          font-family: "Source Sans Pro", sans-serif;
+        }
+        .links {
+          width: 90%;
+          margin: 10px auto;
+          @include flexAround();
+          div {
+            padding: 6px 20px;
+            border: 2px solid #23272a;
+            border-radius: 3px;
+            transition: 0.3s;
+            &:hover {
+              background: #23272a;
+            }
+            &:hover a {
+              color: white;
+            }
+            a {
+              color: #23272a;
+              text-decoration: none;
+              font-size: 1.2rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// start of skills section
+#Skills {
+  padding: 50px 0px;
+  .skillContentWrapper {
+    @include flexBetween();
+    .skillRightImage {
+      width: 400px;
+      img {
+        width: 100%;
+        filter: drop-shadow(1px 2px 5px black);
+        animation: skillImage 2s ease alternate infinite;
+        @keyframes skillImage {
+          from {
+            transform: translateY(-10px);
+          }
+          to {
+            transform: translateY(10px);
+          }
+        }
+      }
+    }
+    .skillsContainer {
+      width: 500px;
+      .singleSkill {
+        width: 100%;
+        padding: 10px;
+        span {
+          font-family: "Fira Code", monospace;
+          color: white;
+          letter-spacing: 2px;
+          font-size: 1.2rem;
+        }
+        .progressContainer {
+          margin: 10px 0px;
+          width: 100%;
+          height: 10px;
+          background: #fff;
+          border-radius: 10px;
+          .progress {
+            height: 100%;
+            background: linear-gradient(to left, rgb(0, 255, 255), #ff0078);
+            border-radius: 10px;
+          }
+          .html {
+            width: 90%;
+          }
+          .css {
+            width: 85%;
+          }
+          .js {
+            width: 95%;
+          }
+          .react {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// review section
+#reviews {
+  padding: 50px 0px;
+  .reviewContentWrapper {
+    @include flexBetween();
+    .singleReview {
+      width: 300px;
+      box-shadow: 1px 2px 5px black;
+      border: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 5px;
+      transition: 0.2s;
+      &:hover legend img {
+        border-radius: 100%;
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+      legend {
+        width: 150px;
+        margin: auto;
+        img {
+          width: 100%;
+          border-radius: 5px;
+          border-top-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+          border: 3px solid $mainColor;
+          transition: 0.5s;
+        }
+      }
+      .desc {
+        text-align: center;
+        padding: 0px 5px;
+        h2 {
+          font-family: "Raleway", sans-serif;
+          margin-bottom: 5px;
+          color: $mainColor;
+        }
+        p {
+          color: #16191b;
+          font-weight: 600;
+          letter-spacing: 1px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+// the slider
+#Slider {
+  padding: 50px 0px;
+  .swiper-container {
+    width: 100%;
+    height: 400px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    .sliderDesc {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.63);
+      border-radius: 10px;
+      @include flexColumn();
+      color: white;
+      h2 {
+        font-size: 2rem;
+        color: rgb(255, 115, 0);
+        text-shadow: 1px 2px 5px black;
+        font-family: "Kurale", serif;
+      }
+      p {
+        padding: 5px 0px;
+        width: 50%;
+        margin: 5px auto;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+// contact section
+#Contact {
+  padding: 50px 0px;
+  .ContactContentWrapper {
+    @include flexBetween();
+    .contactImage {
+      width: 400px;
+      img {
+        width: 100%;
+      }
+      .getInTouch {
+        @include flexAround();
+        padding: 30px 0px;
+        h2 {
+          color: $mainColor;
+          font-family: "Raleway", sans-serif;
+        }
+        .singleTouchLink {
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 2rem;
+            transition: 0.4s;
+            &:hover {
+              color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+    .ContactForm {
+      width: 500px;
+      h2 {
+        color: $mainColor;
+        margin: 10px 0px;
+        font-family: "Raleway", sans-serif;
+      }
+      .inputField {
+        width: 100%;
+        margin: 5px 0px;
+        input,
+        button,
+        textarea {
+          width: 100%;
+          outline: none;
+          border: none;
+          padding: 5px 10px;
+          font-size: 1.1rem;
+          resize: none;
+          border-radius: 3px;
+          border: 1px solid #fff;
+        }
+        input,
+        textarea {
+          transition: 0.2s;
+          &:focus {
+            border-color: $mainColor;
+          }
+        }
+        button {
+          background: $mainColor;
+          color: white;
+          cursor: pointer;
+          padding: 7px 0px;
+          transition: 0.4s;
+          &:hover {
+            background: dodgerblue;
+          }
+        }
+      }
+    }
+  }
+}
+
+#bottom__Footer {
+  padding: 50px 0px;
+  background: linear-gradient(#0000007a, #00000085), url(../img/footer.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .bottom_footer_content_wrapper {
+    @include flexColumn();
+    .social_link {
+      width: 100%;
+      @include flexAround();
+      li {
+        width: 150px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 20px 5px;
+        a {
+          text-decoration: none;
+          color: #ddd;
+          transition: 0.5s;
+          font-weight: 600;
+          letter-spacing: 2px;
+          &:hover {
+            color: $mainColor;
+          }
+          &:hover i {
+            color: white;
+            text-shadow: 1px 0px 1px white;
+          }
+          i {
+            padding: 0px 7px;
+            color: $mainColor;
+            transition: 0.5s;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    .shareButton {
+      margin: 30px 0px;
+      text-align: center;
+      h2 {
+        padding: 15px 0px;
+        color: $mainColor;
+        text-shadow: 1px 2px 5px black;
+        font-family: "Raleway", sans-serif;
+      }
+      .a2a_kit {
+        a {
+          margin: 0px 10px 20px 0px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: #16191b;
+  color: white;
+  text-align: center;
+  padding: 5px 0px;
+  font-family: "Raleway", sans-serif;
+}
+
+// needed for better responsiveness
+@media screen and (max-width: 843px) {
+  .floatingShareButtons {
+    display: none;
+  }
+}
