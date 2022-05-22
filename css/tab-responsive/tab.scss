@@ -1,0 +1,80 @@
+@media screen and (max-width: 1024px) {
+  // A responsive style sheet for laptop and tab type devices.
+  .Container {
+    width: 750px;
+  }
+
+  //   start of header
+  header {
+    .HeaderContentWrapper {
+      .HeaderDesc {
+        width: 50%;
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+        a {
+          font-size: 1.1rem;
+        }
+      }
+      .HeaderImg {
+        width: 50%;
+      }
+    }
+  }
+
+  // start of about section
+  #About {
+    .AboutContentWrapper {
+      .aboutImg {
+        width: 30%;
+      }
+      .aboutDesc {
+        width: 65%;
+      }
+    }
+  }
+
+  //   start of works section
+  #recent_works {
+    .recent_works_content_Wrapper {
+      .singleWork {
+        width: 48%;
+      }
+    }
+  }
+
+  // start of skills section
+  #Skills {
+    .skillContentWrapper {
+      .skillRightImage {
+        width: 250px;
+      }
+      .skillsContainer {
+        width: 400px;
+        .singleSkill {
+          padding: 5px 0px;
+        }
+      }
+    }
+  }
+
+  // contact form
+  #Contact {
+    .ContactContentWrapper {
+      .contactImage {
+        width: 250px;
+        .getInTouch {
+          h2 {
+            display: none;
+          }
+        }
+      }
+      .ContactForm {
+        width: 450px;
+      }
+    }
+  }
+}
