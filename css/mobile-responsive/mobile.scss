@@ -1,0 +1,153 @@
+@media screen and (max-width: 768px) {
+  // a responsive stylesheet for mobile type devices
+  * {
+    cursor: default !important;
+  }
+
+  .Container {
+    width: 95%;
+  }
+
+  .section_title {
+    text-align: center;
+    margin: 10px 0px 40px 0px;
+    h2 {
+      font-size: 1.7rem;
+    }
+    p {
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+      margin: 10px 0px;
+    }
+  }
+
+  .top {
+    z-index: 5;
+  }
+
+  //   start of nav
+  nav {
+    .nav_links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      background: #23272a;
+      transform: translate(100%);
+      transition: 0.5s;
+      li {
+        margin: 15px 0px;
+      }
+    }
+    .bars {
+      display: block;
+      transition: 0.4s;
+      .line {
+        transition: 0.3s;
+      }
+    }
+  }
+
+  //   start of header
+  header {
+    .HeaderContentWrapper {
+      flex-direction: column;
+      .HeaderDesc {
+        width: 100%;
+        text-align: center;
+      }
+      .HeaderImg {
+        display: none;
+      }
+    }
+  }
+
+  //   start of about section
+  #About {
+    .AboutContentWrapper {
+      .aboutImg {
+        width: 90%;
+        margin: 15px auto;
+      }
+      .aboutDesc {
+        width: 100%;
+        h2 {
+          font-size: 1.7rem;
+        }
+        p {
+          word-spacing: -1px;
+        }
+      }
+    }
+  }
+
+  //   start of works section
+  #recent_works {
+    .recent_works_content_Wrapper {
+      .singleWork {
+        width: 100%;
+        .projectDesc {
+          overflow-y: scroll;
+          padding: 200px 0px;
+          .links {
+            text-align: center;
+            div {
+              margin: 5px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // start of skills section
+  #Skills {
+    .skillContentWrapper {
+      .skillRightImage {
+        width: 90%;
+        margin: 10px auto;
+      }
+      .skillsContainer {
+        width: 100%;
+      }
+    }
+  }
+
+  // the slider
+  #Slider {
+    .swiper-slide {
+      .sliderDesc {
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          width: 95%;
+        }
+      }
+    }
+  }
+
+  // contact form
+  #Contact {
+    .ContactContentWrapper {
+      .contactImage {
+        width: 100%;
+        margin: 30px 0px;
+      }
+      .ContactForm {
+        width: 100%;
+      }
+    }
+  }
+
+  // review section
+  #reviews {
+    .reviewContentWrapper {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
