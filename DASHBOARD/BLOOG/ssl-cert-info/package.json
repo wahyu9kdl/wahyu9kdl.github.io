@@ -1,0 +1,27 @@
+{
+    "name": "ssl-cert-info",
+    "version": "1.0.1",
+    "description": "A simple library to get TLS peer certificate information.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wahyu9kdl/wahyu9kdl.github.io/DASHBOARD/BLOOG/ssl-cert-info.git"
+    },
+    "keywords": [
+        "TLS",
+        "SSL",
+        "Certificate"
+    ],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://wahyu9kdl.github.io/LICENSE"
+    },
+    "homepage": "https://wahyu9kdl.github.io",
+    "dependencies": {
+        "pem": "^1.14.4"
+    }
+}
