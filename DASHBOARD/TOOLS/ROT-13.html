@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  
+ Hai, selamat datang di proyek "Cari Kode Pos - Awdev Devoloper - Wahyu9kdl",
+ --------------------
+ Author : wahyu9kdl
+ Github : https://wahyu9kdl.github.io
+ Email  : cs@awdev.eu.org
+  -->
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="/Aw-icon.png" type="image/x-icon">
+    <title>ROT13 - Created Awdev Corporation ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ROT 13 ©️ AWDEV - Free Tools Rot 13">
+  <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ 
+ gtag('config', 'G-VSD8HWB5RG');
+ </script>
+ <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	  
+
+</head>
+
+<body>
+    <div class="jumbotron mb-0" style="border-radius: 0px;">
+
+        <h1 class="display-4">ROT-13 Created <a href="https://wahyu9kdl.github.io" target="_blank">Awdev</a></h1>
+        <p class="lead">A simple ROT Cipher Encoder/Decoder. <a href="https://en.wikipedia.org/wiki/ROT13" target="_blank">More information</a>.</p>
+        
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/ROT13_table_with_example.svg/250px-ROT13_table_with_example.svg.png" ></div>
+        <center><p><h2>ROT13 decoder: Decrypt and convert ROT13 to text</h2></p>
+        <p>ROT13 (rotate by 13 places) replaces a letter with the letter 13 letters after it in the alphabet. It has been described as the "Usenet equivalent printing an answer to a quiz upside down" as it provides virtually no cryptographic security.
+        </p>
+        <p>About Convert ROT13 to Text
+        What do ciphers do?
+        Ciphers are the encoding algorithms used to encode and decode the data. It converts the plaintext to ciphertext using a key that determines how it's done. The first cipher device was used by Spartans as early as 400 bc for secret communication among their military officials.
+        
+        What is ROT13 translator?
+        ROT13 (rotate by 13 places, sometimes referred to as ROT-13) is a substitution cipher with a shift of 13. That technique substitutes a letter with the 13th letter after it in the alphabet.
+        
+        How to encrypt using Rot13?
+        Encryption with Rot13 substitutes a letter with the 13th letter after it in the English alphabet. The 13th position in the alphabet shifts each letter. For example, A becomes N, B becomes O, and so on up to M, which becomes Z. The sequence continues as N becomes A, O becomes B, and so on up to Z, which becomes M.
+        
+        Thus, in ROT13, every letter is shifted to the 13th letter after it to encrypt or decrypt the text.
+        </p>
+        </center>
+
+        <hr class="my-4">
+
+        <textarea type="text" class="form-control mb-2" id="plain-text" rows="2"
+            placeholder="Text to encode/decode"></textarea>
+
+        <div class="input-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">ROT</span>
+                </div>
+
+                <select class="custom-select" id="rot-n">
+                    <option value="25">25</option>
+                    <option value="24">24</option>
+                    <option value="23">23</option>
+                    <option value="22">22</option>
+                    <option value="21">21</option>
+                    <option value="20">20</option>
+                    <option value="19">19</option>
+                    <option value="18">18</option>
+                    <option value="17">17</option>
+                    <option value="16">16</option>
+                    <option value="15">15</option>
+                    <option value="14">14</option>
+                    <option value="13" selected>13</option>
+                    <option value="12">12</option>
+                    <option value="11">11</option>
+                    <option value="10">10</option>
+                    <option value="9" >09</option>
+                    <option value="8" >08</option>
+                    <option value="7" >07</option>
+                    <option value="6" >06</option>
+                    <option value="5" >05</option>
+                    <option value="4" >04</option>
+                    <option value="3" >03</option>
+                    <option value="2" >02</option>
+                    <option value="1" >01</option>
+                </select>
+
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-primary" onclick="cipher(false)">Encode</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="cipher(true) ">Decode</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="list-group" id="rotated-text-list">
+        <a class="text-white list-group-item list-group-item-action flex-column align-items-start active"
+            id="rotated-text-item" style="border-top-left-radius: 0px; border-top-right-radius: 0px;">
+
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Rotated Text</h5>
+                <small>
+                    <button type="button" class="btn btn-light btn-sm" data-container="body" data-toggle="popover"
+                        data-placement="bottom" data-content="Copied to clipboard!" id="copy-data"
+                        onclick="copy('#rotated-text')">
+                        Copy
+                    </button>
+                </small>
+            </div>
+
+            <p class="mb-1" id="rotated-text">...</p>
+        </a>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+function rot(phrase, n, decode)
+{
+    var rotphrase = "";
+    if (decode)
+        n = 26 - n;
+
+    for (var i = 0; i < phrase.length; ++i)
+    {
+        var char = phrase[i];
+        if (char != ' ')
+        {
+            if (char.toLowerCase() >= 'a' && char.toLowerCase() <= 'z')
+            {
+                if (String.fromCharCode(char.toLowerCase().charCodeAt(0) + n) > 'z')
+                    char = String.fromCharCode('a'.charCodeAt(0) + (char.charCodeAt(0) - 'z'.charCodeAt(0) + (n - 1)));
+                else
+                    char = String.fromCharCode(char.charCodeAt(0) + n);
+            }
+        }
+        rotphrase += char;
+    }
+    return rotphrase;
+}
+
+function cipher(decode)
+{
+    var phrase = $('#plain-text').val();
+    if (phrase == "")
+        return;
+    var n = $('#rot-n').val();
+
+    var ciphertext = rot(phrase, parseInt(n), decode);
+
+    $('#rotated-text').text(ciphertext);
+    $('#rotated-text-list').slideDown();
+
+    // Scroll to rotated-text-list
+    $('html, body').animate({
+        scrollTop: parseInt($('#rotated-text-list').offset().top)
+    }, 1000);
+
+    return;
+}
+
+function copy_fallback(element_id)
+{
+    var textarea = document.createElement('textarea');
+    textarea.value = $(element_id).text();
+
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+
+    try
+    {
+        document.execCommand('copy');
+    }
+    catch (err)
+    {
+        console.error('Could not copy to clipboard.');
+    }
+
+    document.body.removeChild(textarea);
+    return;
+}
+
+function copy(element_id)
+{
+    if (!navigator.clipboard)
+    {
+        copy_fallback(element_id);
+
+        $('#copy-data').popover('show');
+        setTimeout(function() {
+            $('#copy-data').popover('hide');
+        }, 1000);
+        return;
+    }
+
+    navigator.clipboard.writeText($(element_id).text()).then(function() {
+        $('#copy-data').popover('show');
+        setTimeout(function() {
+            $('#copy-data').popover('hide');
+        }, 1000);
+    });
+    return;
+}
+
+$('#rotated-text-list').hide();
+
+$('#plain-text').on('input', function() {
+    $('#rotated-text-list').slideUp();
+});
+
+// Enable popovers
+$(function() {
+    $('[data-toggle="popover"]').popover({
+        trigger: 'manual'
+    });
+});
+</script>
+<!-- Sponsored -->
+  <center>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+  crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+  style="display:block"
+  data-ad-format="fluid"
+  data-ad-layout-key="+39+qh+4e-5w+3b"
+  data-ad-client="ca-pub-5295583488737876"
+  data-ad-slot="9633191715"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <amp-ad width="100vw" height="320"
+  type="adsense"
+  data-ad-client="ca-pub-5295583488737876"
+  data-ad-slot="1819124764"
+  data-auto-format="mcrspv"
+  data-full-width="">
+  <div overflow=""></div>
+  </amp-ad>
+  </center>
+  <!--And Sponsored -->
+  
+    </body>
+
+</html>
