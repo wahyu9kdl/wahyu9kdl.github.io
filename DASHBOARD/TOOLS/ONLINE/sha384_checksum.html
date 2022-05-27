@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Online tools provides md2, md5, sha1, sha2, sha512, bas64, html encode / decode functions">
-    <title>Online Tools
+    <meta name="description" content="SHA384 online hash file checksum function">
+    <title>SHA384 File Checksum Online
     </title>
     <script>
       if (location.hostname != 'localhost') {
@@ -13,17 +13,8 @@
         ga('create', 'UA-44208259-6', 'auto');
         ga('send', 'pageview');
       }
-    </script><!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    
-    gtag('config', 'G-VSD8HWB5RG');
     </script>
-    <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	  
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
   </head>
@@ -32,7 +23,31 @@
       <h1><a href="index.html">Online Tools</a></h1>
     </div>
     <div id="body">
-      <div id="index">
+      <script src="js/main.js"></script>
+      <div id="main">
+        <h1>SHA384 File Checksum
+        </h1>
+        <div class="description">SHA384 online hash file checksum function
+        </div>
+        <div class="input">
+          <div id="droppable-zone">
+            <div id="droppable-zone-wrapper">
+              <div id="droppable-zone-text">Drop File Here</div>
+            </div>
+            <input id="input" type="file" placeholder="Input2" class="droppable-file">
+          </div>
+        </div>
+        <div class="submit">
+          <input id="execute" type="button" value="Hash" class="btn btn-default">
+          <label>
+            <input id="auto-update" type="checkbox" value="1" checked="checked">Auto Update
+          </label>
+        </div>
+        <div class="output">
+          <textarea id="output" placeholder="Output"></textarea>
+        </div>
+      </div>
+      <div id="sidebar">
         <ul class="menu">
           <li>
             <div class="menu-group">Hash</div>
@@ -40,7 +55,7 @@
           <li><a href="crc16.html">CRC-16</a></li>
           <li><a href="crc32.html">CRC-32</a></li>
           <li><a href="md2.html">MD2</a></li>
-          <li><a href="md4.html">MD4</a></li>
+          <li><a href="md4.html">MD4  </a></li>
           <li><a href="md5.html">MD5</a></li>
           <li><a href="sha1.html">SHA1</a></li>
           <li><a href="sha224.html">SHA224</a></li>
@@ -62,20 +77,14 @@
         </ul>
         <ul class="menu">
           <li>
-            <div class="menu-group">File Hash</div>
+            <div class="menu-group">Checksum</div>
           </li>
           <li><a href="crc16_checksum.html">CRC-16</a></li>
           <li><a href="crc32_checksum.html">CRC-32</a></li>
-          <li><a href="md2_file_hash.html">MD2</a></li>
-          <li><a href="md4_file_hash.html">MD4</a></li>
           <li><a href="md5_checksum.html">MD5</a></li>
           <li><a href="sha1_checksum.html">SHA1</a></li>
           <li><a href="sha224_checksum.html">SHA224</a></li>
           <li><a href="sha256_checksum.html">SHA256</a></li>
-          <li><a href="sha384_file_hash.html">SHA384</a></li>
-          <li><a href="sha512_file_hash.html">SHA512</a></li>
-          <li><a href="sha512_224_file_hash.html">SHA512/224</a></li>
-          <li><a href="sha512_256_file_hash.html">SHA512/256</a></li>
           <li><a href="sha3_224_checksum.html">SHA3-224</a></li>
           <li><a href="sha3_256_checksum.html">SHA3-256</a></li>
           <li><a href="sha3_384_checksum.html">SHA3-384</a></li>
@@ -89,25 +98,18 @@
         </ul>
         <ul class="menu">
           <li>
-            <div class="menu-group">Encode</div>
+            <div class="menu-group">Encode / Decode</div>
           </li>
-          <li><a href="base32_encode.html">Base32</a></li>
-          <li><a href="base32_encode_file.html">Base32 File</a></li>
-          <li><a href="base64_encode.html">Base64</a></li>
-          <li><a href="base64_encode_file.html">Base64 File</a></li>
-          <li><a href="html_encode.html">HTML</a></li>
-          <li><a href="url_encode.html">URL</a></li>
-        </ul>
-        <ul class="menu">
-          <li>
-            <div class="menu-group">Decode</div>
-          </li>
-          <li><a href="base32_decode.html">Base32</a></li>
-          <li><a href="base32_decode_file.html">Base32 File</a></li>
-          <li><a href="base64_decode.html">Base64</a></li>
-          <li><a href="base64_decode_file.html">Base64 File</a></li>
-          <li><a href="html_decode.html">HTML</a></li>
-          <li><a href="url_decode.html">URL</a></li>
+          <li><a href="base32_encode.html">Base32 Encode</a></li>
+          <li><a href="base32_decode.html">Base32 Decode</a></li>
+          <li><a href="base64_encode.html">Base64 Encode</a></li>
+          <li><a href="base64_decode.html">Base64 Decode</a></li>
+          <li><a href="base64_encode_file.html">Base64 Encode File</a></li>
+          <li><a href="base64_decode_file.html">Base64 Decode File</a></li>
+          <li><a href="html_encode.html">HTML Encode</a></li>
+          <li><a href="html_decode.html">HTML Decode</a></li>
+          <li><a href="url_encode.html">URL Encode</a></li>
+          <li><a href="url_decode.html">URL Decode</a></li>
         </ul>
         <ul class="menu">
           <li>
@@ -116,31 +118,8 @@
           <li><a href="syntax_highlight.html">Syntax Highlight</a></li>
         </ul>
       </div>
-      <!-- Sponsored -->
-      <center>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-      crossorigin="anonymous"></script>
-      <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-format="fluid"
-      data-ad-layout-key="+39+qh+4e-5w+3b"
-      data-ad-client="ca-pub-5295583488737876"
-      data-ad-slot="9633191715"></ins>
-      <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      <amp-ad width="100vw" height="320"
-      type="adsense"
-      data-ad-client="ca-pub-5295583488737876"
-      data-ad-slot="1819124764"
-      data-auto-format="mcrspv"
-      data-full-width="">
-      <div overflow=""></div>
-      </amp-ad>
-      </center>
-      <!--And Sponsored -->
-      <p>Please contact <a href="mailto:cs@awdev.eu.org">cs@awdev.eu.org</a> or <a href="https://wahyu9kdl.github.io">profile</a> if any problem.</p>
-
+      <script src="https://cdn.jsdelivr.net/gh/emn178/js-sha512/build/sha512.min.js"></script>
+      <script>method = sha384;</script>
     </div>
     <div id="footer">&copy; 2015-2017 Online Tools</div>
   </body>
