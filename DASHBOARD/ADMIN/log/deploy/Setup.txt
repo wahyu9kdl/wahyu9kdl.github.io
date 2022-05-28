@@ -1,0 +1,25 @@
+2022-05-28T07:27:48.6811206Z Current runner version: '2.291.1'
+2022-05-28T07:27:48.6841692Z ##[group]Operating System
+2022-05-28T07:27:48.6842293Z Ubuntu
+2022-05-28T07:27:48.6842537Z 20.04.4
+2022-05-28T07:27:48.6843046Z LTS
+2022-05-28T07:27:48.6843370Z ##[endgroup]
+2022-05-28T07:27:48.6843658Z ##[group]Virtual Environment
+2022-05-28T07:27:48.6844039Z Environment: ubuntu-20.04
+2022-05-28T07:27:48.6844419Z Version: 20220515.1
+2022-05-28T07:27:48.6844905Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20220515.1/images/linux/Ubuntu2004-Readme.md
+2022-05-28T07:27:48.6845610Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20220515.1
+2022-05-28T07:27:48.6846081Z ##[endgroup]
+2022-05-28T07:27:48.6846440Z ##[group]Virtual Environment Provisioner
+2022-05-28T07:27:48.6846802Z 1.0.0.0-main-20220516-1
+2022-05-28T07:27:48.6847140Z ##[endgroup]
+2022-05-28T07:27:48.6847771Z ##[group]GITHUB_TOKEN Permissions
+2022-05-28T07:27:48.6848323Z Contents: read
+2022-05-28T07:27:48.6848683Z Metadata: read
+2022-05-28T07:27:48.6849223Z Pages: write
+2022-05-28T07:27:48.6849553Z ##[endgroup]
+2022-05-28T07:27:48.6853421Z Secret source: Actions
+2022-05-28T07:27:48.6854078Z Prepare workflow directory
+2022-05-28T07:27:48.7725475Z Prepare all required actions
+2022-05-28T07:27:48.7922809Z Getting action download info
+2022-05-28T07:27:48.9958500Z Download action repository 'actions/deploy-pages@v1' (SHA:eaf36f48c9dc4e0985be499e83eb0696d19916ac)
