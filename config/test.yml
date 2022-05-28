@@ -3,8 +3,8 @@
   address: 'localhost'
   port: 1111
   
-  redirectUrl: 'http://frontend.example.test'
+  redirectUrl: 'https://wahyu9kdl.github.io'
   
-  rasterUrl: 'http://raster.example.test'
+  rasterUrl: 'https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/MIKROVER/CHECK-DNS.html'
   
   handleInternalErrors: false
