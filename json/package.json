@@ -2,5 +2,5 @@
 "Pull requests":{"url":"https://github.com/wahyu9kdl/wahyu9kdl.github.io/pulls"},
 "Wiki":"https://github.com/wahyu9kdl/wahyu9kdl.github.io/wiki"
  "homepage": "https://github.com/wahyu9kdl/wahyu9kdl.github.io#readme",
-"404":"wahyu9kdl.github.io/404.html", "keywords": [ "apache", "Awfanspage", "configs", "configurations", "server", "template","PORTOFOLIO","ANIMASI","wahyu9kdl.github.io","DASHBOARD","PROJECTS","FACEBOOK","TOOLS","ANIMATION","MIKROVER","LICENSE","faq"
+"404":"https://wahyu9kdl.github.io/404.html", "keywords": [ "apache", "Awfanspage", "configs", "configurations", "server", "template","PORTOFOLIO","ANIMASI","wahyu9kdl.github.io","DASHBOARD","PROJECTS","FACEBOOK","TOOLS","ANIMATION","MIKROVER","LICENSE","faq"
  ], "files": [ "dist/.htaccess" ]}
