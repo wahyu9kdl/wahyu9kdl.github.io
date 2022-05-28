@@ -1,0 +1,23 @@
+2022-05-28T07:27:49.8531221Z ##[group]Run actions/deploy-pages@v1
+2022-05-28T07:27:49.8531638Z with:
+2022-05-28T07:27:49.8531876Z   emit_telemetry: false
+2022-05-28T07:27:49.8532469Z   token: ***
+2022-05-28T07:27:49.8532708Z   timeout: 600000
+2022-05-28T07:27:49.8532949Z   error_count: 10
+2022-05-28T07:27:49.8533198Z   reporting_interval: 5000
+2022-05-28T07:27:49.8533464Z ##[endgroup]
+2022-05-28T07:27:50.1261028Z Actor: github-pages[bot]
+2022-05-28T07:27:50.1261496Z Action ID: 2400331251
+2022-05-28T07:27:50.1262589Z Artifact URL: https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/pipelines/workflows/2400331251/artifacts?api-version=6.0-preview
+2022-05-28T07:27:50.1755841Z {"count":1,"value":[{"containerId":9418760,"size":29593600,"signedContent":null,"fileContainerResourceUrl":"https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/resources/Containers/9418760","type":"actions_storage","name":"github-pages","url":"https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/pipelines/1/runs/568/artifacts?artifactName=github-pages","expiresOn":"2022-05-29T07:27:30.1696127Z","items":null}]}
+2022-05-28T07:27:50.1762393Z Creating deployment with payload:
+2022-05-28T07:27:50.1762779Z {
+2022-05-28T07:27:50.1764011Z 	"artifact_url": "https://pipelines.actions.githubusercontent.com/wbV2TAkFDQa3zKNet79EZvMryiQaSUm9vXwiAmUYAts71ickqL/_apis/pipelines/1/runs/568/artifacts?artifactName=github-pages&%24expand=SignedContent",
+2022-05-28T07:27:50.1765035Z 	"pages_build_version": "5539ec663b37a315360ff3f30dcff7c16c56a8d2",
+2022-05-28T07:27:50.1838107Z 	"oidc_token": "***"
+2022-05-28T07:27:50.1838449Z }
+2022-05-28T07:27:50.6140161Z Created deployment for 5539ec663b37a315360ff3f30dcff7c16c56a8d2
+2022-05-28T07:27:50.6143457Z {"page_url":"https://wahyu9kdl.github.io/","status_url":"https://api.github.com/repos/wahyu9kdl/wahyu9kdl.github.io/pages/deployment/status/5539ec663b37a315360ff3f30dcff7c16c56a8d2","preview_url":""}
+2022-05-28T07:27:50.6147525Z 
+2022-05-28T07:27:55.8173791Z Reported success!
+2022-05-28T07:27:55.8240697Z 
