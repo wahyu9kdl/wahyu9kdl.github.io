@@ -1,0 +1,40 @@
+2022-05-28T07:27:40.2656297Z Requested labels: ubuntu-latest
+2022-05-28T07:27:40.2656349Z Job defined at: wahyu9kdl/wahyu9kdl.github.io/dynamic/pages/pages-build-deployment@refs/heads/main
+2022-05-28T07:27:40.2656374Z Waiting for a runner to pick up this job...
+2022-05-28T07:27:41.1941955Z Job is waiting for a hosted runner to come online.
+2022-05-28T07:27:43.8568491Z Job is about to start running on the hosted runner: Hosted Agent (hosted)
+2022-05-28T07:27:45.7288185Z Current runner version: '2.291.1'
+2022-05-28T07:27:45.7312986Z ##[group]Operating System
+2022-05-28T07:27:45.7313439Z Ubuntu
+2022-05-28T07:27:45.7313703Z 20.04.4
+2022-05-28T07:27:45.7314037Z LTS
+2022-05-28T07:27:45.7314271Z ##[endgroup]
+2022-05-28T07:27:45.7314589Z ##[group]Virtual Environment
+2022-05-28T07:27:45.7314947Z Environment: ubuntu-20.04
+2022-05-28T07:27:45.7315237Z Version: 20220515.1
+2022-05-28T07:27:45.7315760Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20220515.1/images/linux/Ubuntu2004-Readme.md
+2022-05-28T07:27:45.7316389Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20220515.1
+2022-05-28T07:27:45.7316778Z ##[endgroup]
+2022-05-28T07:27:45.7317105Z ##[group]Virtual Environment Provisioner
+2022-05-28T07:27:45.7317459Z 1.0.0.0-main-20220516-1
+2022-05-28T07:27:45.7317748Z ##[endgroup]
+2022-05-28T07:27:45.7318360Z ##[group]GITHUB_TOKEN Permissions
+2022-05-28T07:27:45.7318855Z Contents: read
+2022-05-28T07:27:45.7319300Z Metadata: read
+2022-05-28T07:27:45.7319598Z Pages: write
+2022-05-28T07:27:45.7319881Z ##[endgroup]
+2022-05-28T07:27:45.7323227Z Secret source: Actions
+2022-05-28T07:27:45.7323684Z Prepare workflow directory
+2022-05-28T07:27:45.8161129Z Prepare all required actions
+2022-05-28T07:27:45.8344044Z Getting action download info
+2022-05-28T07:27:45.9887986Z Download action repository 'actions/deploy-pages@v1' (SHA:eaf36f48c9dc4e0985be499e83eb0696d19916ac)
+2022-05-28T07:27:46.4777724Z ##[group]Run actions/deploy-pages@v1
+2022-05-28T07:27:46.4778073Z with:
+2022-05-28T07:27:46.4778386Z   emit_telemetry: true
+2022-05-28T07:27:46.4778974Z   token: ***
+2022-05-28T07:27:46.4779225Z   timeout: 600000
+2022-05-28T07:27:46.4779513Z   error_count: 10
+2022-05-28T07:27:46.4779982Z   reporting_interval: 5000
+2022-05-28T07:27:46.4780261Z ##[endgroup]
+2022-05-28T07:27:46.6369891Z Sending telemetry for run id 2400331251
+2022-05-28T07:27:46.8553464Z Cleaning up orphan processes

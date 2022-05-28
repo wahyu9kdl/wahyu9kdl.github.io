@@ -1,0 +1,8 @@
+2022-05-28T07:27:40.0018465Z ##[section]Starting: Prepare job report-build-status
+2022-05-28T07:27:40.0019863Z Evaluating strategy
+2022-05-28T07:27:40.0020030Z Creating job '__default'
+2022-05-28T07:27:40.0020272Z Evaluating timeout
+2022-05-28T07:27:40.0020305Z Evaluating cancel timeout
+2022-05-28T07:27:40.0020337Z Evaluating continue on error
+2022-05-28T07:27:40.0020369Z Evaluating target
+2022-05-28T07:27:40.0021669Z ##[section]Finishing: Prepare job report-build-status

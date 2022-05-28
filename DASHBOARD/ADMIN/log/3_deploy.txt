@@ -1,0 +1,9 @@
+2022-05-28T07:27:40.0005651Z ##[section]Starting: Prepare job deploy
+2022-05-28T07:27:40.0008121Z Evaluating strategy
+2022-05-28T07:27:40.0008307Z Creating job '__default'
+2022-05-28T07:27:40.0008568Z Evaluating timeout
+2022-05-28T07:27:40.0008619Z Evaluating cancel timeout
+2022-05-28T07:27:40.0008653Z Evaluating continue on error
+2022-05-28T07:27:40.0008689Z Evaluating target
+2022-05-28T07:27:40.0009068Z Evaluating environment
+2022-05-28T07:27:40.0010659Z ##[section]Finishing: Prepare job deploy
