@@ -14,6 +14,64 @@ My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
   </a>  
   <a href="https://ko-fi.com/awfanspage#checkoutModal" target='_blank'><img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for rahuldkjain' />
   </a>
+# A Records
+
+| Name | TTL | Data |
+|------|-----|------|
+| wahyu9kdl.github.io | 3600 | 185.199.108.153 |
+| wahyu9kdl.github.io | 3600 | 185.199.109.153 |
+| wahyu9kdl.github.io | 3600 | 185.199.110.153 |
+| wahyu9kdl.github.io | 3600 | 185.199.111.153 |
+
+# TXT Records
+
+No records present.
+
+# MX Records
+
+No records present.
+
+# AAAA Records
+
+| Name | TTL | Data |
+|------|-----|------|
+| wahyu9kdl.github.io | 3600 | 2606:50c0:8000::153 |
+| wahyu9kdl.github.io | 3600 | 2606:50c0:8001::153 |
+| wahyu9kdl.github.io | 3600 | 2606:50c0:8002::153 |
+| wahyu9kdl.github.io | 3600 | 2606:50c0:8003::153 |
+
+# CNAME Records
+
+No records present.
+
+# CAA Records
+
+| Name | TTL | Data |
+|------|-----|------|
+| wahyu9kdl.github.io | 3600 | issue "digicert.com" |
+| wahyu9kdl.github.io | 3600 | issue "letsencrypt.org" |
+| wahyu9kdl.github.io | 3600 | issuewild "digicert.com" |
+
+# NS Records
+
+No records present.
+
+# SRV Records
+
+No records present.
+
+# DMARC Records
+
+No records present.
+
+# SSHFP Records
+
+No records present.
+
+# TLSA Records
+
+No records present.
+
 
 ## 🧰 SERVICE
 
