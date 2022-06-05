@@ -1,48 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  
+ Hai, selamat datang di proyek "Cari Kode Pos - Awdev Devoloper - Wahyu9kdl",
+ --------------------
+ Author : wahyu9kdl
+ Github : https://wahyu9kdl.github.io
+ Email  : cs@awdev.eu.org
+  -->
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<style scoped='' type="text/css">
-#arlina-random ul{list-style:none;margin:0;padding:0}#arlina-random li{display:block;clear:both;overflow:hidden;list-style:none;border-bottom:1px solid #e3e3e3;word-break:break-word;padding:10px 0;margin:0;}
-#arlina-random li:last-child{border-bottom:0;}
-#arlina-random li a{color:#444;}#arlina-random li a:hover{color:#444;text-decoration:underline}
-</style>
-<div id='arlina-random'>Memuat...</div>
-<script>
-//<![CDATA[
-// Random Post Widget
-var homePage = 'https://www.gurudzgn.com/',
-    maxResults = 100,
-    containerId = 'arlina-random';
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-function shuffleArray(arr) {
-    var i = arr.length, j, temp;
-    if (i === 0) return false;
-    while (--i) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    return arr;
-}
-function ArlinaRandomPosts(json) {
-    var startIndex = getRandomInt(1, (json.feed.openSearch$totalResults.$t - maxResults));
-    // console.log('Get the post feed start from ' + startIndex + ' until ' + (startIndex + maxResults));
-    document.write('<scr' + 'ipt src="' + homePage + '/feeds/posts/summary?alt=json-in-script&orderby=updated&start-index=' + startIndex + '&max-results=' + maxResults + '&callback=randomPosts"></scr' + 'ipt>');
-}
-function randomPosts(json) {
-    var link, ct = document.getElementById(containerId),
-        entry = shuffleArray(json.feed.entry),
-        skeleton = "<ul>";
-    for (var i = 0, len = entry.length; i < len; i++) {
-        for (var j = 0, jen = entry[i].link.length; j < jen; j++) {
-            link = (entry[i].link[j].rel == "alternative") ? entry[i].link[j].href : 'https://wahyu9kdl.github.io';
-        }
-        skeleton += '<li><a href="' + link + '">' + entry[i].title.$t + '</a></li>';
-    }
-    ct.innerHTML = skeleton + '</ul>';
-}
-document.write('<scr' + 'ipt src="' + homePage + '/feeds/posts/summary?alt=json-in-script&max-results=0&callback=ArlinaRandomPosts"></scr' + 'ipt>');
-//]]>
-</script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="shortcut icon" href="/Aw-icon.png" type="image/x-icon">
+    <title> Taka Pedia </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ROT 13 ©️ AWDEV - Free Tools Rot 13">
+  <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ 
+ gtag('config', 'G-VSD8HWB5RG');
+ </script>
+ <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	  
+<!--And Global site tag (gtag.js) - Google Analytics -->
+
+</head>
+<body>
+<iframe src="https://www.takapedia.com/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+</body>
+</html>
