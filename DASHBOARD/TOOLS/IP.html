@@ -1,39 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" id="ip2geoapp" class="ip2geoapp">
-<head id="head">
-<title>Convert IP Address to Geolocation Data Api Console</title>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="IP2GeoApp an app to convert IP address to Geolocation" />
-<meta name="author" content="awdev" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://wahyu9kdl.github.io/hero/ip/images/favicon-32x32.png" />
+    <title>IP2GeoApp | IP Address Geo Location</title>
+    <meta name="description" content=" IP Address to Geolocation Data Api Console IP2GeoApp an app to convert IP address to Geolocation | IP Address Geo Location - Awdev Corporation" />
+    <meta name="keywords" content="IP2GeoApp,ip,geo location,addres,cari lokasi,ip website,check lokasi,awdev" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css" type="text/css">
-<link rel="stylesheet" href="https://spin.js.org/spin.css" crossorigin="anonymous">
-<style type="text/css">
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
 
-* {
+    <link rel="stylesheet" href="https://wahyu9kdl.github.io/hero/ip/styles.css" />
+
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-VSD8HWB5RG');
+    </script>
+    <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="module" src="https://wahyu9kdl.github.io/hero/ip/scripts/index.js"></script>
+  <style type="text/css">
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  
+  * {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-}
-
-.center-block {
+  }
+  
+  .center-block {
   text-align: left;
   min-height: calc(100vh - 132px);
-}
-
-.wrapper {
+  }
+  
+  .wrapper {
   background: #eee;
   border: 1px solid #999;
   max-width: 1140px;
-}
-
-.wrapper textarea, .wrapper input[type=text] {
+  }
+  
+  .wrapper textarea, .wrapper input[type=text] {
   background: linear-gradient(to bottom, #e5e5e5 0%,#f2f2f2 100%);
   border: none;
   width: 100%;
@@ -41,229 +73,183 @@
   box-sizing: border-box;
   border-bottom: 1px dotted #999;
   resize: none;
-}
-
-.wrapper textarea:focus {
+  }
+  
+  .wrapper textarea:focus {
   outline: none;
-}
-
-.input-group {
+  }
+  
+  .input-group {
   width: 100%;
-}
-
-.controls {
+  }
+  
+  .controls {
   text-align: right;
   margin-top: -6px;
-}
-
-button {
+  }
+  
+  button {
   background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
   border: 1px solid #999;
   padding: 10px 25px;
   font-weight: bold;
-  color: rgb(77,77,77);
+  color: #fff;
   border-width: 1px 0 0 1px;
-}
-
-textarea {
-  width: 100%;
-  height: 500px;
-}
-
-input {
-  width: 100%;
-}
-
-.input-error {
-  animation: shake 0.81s cubic-bezier(.36, .07, .19, .97) both infinite;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
   }
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
-
-.footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
-body > .container {
+  
+  a:link { text-decoration: none; }
+  a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:active { text-decoration: none; }
+  
+  
+  body > .container {
   padding: 60px 15px 0;
-}
+  }  
+  #header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  }
+  #header.header-scrolled, #header.header-inner-pages {
+  background: rgba(40, 58, 90, 0.9);
+  }
+  #header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  }
+  #header .logo a {
+  color: #fff;
+  }
+  #header .logo img {
+  max-height: 40px;
+  }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+  </head>
+  <body> 
+    <header class="top-container">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+    
+    <h1 class="logo me-auto"><a href="index.html"><img src="https://camo.githubusercontent.com/d0ef82664f4bf11b9a899c92c7d2cb15ee1ca8cc79a07a5cf2e6279b52204e05/68747470733a2f2f626c6f676765722e676f6f676c6575736572636f6e74656e742e636f6d2f696d672f622f523239765a32786c2f4156765873456956635962303255774656486d76765a3569413033414c314a46387a4b2d714348667372753433724948484133577267763741625f4d746e303856767a566a61425643694c4f354b546f5a7a576546635a36366a706c577371466744554832617a493273304836446858643946396952504d6e444c69326355324d634f6c3659625862596353765a49706e5551785f765f69447445426b346c4a436159464433624a52366c373635747248494e4a4f6646424161744a483133432f733238312f61776465762e706e6720 " alt="AWDEV" class="img-fluid">𝓐𝔀𝓭𝓮𝓿</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    
+    
+   </div>
+    <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav pull-right">
+    <li>
+    <a href="#" target="_blank">Home</a>
+    </li>
+    <li>
+    <a href="https://bit.ly/3weJFOn" target="_blank">Work</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/index.html" target="_blank">Skill</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/hero/app/refresh/index.html" target="_blank">Hero Refesh</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/ANIMATION/RGB-COLOR.html" target="_blank">RGB Collor</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/hero/app/twibbon/index.html " target="_blank">Twibbon</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/animation/" target="_blank">Animation</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/visitor-badge.html" target="_blank">Visitor Badge</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown.html" target="_blank">Markdown</a>
+    </li>
+    <li>
+    <a href="https://bit.ly/37Nuan1" target="_blank">Readme Generator</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/HTML/TOOLS/QR.html " target="_blank">QR Generator</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/link-lock/create/" target="_blank">Link-Lock</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/DASHBOARD/TOOLS/ONLINE/" target="_blank">Online Tools</a>
+    </li>
+    <li>
+    <a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/archers-island-master/" target="_blank">Archer's Island</a>
+    </li>
+    <li>
+    <a href="https://www.awdev.eu.org" target="_blank">Courses</a>
+    </li>
+    <li>
+    <a href="https://www.awdev.my.id" target="_blank">Devoloper Profile</a>
+    </li>
+    </ul>
+    </div></div>
+    </nav>
+      <h1 class="main-heading">𝐈𝐏𝟐𝐆𝐞𝐨𝐀𝐩𝐩
+      <p>
+      𝐈𝐏 𝐀𝐝𝐝𝐫𝐞𝐬𝐬 𝐓𝐫𝐚𝐜𝐤𝐞𝐫</h1>
+      <form class="form" novalidate>
+        <input
+          type="text"
+          class="input"
+          placeholder="Search for any IP address or domain"
+          aria-label="Type IP address or Domain name"
+        />
+        <button
+          class="submit-btn"
+          type="submit"
+          aria-label="Hit Search"
+        ></button>
+      </form>
 
-.container .text-muted {
-  margin: 20px 0;
-}
+      <dl class="user-data-list">
+        <div class="user-data-item">
+          <dt class="data-term">IP Address</dt>
+          <dd class="data-value"></dd>
+        </div>
 
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
+        <div class="user-data-item">
+          <dt class="data-term">Location</dt>
+          <dd class="data-value"></dd>
+        </div>
 
-.result {
-    margin-top: 20px;
-}
+        <div class="user-data-item">
+          <dt class="data-term">Timezone</dt>
+          <dd class="data-value"></dd>
+        </div>
 
-pre, code {
-  font-size: 80%;
-  height: calc(100vh - 278px);
-}
+        <div class="user-data-item">
+          <dt class="data-term">ISP</dt>
+          <dd class="data-value"></dd>
+        </div>
+      </dl>
+    </header>
 
-.mapWrapper {
-  width: 100%;
-  height: calc(100vh - 278px);
-}
-</style>
-<!-- =======================================================
-  * Template Name:  IP2GeoApp - v1.1.1
-  * Template URL: https://wahyu9kdl.github.io
-  * Author: awdev - https://www.awdev.my.id
-  * License: https://www.awdev.my.id/license/
-  ======================================================== -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
- <script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- 
- gtag('config', 'G-VSD8HWB5RG');
- </script>
- <script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	  
-<!--And Global site tag (gtag.js) - Google Analytics -->
-
-</head>
-<body>
-<form id="form">
-<nav class="navbar navbar-inverse">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="javascript:void(0);">IP2GeoApp</a>
-</div>
-<div id="navbar" class="navbar-collapse collapse">
-<ul class="nav navbar-nav pull-right">
-<li>
-<a href="#" target="_blank">Home</a>
-</li>
-<li>
-<a href="https://bit.ly/3weJFOn" target="_blank">Work</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/HTML/index.html" target="_blank">Skill</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/hero/app/refresh/index.html" target="_blank">Hero Refesh</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/ANIMATION/RGB-COLOR.html" target="_blank">RGB Collor</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/hero/app/twibbon/index.html " target="_blank">Twibbon</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/animation/" target="_blank">Animation</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/HTML/TOOLS/visitor-badge.html" target="_blank">Visitor Badge</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown.html" target="_blank">Markdown</a>
-</li>
-<li>
-<a href="https://bit.ly/37Nuan1" target="_blank">Readme Generator</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/HTML/TOOLS/QR.html " target="_blank">QR Generator</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/link-lock/create/" target="_blank">Link-Lock</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/DASHBOARD/TOOLS/ONLINE/" target="_blank">Online Tools</a>
-</li>
-<li>
-<a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/archers-island-master/" target="_blank">Archer's Island</a>
-</li>
-<li>
-<a href="https://www.awdev.eu.org" target="_blank">Courses</a>
-</li>
-<li>
-<a href="https://www.awdev.my.id" target="_blank">Devoloper Profile</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<div class="center-block">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<h1 title="Enter any IP to get Geolocation">Enter any IP Address</h1>
-</div>
-<div class="col-md-12">
-<div class="input-group input-group-lg">
-<input type="text" class="form-control" placeholder="e.g. 1.1.1.1" value="112.215.243.131">
-<span class="input-group-btn">
-<button class="btn btn-default" type="submit" title="Convert an IP address to Geolocation">Go!</button>
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class="container-fluid full-width">
-<div class="result">
-<div class="row row-no-gutter">
-<div class="col-md-9">
-<h2 class="hide">Map</h2>
-<div id="map" class="mapWrapper"></div>
-</div>
-<div class="col-md-3">
-<h2 class="hide">JSON</h2>
-<pre id="json"></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</form>
-<footer class="footer">
-<div class="container">
-<div class="row">
-<div class="col-md-6">
+    <div id="map">
+      <h1 class="loading-text">Loading...</h1>
+    </div>
 <!-- Sponsored -->
   <center>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
@@ -287,167 +273,15 @@ pre, code {
   </amp-ad>
   </center>
   <!--And Sponsored -->
-  
-<footer class="footer">
-<div class="container">
-<div class="row">
-<div class="col-md-6">
-<p class="text-muted">Awdev Corporation - Screenshot Website Full Page - Distributed <a href="https://wahyu9kdl.github.io" >@Awdev </p>
-</div>
-</div>
-</div>
-</div>
-</footer>
- </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js" integrity="sha512-GoORoNnxst42zE3rYPj4bNBm0Q6ZRXKNH2D9nEmNvVF/z24ywVnijAWVi/09iBiVDQVf3UlZHpzhAJIdd9BXqw==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-beautify.min.js" integrity="sha512-QfDSPBb1bUxUj/XQP0UNmQLsHy5LMKOzk9IAuUYGJebOFrfYi5csZsrUaPbgrsppiKY3kPv+zGe/kaS6yUcmHg==" crossorigin="anonymous"></script>
-<script src="https://spin.js.org/spin.umd.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-    const isBlank = (obj) => {
-		return (!obj || obj === "");
-    }
-    
-    const showError = () => {
-        $("input").parents().eq(1).addClass("input-error");
-        window.setTimeout(function () {
-            $("input").parents().eq(1).removeClass("input-error");
-        }, 810);
-    }
-
-    const loadIP2Geo = (event) => {
-        event.preventDefault();
-
-        var varIPAddr = $("input").val();
-
-        if (!isBlank(varIPAddr)) {
-            let xhr = $.ajax({
-                url: "https://ip2geoapp.com/api/geoip",
-                method: "POST",
-                data: {
-                    "ipaddress": varIPAddr
-                },
-                beforeSend: function () {
-                    $(".result").removeClass("hide");
-
-                    var opts = {
-                        lines: 13, // The number of lines to draw
-                        length: 38, // The length of each line
-                        width: 17, // The line thickness
-                        radius: 45, // The radius of the inner circle
-                        scale: 1, // Scales overall size of the spinner
-                        corners: 1, // Corner roundness (0..1)
-                        speed: 1, // Rounds per second
-                        rotate: 0, // The rotation offset
-                        animation: 'spinner-line-shrink', // The CSS animation name for the lines
-                        direction: 1, // 1: clockwise, -1: counterclockwise
-                        color: '#000000', // CSS color or array of colors
-                        fadeColor: 'transparent', // CSS color or array of colors
-                        top: '50%', // Top position relative to parent
-                        left: '50%', // Left position relative to parent
-                        shadow: '0 0 1px transparent', // Box-shadow for the lines
-                        zIndex: 2000000000, // The z-index (defaults to 2e9)
-                        className: 'spinner', // The CSS class to assign to the spinner
-                        position: 'absolute', // Element positioning
-                    };
-
-                    var target = $(".mapWrapper")[0];
-                    window.spinner = new Spin.Spinner(opts).spin(target);
-                },
-                success:function(data) {
-                    window.JSONEditor.setValue(JSON.stringify(data, undefined, 2));
-
-                    if (!isBlank(data) && !isBlank(data.city) && 
-                        !$.isEmptyObject(data) && !$.isEmptyObject(data.city)) {
-
-                        var lng = data.city.location.longitude;
-                        var lat = data.city.location.latitude;
-                        
-                        // Collect Result in a array to render as a List!
-                        window.arrayMarker.push({
-                            "longitude": lng, 
-                            "latitude": lat,
-                            "data": data
-                        });
-
-                        var vectorLayer = new ol.layer.Vector({
-                            target: "points",
-                            source: new ol.source.Vector(),
-                            style: new ol.style.Style({
-                                image: new ol.style.Icon({
-                                    anchor: [0.5, 0.5],
-                                    anchorXUnits: "fraction",
-                                    anchorYUnits: "fraction",
-                                    src: "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_red" + window.arrayMarker.length + ".png"
-                                })
-                            })
-                        });
-                        window.map.addLayer(vectorLayer);
-
-                        var source = vectorLayer.getSource();
-                        var pointFeature = new ol.Feature({
-                            geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
-                        });
-                        source.addFeature(pointFeature);
-
-                        window.map.getView().fit(vectorLayer.getSource().getExtent(), {
-                            size: map.getSize(),
-                            maxZoom: 13
-                        });
-                    }
-                    else {
-                        showError();
-                    }
-                },
-                error: function () {
-                    showError();
-                },
-                complete: function () {
-                    window.spinner.stop();
-                }
-            });
-        }
-        else {
-            showError();
-        }
-    };
-
-    $(document).ready(function() {
-        $("button").bind("click", loadIP2Geo);
-
-        window.arrayMarker = [];
-        window.map = new ol.Map({
-            target: "map",
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
-                })
-            ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([0, 0]),
-                zoom: 0
-            })
-        });
-
-        require(["ace/ace"], function (ace) {
-            ace.config.set("basePath", "https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12");
-            window.JSONEditor = ace.edit("json");
-            window.JSONEditor.session.setMode("ace/mode/json");
-            window.JSONEditor.setOptions({
-                theme: "ace/theme/pastel_on_dark",
-                fontSize: 13,
-                showGutter: true,
-                useWorker: true,
-                showPrintMargin: false,
-                enableBasicAutocompletion: true,
-                enableLiveAutocompletion: true,
-                readOnly: true
-            });
-            window.JSONEditor.setValue(JSON.stringify({}, undefined, 2));
-        });
-    });
-</script>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://wahyu9kdl-github-io.translate.goog/hero/ip/index.html?_x_tr_sl=auto&_x_tr_tl=ko&_x_tr_hl=ms" target="_blank"
+        >Frontend Mentor Awdev Corporation</a
+      >. Created by
+      <a href="https://bit.ly/397ypuB ">HERO</a>.
+    </footer>
+  </body>
 </html>
+
+
+ 
