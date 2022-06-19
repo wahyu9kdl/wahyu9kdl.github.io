@@ -1,6 +1,6 @@
 # These are supported funding model platforms
 
-github: wahyu9kdl
+github: [wahyu9kdl]
 patreon: Awfanspage
 open_collective: wahyu9kdl
 tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
