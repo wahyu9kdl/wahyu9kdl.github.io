@@ -14,7 +14,7 @@ type metricsInterface struct {
 func init() {
     unleash.Initialize(
         unleash.WithUrl("https://gitlab.com/api/v4/feature_flags/unleash/34603021"),
-        unleash.WithInstanceId("SagKSfs1tszzYzWeiMYt"),
+        unleash.WithInstanceId("3GiQbHPfTGczxZBeUGBkzC4TAiMiapaWih"),
         unleash.WithAppName("AWDEV"), // Set to the running environment of your application
         unleash.WithListener(&metricsInterface{}),
     )
