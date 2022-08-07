@@ -1,0 +1,20 @@
+<center>
+    <script type="text/javascript">
+    {
+    var url="https://cdn-awdev.blogspot.com/p/rools.html" ;
+    document.write("WELLCOME TO ROOLS V 1 ");
+    setTimeout(function(){window.location = url;}, 30000);
+    }
+    {
+    var timeleft = 30;
+    var downloadTimer = setInterval(function(){
+    if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "Finished";
+    } else {
+    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+    }
+    timeleft -= 1;
+    }, 1000);}</script>
+    <div id="countdown">HELLO ! AWDEV</div></center>
+    
