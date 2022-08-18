@@ -7,13 +7,18 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Markdown Previewer</title>
-        <meta name="description" content="Markdown Previewer Free Online Editor README.md">
+        <meta name="description" content="Markdown Previewer Free Online Editor | AWDEV TOOLS">
+        <meta name="keywords" content="AWDEV,AWDEV TOOLS,Markdown Previewer,Markdown Awdev,online tools" />        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">   
+    <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer">  
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
     crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">  
-    <meta name="keywords" content="Markdown Previewer" />
     <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
     <meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -153,15 +158,223 @@
     color: var(--highlight-warm);
     }
     </style>
+    <style type="text/css">
+    /* Styles */
+    
+    body {
+    font-family: 'Fira Sans', sans-serif,#f5f2f0;
+    background: grey;
+    color:#fff;
+    }
+    
+    .navbar-brand svg {
+    margin-top: -5px;
+    }
+    
+    .navbar.navbar-dark {
+    background: #fffff;
+    }
+    
+    h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    }
+    
+    textarea {
+    width: 100%;
+    min-height: 300px;
+    }
+    
+    /* Text Editor */
+    
+    figure.image {
+    display: inline-block;
+    border: 1px solid gray;
+    margin: 0 2px 0 1px;
+    background: #f5f2f0;
+    }
+    
+    figure.align-left {
+    float: left;
+    }
+    
+    figure.align-right {
+    float: right;
+    }
+    
+    figure.image img {
+    margin: 8px 8px 0 8px;
+    }
+    
+    figure.image figcaption {
+    margin: 6px 8px 6px 8px;
+    text-align: center;
+    }
+    
+    
+    /*
+    Alignment using classes rather than inline styles
+    check out the "formats" option
+    */
+    
+    img.align-left {
+    float: left;
+    }
+    
+    img.align-right {
+    float: right;
+    }
+    
+    /* Basic styles for Table of Contents plugin (toc) */
+    .mce-toc {
+    border: 1px solid gray;
+    }
+    
+    .mce-toc h2 {
+    margin: 4px;
+    }
+    
+    .mce-toc li {
+    list-style-type: none;
+    }
+    
+    /* Utilities */
+    
+    @media only screen and (min-width: 992px) {
+    .w-lg-100 {
+    width: 100%;
+    }
+    }
+    </style>
     </head>
     <body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between">
+    <a class="navbar-brand fw-bold" href="/">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square mr-1" viewBox="0 0 16 16">
+    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+    </svg>
+    <span class="d-none d-lg-inline-block">CodeSandbox</span>
+    </a>
+    <h1 class="w-lg-100 mb-0 text-center text-light">Markdown Preview ©️ AWDEV</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <!-- <li class="nav-item">
+    <a class="nav-link" href="#">Link</a></li> -->
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-uppercase" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More Tools</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person mr-2" viewBox="0 0 16 16">
+    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+    </svg>
+    <span>
+    UI Simple Profile
+    </span>
+    </a>
+    </li>
+    <li><hr class="dropdown-divider" /></li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/AWDEV" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart mr-2" viewBox="0 0 16 16">
+    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+    </svg>
+    <span>
+    AWDEV
+    </span>
+    </a>
+    </li>
+    <li><hr class="dropdown-divider" /></li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/wahyu9kdl" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+    </svg>
+    <span>
+    AWDEV TOOLS
+    </span>
+    </a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://bit.ly/3weJFOn" target="_blank">💼 Work</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/index.html" target="_blank">⭐ Skill</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/hero/app/refresh/index.html" target="_blank">♻️ Hero Refesh</a>
+    </li>    
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/hero/app/twibbon/index.html " target="_blank">🖼 Twibbon</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/animation/" target="_blank">🌟 Animation</a>
+    </li>    
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown.html" target="_blank">📑 Markdown</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://bit.ly/37Nuan1" target="_blank">📝 Readme Generator</a>
+    </li>    
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/link-lock/create/" target="_blank">🔐 Link-Lock</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/DASHBOARD/TOOLS/ONLINE/" target="_blank">📡 Online Tools</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/archers-island-master/" target="_blank">🏞 Archer's Island</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/image2cpp.html" target="_blank">📚 Image2ccp</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/QR.html " target="_blank">🔎 QR Generator</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/qr.html " target="_blank">🔎 QR Code</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/miniPaint.html" target="_blank">📚 MiniPaint</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/visitor-badge.html" target="_blank">📊 Visitor Badge</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/COLLOR/PALATTE.html " target="_blank">🎨 Collor Grid</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/TOOLS/Calculator.html " target="_blank">🧮 Calkulator</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://wahyu9kdl.github.io/HTML/Clock.html" target="_blank">⏰ Clock</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://www.awdev.eu.org" target="_blank">📚 Courses</a>
+    </li>
+    <li>
+    <a class="dropdown-item" href="https://www.awdev.my.id" target="_blank">💁 ‍️Devoloper Profile</a>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    <!-- Main Content -->
+    <div>
     <div class="page_wrap">
-    <header>
+    
     <h1>Markdown Preview</h1>
-    <p>LIVE EDITOR CODE README.md</p>
+    <p>LIVE EDITOR CODE MARKDOWN | AWDEV</p>
    
     <p>
-    My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
+    Oppen Source LIVE EDITOR Markdown Preview on Github <a href="https://github.com/sponsors/wahyu9kdl ">clik here...! </a>
     </p>Follow <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fwahyu9kdl">@wahyu9kdl</a>
     <p align="center">
     <i>Loved the tool? Please consider <a href="https://paypal.me/wahyudi9kdl/10">donating</a>  💸 to help it improve!</i>
@@ -174,7 +387,7 @@
     </a>
     
     <p> 🧰 SERVICE</p>
-    
+    🗂 Oppen Doc GitHub Markdown CSS demo <a href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown/markdown-css.html" > Clik here....!</a>
     📝 <a href="https://form.jotform.com/awfanspage/formulir">FORMULIR</a> SERVICE
     📥 <a href="https://www.file-upload.com/users/Awfanspage/89315/FREE">💯 FREE DOWNLODER FILE</a>
     
@@ -255,77 +468,49 @@
           };
           
           </script>
+          <div>
+          <span>
+          <p align="center">
+          <h2>Connect with me:</span></h2></p>    
+          <p align="center">
+          <a href="https://codepen.io/san3" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="san3" height="30" width="40" /></a>
+          <a href="https://dev.to/wahyu9kdl" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+          <a href="https://twitter.com/Awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="awfanspage" height="30" width="40" /></a>
+          <a href="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" height="30" width="40" /></a>
+          <a href="https://fb.com/awgroupchannel" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="awgroupchannel" height="30" width="40" /></a>
+          <a href="https://instagram.com/awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="awfanspage" height="30" width="40" /></a>
+          <a href=" https://dribbble.com/wahyu9kdl/shots " target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+          <a href="https://wahyu9kdl.medium.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="wahyu9kdl" height="30" width="40" /></a>
+          <a href="https://m.youtube.com/channel/UC7CRa3nkxakAZx_aRsMwRyA/playlists" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="aw youtube channel" height="30" width="40" /></a>
+          <a href=" https://wahyu9kdl.github.io/wahyu9kdl" ><img align="center" src=" https://camo.githubusercontent.com/5b09aa408358eda7cba977c95dccaf65b070ed679c9be064297a11161058d1f2/68747470733a2f2f312e62702e626c6f6773706f742e636f6d2f2d735749774852616b54744d2f594a7068586a65796f46492f41414141414141414339632f37747230382d4d665f387379524457346c4c30514e7042564431773734772d6841434c63424741735948512f733630302f6c6f676f355f31315f31353330322e706e67 " height="30" width="40" /></a>		
+          <a href="https://www.alhikmah.my.id" ><img align="center" src="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl/main/logo.png" height="30" width="40" /></a>
+          </p>
+          </p></div>
+          
         <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.1.0/marked.min.js"></script>
         <script src="index.js" async defer></script>
-    <h2>Connect with me:</span></h2>    
-    <p align="left">
-    <a href="https://codepen.io/san3" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="san3" height="30" width="40" /></a>
-    <a href="https://dev.to/wahyu9kdl" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="wahyu9kdl" height="30" width="40" /></a>
-    <a href="https://twitter.com/Awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="awfanspage" height="30" width="40" /></a>
-    <a href="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/ahmad-wahyudi-41b6841b6" height="30" width="40" /></a>
-    <a href="https://fb.com/awgroupchannel" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="awgroupchannel" height="30" width="40" /></a>
-    <a href="https://instagram.com/awfanspage" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="awfanspage" height="30" width="40" /></a>
-    <a href=" https://dribbble.com/wahyu9kdl/shots " target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="wahyu9kdl" height="30" width="40" /></a>
-    <a href="https://wahyu9kdl.medium.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="wahyu9kdl" height="30" width="40" /></a>
-    <a href="https://m.youtube.com/channel/UC7CRa3nkxakAZx_aRsMwRyA/playlists" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="aw youtube channel" height="30" width="40" /></a>
-    <a href="https://open.spotify.com/show/4UoPUn3e0VhJ6MGOwdsrHV" target="blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="http://feedproxy.google.com/~r/blogspot/ghpgr/~3/vyr1fhc7dbi/informasi-cara-mendapatkan-ribuan.html" height="30" width="40" /></a>
-    <a href=" https://wahyu9kdl.github.io/wahyu9kdl" ><img align="center" src=" https://camo.githubusercontent.com/5b09aa408358eda7cba977c95dccaf65b070ed679c9be064297a11161058d1f2/68747470733a2f2f312e62702e626c6f6773706f742e636f6d2f2d735749774852616b54744d2f594a7068586a65796f46492f41414141414141414339632f37747230382d4d665f387379524457346c4c30514e7042564431773734772d6841434c63424741735948512f733630302f6c6f676f355f31315f31353330322e706e67 " height="30" width="40" /></a>		
-    <a href="https://www.alhikmah.my.id" ><img align="center" src="https://raw.githubusercontent.com/wahyu9kdl/wahyu9kdl/main/logo.png" height="30" width="40" /></a>
-    </p>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+        crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-5295583488737876"
+        data-ad-slot="1819124764"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     
-    <div id="container" style="background: url(&quot;../images/pattern.png&quot;) rgb(221, 221, 221); border: 1px solid rgb(42, 42, 42); box-shadow: rgb(177, 177, 177) 0px 0px 5px; font-family: Arial, Arial, Helvetica, sans-serif; font-size: 15px;"><div id="main" role="main" style="background-color: grey; margin-top: 20px; padding: 0px 20px 90px;"><article class="markdown-body"><h2 style="color: #557398; font-size: 24px; margin-bottom: 20px;">©️ LICENSE</h2><p style="margin-bottom: 20px;"><a href="http://creativecommons.org/licenses/by/4.0/" rel="license" style="background-color: transparent; color: #63a52a; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;"><img alt="Lisensi Creative Commons" src="https://i.creativecommons.org/l/by/4.0/88x31.png" style="border: 0px; box-sizing: border-box; max-width: 100%;" /></a><br />Ciptaan disebarluaskan di bawah&nbsp;<a href="http://creativecommons.org/licenses/by/4.0/" rel="license" style="background-color: transparent; color: #63a52a; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">Lisensi Creative Commons Atribusi 4.0 Internasional</a>. Copyright (c) 2021, Aw Score Code - AL HIKMAH [ Desain by : Aw Group Channel ] All rights reserved. For licensing,&nbsp;<a href="https://www.alhikmah.my.id/p/license.html" rel="license" style="background-color: transparent; color: #63a52a; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">see LICENSE.html</a></p><p style="margin-bottom: 20px;">Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved. For licensing,&nbsp;<a href="https://www.awgroupchannel.my.id/p/license.html" rel="license" style="background-color: transparent; color: #63a52a; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">see LICENSE.html</a></p>
-    <h3 align="left" style="font-size: 20px; margin-bottom: 20px;">Support:</h3><p align="center" style="margin-bottom: 20px;"><i>Loved the tool? Please consider&nbsp;<a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Ftransfer%2Fhomepage%2Fexternal%2Fprofile%3FflowContextData%3DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%26amount%3D25%26currencyCode%3DAUD&amp;onboardData=%7B%22country.x%22%3A%22ID%22%2C%22locale.x%22%3A%22id_ID%22%2C%22intent%22%3A%22paypalme%22%2C%22redirect_url%22%3A%22https%253A%252F%252Fwww.paypal.com%252Fmyaccount%252Ftransfer%252Fhomepage%252Fexternal%252Fprofile%253FflowContextData%253DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%2526amount%253D25%2526currencyCode%253DAUD%22%2C%22sendMoneyText%22%3A%22Anda%2520mengirimkan%2520Ahmad%2520wahyudi%22%7D" style="background-color: transparent; color: #63a52a; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">donating</a>&nbsp;💸 to help it improve!</i></p><p align="center" style="margin-bottom: 20px;"><a href="https://trakteer.id/awfanspage/tip" style="background-color: transparent; clear: left; color: #63a52a; float: left; margin-bottom: 1em; margin-right: 1em; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;"><img align="left" alt="Support" height="50" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" style="border: 0px; box-sizing: border-box; max-width: 100%;" width="210" /></a><a href="https://ko-fi.com/Awfanspage" style="background-color: transparent; clear: left; color: #63a52a; float: left; margin-bottom: 1em; margin-right: 1em; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;"><img align="left" alt="Awfanspage" height="50" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" style="border: 0px; box-sizing: border-box; max-width: 100%;" width="210" /></a>
-    <a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Ftransfer%2Fhomepage%2Fexternal%2Fprofile%3FflowContextData%3DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%26amount%3D25%26currencyCode%3DAUD&amp;onboardData=%7B%22country.x%22%3A%22ID%22%2C%22locale.x%22%3A%22id_ID%22%2C%22intent%22%3A%22paypalme%22%2C%22redirect_url%22%3A%22https%253A%252F%252Fwww.paypal.com%252Fmyaccount%252Ftransfer%252Fhomepage%252Fexternal%252Fprofile%253FflowContextData%253DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%2526amount%253D25%2526currencyCode%253DAUD%22%2C%22sendMoneyText%22%3A%22Anda%2520mengirimkan%2520Ahmad%2520wahyudi%22%7D" style="background-color: transparent; color: #63a52a; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;"><img alt="sponsor github profile readme generator" src="https://img.shields.io/badge/support-PayPal-blue?logo=PayPal&amp;style=flat-square&amp;label=Donate" style="border: 0px; box-sizing: border-box; max-width: 100%;" />&nbsp;</a><a href="https://ko-fi.com/awfanspage#checkoutModal" style="background-color: transparent; color: #63a52a; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;" target="_blank"><img alt="Buy Coffee for rahuldkjain" height="23" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" style="border: 0px; box-sizing: border-box; max-width: 100%;" width="100" /></a><br /></p></article></div></div>
-    <footer style="background-color: #d1d1d1; font-family: Arial, Arial, Helvetica, sans-serif; font-size: 15px; margin-bottom: 60px; padding-bottom: 60px;"><div class="owner" style="background: rgb(34, 34, 34); border: 5px solid rgb(68, 68, 68); color: #d6d6d6; margin: -67px -10px 35px; padding: 5px 15px;">
+    
+    <footer style="background-color: #d1d1d1; font-family: Arial, Arial, Helvetica, sans-serif; font-size: 15px; margin-bottom: 60px; padding-bottom: 60px;">
+    <div class="owner" style="background: rgb(34, 34, 34); border: 5px solid rgb(68, 68, 68); color: #d6d6d6; margin: -67px -10px 35px; padding: 5px 15px;">
     <p style="font-family: Georgia, serif;"><a class="avatar" href="https://github.com/wahyu9kdl" style="background-color: #666666; color: #63a52a; display: block; float: left; font-size: 16px; font-style: italic; margin: -19px 10px 0px 0px; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s; width: 60px;"><img height="48" src="https://github.com/wahyu9kdl.png" style="border: 1px solid rgb(42, 42, 42); display: block; margin: 5px;" width="48" /></a>
     <a href="https://github.com/wahyu9kdl" style="background-color: transparent; color: #63a52a; font-size: 16px; font-style: italic; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">wahyu9kdl</a>&nbsp;maintains&nbsp;
-    <a href="https://www.alhikmah.my.id" style="background-color: transparent; color: #63a52a; font-size: 16px; font-style: italic; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">ALHIKMAH.MY.ID</a></p></div>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-    crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-format="autorelaxed"
-    data-ad-client="ca-pub-5295583488737876"
-    data-ad-slot="2104008255"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <center>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-    crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-format="autorelaxed"
-    data-ad-client="ca-pub-5295583488737876"
-    data-ad-slot="2104008255"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <center>
-    <p>QR Code Generator Tools is special online software for creating and saving QR Codes or for converting different information into QR Codes.</p>
-    <p>Creating a QR Code with the free QR Code Maker takes only a few seconds. Choose from a variety of available QR Code types: from a vCard to an Email QR Code. Save the Code or insert it into your website with ease.</p>
-    <h3>REALATED POST:</h3>
-    <ul>
-    <li><a href="https://bit.ly/39S49Ue" > REALATED POST 1 </a></li>
-    <li><a href="https://bit.ly/37Nuan1" > REALATED POST 2  </a></li>
-    <li><a href="https://bit.ly/3weJFOn" > REALATED POST 3 </a></li>
-    <li><a href="https://t.co/HZJoHOSpHC"> REALATED POST 4  </a></li>
-    <li><a href="https://t.co/I0zjdhpTmJ"> REALATED POST 5  </a></li>
-    <li><a href="https://t.co/3Gd87uMiGL"> REALATED POST 6  </a></li>
-    <li><a href="https://wahyu9kdl.github.io/HTML/TOOLS/QR.html" > QR GENERATOR CODE </a></li>
-    </ul>
-    </center>
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-    crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-format="autorelaxed"
-    data-ad-client="ca-pub-5295583488737876"
-    data-ad-slot="1819124764"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <a href="https://www.alhikmah.my.id" style="background-color: transparent; color: #63a52a; font-size: 16px; font-style: italic; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">ALHIKMAH.MY.ID</a> - 
+    <a href="https://www.alhikmah.my.id" style="background-color: transparent; color: #63a52a; font-size: 16px; font-style: italic; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">AWDEV.MY.ID</a> -
+    <a href="https://www.alhikmah.my.id" style="background-color: transparent; color: #63a52a; font-size: 16px; font-style: italic; text-decoration-line: none; transition: opacity 0.3s ease-in-out 0s;">AWDEV.EU.ORG</a></p></div>    
+    </footer>    
+    <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.0/tinymce.min.js" integrity="sha512-XNYSOn0laKYg55QGFv1r3sIlQWCAyNKjCa+XXF5uliZH+8ohn327Ewr2bpEnssV9Zw3pB3pmVvPQNrnCTRZtCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     </body>
 </html>
