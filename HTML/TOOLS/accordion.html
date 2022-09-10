@@ -1,0 +1,1824 @@
+<!doctype html>
+<html>
+<head>
+<script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Accordion Generator | Free Tools - by WahYu9kdl</title>
+<meta name="description" content="Accordion Generator for Collapsible FAQ / section, for Shopify stores Publicated AWDEV Global Oppen Free Source"/>
+<meta name="keywords" content="Awdev,Acordion,Generator,Converter,Tools," />
+<meta name="description" content="Accordion Menu Generator | JavaScript Accordion | FREE TOOLS AWDEV" />
+<meta name="description" content="AWDEV Global Network helps you to Free Tools generate HTML, CSS, Javascript accordion code to use in your blog/website." />
+<meta property="og:image" content="/favicon.io">
+<meta property="twitter:card" content="">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
+crossorigin="anonymous"></script>
+<link rel="shortcut icon" type="image/x-icon" href="https://wahyu9kdl.github.io/Aw-icon.png">  
+<meta name="google-site-verification" content="Yz_h71MpL-vH2RoECFzJU6NOZZVqSiu81kGfJv2VDXA"/>
+<style type="text/css">
+/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
+
+/*! modern-normalize v1.1.0 | MIT License | www.awdev.my.id | https://github.com/sponsors/wahyu9kdl  */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+html {
+-moz-tab-size: 4;
+-o-tab-size: 4;
+tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+line-height: 1.15;
+/* 1 */
+-webkit-text-size-adjust: 100%;
+/* 2 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+font-family:
+system-ui,
+-apple-system, /* Firefox supports this but not yet `system-ui` */
+'Segoe UI',
+Roboto,
+Helvetica,
+Arial,
+sans-serif,
+'Apple Color Emoji',
+'Segoe UI Emoji';
+}
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+hr {
+height: 0;
+/* 1 */
+color: inherit;
+/* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr[title] {
+-webkit-text-decoration: underline dotted;
+text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+font-family:
+ui-monospace,
+SFMono-Regular,
+Consolas,
+'Liberation Mono',
+Menlo,
+monospace;
+/* 1 */
+font-size: 1em;
+/* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+
+sub {
+bottom: -0.25em;
+}
+
+sup {
+top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+text-indent: 0;
+/* 1 */
+border-color: inherit;
+/* 2 */
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+font-family: inherit;
+/* 1 */
+font-size: 100%;
+/* 1 */
+line-height: 1.15;
+/* 1 */
+margin: 0;
+/* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button,
+select {
+/* 1 */
+text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'] {
+-webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+display: list-item;
+}
+
+/**
+* Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+* A thin layer on top of normalize.css that provides a starting point more
+* suitable for web applications.
+*/
+
+/**
+* Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+margin: 0;
+}
+
+button {
+background-color: transparent;
+background-image: none;
+}
+
+fieldset {
+margin: 0;
+padding: 0;
+}
+
+ol,
+ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+/**
+* Tailwind custom reset styles
+*/
+
+/**
+* 1. Use the user's configured `sans` font-family (with Tailwind's default
+*    sans-serif font stack as a fallback) as a sane default.
+* 2. Use Tailwind's default "normal" line-height so the user isn't forced
+*    to override it to ensure consistency even when using the default theme.
+*/
+
+html {
+font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* 1 */
+line-height: 1.5;
+/* 2 */
+}
+
+/**
+* Inherit font-family and line-height from `html` so users can set them as
+* a class directly on the `html` element.
+*/
+
+body {
+font-family: inherit;
+line-height: inherit;
+}
+
+/**
+* 1. Prevent padding and border from affecting element width.
+*
+*    We used to set this in the html element and inherit from
+*    the parent element for everything else. This caused issues
+*    in shadow-dom-enhanced elements like <details> where the content
+*    is wrapped by a div with box-sizing set to `content-box`.
+*
+*    https://github.com/mozdevs/cssremedy/issues/4
+*
+*
+* 2. Allow adding a border to an element by just adding a border-width.
+*
+*    By default, the way the browser specifies that an element should have no
+*    border is by setting it's border-style to `none` in the user-agent
+*    stylesheet.
+*
+*    In order to easily add borders to elements by just setting the `border-width`
+*    property, we change the default border-style for all elements to `solid`, and
+*    use border-width to hide them instead. This way our `border` utilities only
+*    need to set the `border-width` property instead of the entire `border`
+*    shorthand, making our border utilities much more straightforward to compose.
+*
+*    https://github.com/tailwindcss/tailwindcss/pull/116
+*/
+
+*,
+::before,
+::after {
+box-sizing: border-box;
+/* 1 */
+border-width: 0;
+/* 2 */
+border-style: solid;
+/* 2 */
+border-color: currentColor;
+/* 2 */
+}
+
+/*
+* Ensure horizontal rules are visible by default
+*/
+
+hr {
+border-top-width: 1px;
+}
+
+/**
+* Undo the `border-style: none` reset that Normalize applies to images so that
+* our `border-{width}` utilities have the expected effect.
+* 
+* The Normalize reset is unnecessary for us since we default the border-width
+* to 0 on all elements.
+* DEV - g.dev/awdev - web www.awdev.my.id open blog m.awdev.my.id
+* https://github.com/tailwindcss/tailwindcss/issues/362
+*/
+
+img {
+border-style: solid;
+}
+
+textarea {
+resize: vertical;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+opacity: 1;
+color: #9ca3af;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+opacity: 1;
+color: #9ca3af;
+}
+
+input::placeholder,
+textarea::placeholder {
+opacity: 1;
+color: #9ca3af;
+}
+
+button,
+[role="button"] {
+cursor: pointer;
+}
+
+table {
+border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-size: inherit;
+font-weight: inherit;
+}
+
+/**
+* Reset links to optimize for opt-in styling instead of
+* opt-out.
+*/
+
+a {
+color: inherit;
+text-decoration: inherit;
+}
+
+/**
+* Reset form element properties that are easy to forget to
+* style explicitly so you don't inadvertently introduce
+* styles that deviate from your design system. These styles
+* supplement a partial reset that is already applied by
+* normalize.css.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+padding: 0;
+line-height: inherit;
+color: inherit;
+}
+
+/**
+* Use the configured 'mono' font family for elements that
+* are expected to be rendered with a monospace font, falling
+* back to the system monospace stack if there is no configured
+* 'mono' font family.
+*/
+
+pre,
+code,
+kbd,
+samp {
+font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/**
+* 1. Make replaced elements `display: block` by default as that's
+*    the behavior you want almost all of the time. Inspired by
+*    CSS Remedy, with `svg` added as well.
+*
+*    https://github.com/mozdevs/cssremedy/issues/14
+* 
+* 2. Add `vertical-align: middle` to align replaced elements more
+*    sensibly by default when overriding `display` by adding a
+*    utility like `inline`.
+*
+*    This can trigger a poorly considered linting error in some
+*    tools but is included by design.
+* 
+*    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+display: block;
+/* 1 */
+vertical-align: middle;
+/* 2 */
+}
+
+/**
+* Constrain images and videos to the parent width and preserve
+* their intrinsic aspect ratio.
+*
+* https://github.com/mozdevs/cssremedy/issues/14
+*/
+
+img,
+video {
+max-width: 100%;
+height: auto;
+}
+
+/**
+* Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+display: none;
+}
+
+*, ::before, ::after {
+--tw-border-opacity: 1;
+border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+[type='text'],[type='time'],textarea,select {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background-color: #fff;
+border-color: #6b7280;
+border-width: 1px;
+border-radius: 0px;
+padding-top: 0.5rem;
+padding-right: 0.75rem;
+padding-bottom: 0.5rem;
+padding-left: 0.75rem;
+font-size: 1rem;
+line-height: 1.5rem;
+}
+
+[type='text']:focus, [type='time']:focus, textarea:focus, select:focus {
+outline: 2px solid transparent;
+outline-offset: 2px;
+--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+--tw-ring-offset-width: 0px;
+--tw-ring-offset-color: #fff;
+--tw-ring-color: #2563eb;
+--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+border-color: #2563eb;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+color: #6b7280;
+opacity: 1;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+color: #6b7280;
+opacity: 1;
+}
+
+input::placeholder,textarea::placeholder {
+color: #6b7280;
+opacity: 1;
+}
+
+select {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+background-position: right 0.5rem center;
+background-repeat: no-repeat;
+background-size: 1.5em 1.5em;
+padding-right: 2.5rem;
+-webkit-print-color-adjust: exact;
+color-adjust: exact;
+}
+
+.container {
+width: 100%;
+}
+
+@media (min-width: 640px) {
+.container {
+max-width: 640px;
+}
+}
+
+@media (min-width: 768px) {
+.container {
+max-width: 768px;
+}
+}
+
+@media (min-width: 1024px) {
+.container {
+max-width: 1024px;
+}
+}
+
+@media (min-width: 1280px) {
+.container {
+max-width: 1280px;
+}
+}
+
+@media (min-width: 1536px) {
+.container {
+max-width: 1536px;
+}
+}
+
+.fixed {
+position: fixed;
+}
+
+.absolute {
+position: absolute;
+}
+
+.relative {
+position: relative;
+}
+
+.inset-0 {
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: 0px;
+}
+
+.z-10 {
+z-index: 10;
+}
+
+.mx-auto {
+margin-left: auto;
+margin-right: auto;
+}
+
+.my-2 {
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+}
+
+.my-8 {
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+
+.my-10 {
+margin-top: 2.5rem;
+margin-bottom: 2.5rem;
+}
+
+.mt-0 {
+margin-top: 0px;
+}
+
+.mt-1 {
+margin-top: 0.25rem;
+}
+
+.mt-2 {
+margin-top: 0.5rem;
+}
+
+.mt-3 {
+margin-top: 0.75rem;
+}
+
+.mt-4 {
+margin-top: 1rem;
+}
+
+.mt-5 {
+margin-top: 1.25rem;
+}
+
+.mt-8 {
+margin-top: 2rem;
+}
+
+.mb-2 {
+margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+margin-bottom: 1rem;
+}
+
+.mb-6 {
+margin-bottom: 1.5rem;
+}
+
+.ml-2 {
+margin-left: 0.5rem;
+}
+
+.block {
+display: block;
+}
+
+.inline-block {
+display: inline-block;
+}
+
+.inline {
+display: inline;
+}
+
+.flex {
+display: flex;
+}
+
+.inline-flex {
+display: inline-flex;
+}
+
+.table {
+display: table;
+}
+
+.contents {
+display: contents;
+}
+
+.hidden {
+display: none;
+}
+
+.h-5 {
+height: 1.25rem;
+}
+
+.h-6 {
+height: 1.5rem;
+}
+
+.h-7 {
+height: 1.75rem;
+}
+
+.max-h-0 {
+max-height: 0px;
+}
+
+.max-h-tall {
+max-height: 50rem;
+}
+
+.min-h-screen {
+min-height: 100vh;
+}
+
+.w-5 {
+width: 1.25rem;
+}
+
+.w-6 {
+width: 1.5rem;
+}
+
+.w-7 {
+width: 1.75rem;
+}
+
+.w-full {
+width: 100%;
+}
+
+.max-w-prose {
+max-width: 65ch;
+}
+
+.flex-1 {
+flex: 1 1 0%;
+}
+
+.transform {
+--tw-translate-x: 0;
+--tw-translate-y: 0;
+--tw-rotate: 0;
+--tw-skew-x: 0;
+--tw-skew-y: 0;
+--tw-scale-x: 1;
+--tw-scale-y: 1;
+transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-0 {
+--tw-translate-y: 0px;
+}
+
+.translate-y-4 {
+--tw-translate-y: 1rem;
+}
+
+@-webkit-keyframes spin {
+to {
+transform: rotate(360deg);
+}
+}
+
+@keyframes spin {
+to {
+transform: rotate(360deg);
+}
+}
+
+@-webkit-keyframes ping {
+75%, 100% {
+transform: scale(2);
+opacity: 0;
+}
+}
+
+@keyframes ping {
+75%, 100% {
+transform: scale(2);
+opacity: 0;
+}
+}
+
+@-webkit-keyframes pulse {
+50% {
+opacity: .5;
+}
+}
+
+@keyframes pulse {
+50% {
+opacity: .5;
+}
+}
+
+@-webkit-keyframes bounce {
+0%, 100% {
+transform: translateY(-25%);
+-webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+animation-timing-function: cubic-bezier(0.8,0,1,1);
+}
+
+50% {
+transform: none;
+-webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+animation-timing-function: cubic-bezier(0,0,0.2,1);
+}
+}
+
+@keyframes bounce {
+0%, 100% {
+transform: translateY(-25%);
+-webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+animation-timing-function: cubic-bezier(0.8,0,1,1);
+}
+
+50% {
+transform: none;
+-webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+animation-timing-function: cubic-bezier(0,0,0.2,1);
+}
+}
+
+.resize-none {
+resize: none;
+}
+
+.flex-row-reverse {
+flex-direction: row-reverse;
+}
+
+.flex-col {
+flex-direction: column;
+}
+
+.items-end {
+align-items: flex-end;
+}
+
+.items-center {
+align-items: center;
+}
+
+.justify-center {
+justify-content: center;
+}
+
+.justify-between {
+justify-content: space-between;
+}
+
+.overflow-hidden {
+overflow: hidden;
+}
+
+.overflow-y-auto {
+overflow-y: auto;
+}
+
+.whitespace-pre-wrap {
+white-space: pre-wrap;
+}
+
+.rounded {
+border-radius: 0.25rem;
+}
+
+.rounded-md {
+border-radius: 0.375rem;
+}
+
+.rounded-lg {
+border-radius: 0.5rem;
+}
+
+.border {
+border-width: 1px;
+}
+
+.border-b-2 {
+border-bottom-width: 2px;
+}
+
+.border-b {
+border-bottom-width: 1px;
+}
+
+.border-dashed {
+border-style: dashed;
+}
+
+.border-transparent {
+border-color: transparent;
+}
+
+.border-gray-300 {
+--tw-border-opacity: 1;
+border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+}
+
+.border-gray-500 {
+--tw-border-opacity: 1;
+border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+}
+
+.focus\:border-blue-500:focus {
+--tw-border-opacity: 1;
+border-color: rgba(59, 130, 246, var(--tw-border-opacity));
+}
+
+.bg-white {
+--tw-bg-opacity: 1;
+background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.bg-gray-50 {
+--tw-bg-opacity: 1;
+background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+.bg-gray-500 {
+--tw-bg-opacity: 1;
+background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+}
+
+.bg-indigo-600 {
+--tw-bg-opacity: 1;
+background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-50:hover {
+--tw-bg-opacity: 1;
+background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+.hover\:bg-indigo-700:hover {
+--tw-bg-opacity: 1;
+background-color: rgba(67, 56, 202, var(--tw-bg-opacity));
+}
+
+.bg-opacity-75 {
+--tw-bg-opacity: 0.75;
+}
+
+.bg-gradient-to-b {
+background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-indigo-300 {
+--tw-gradient-from: #a5b4fc;
+--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(165, 180, 252, 0));
+}
+
+.hover\:from-indigo-500:hover {
+--tw-gradient-from: #6366f1;
+--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(99, 102, 241, 0));
+}
+
+.via-indigo-500 {
+--tw-gradient-stops: var(--tw-gradient-from), #6366f1, var(--tw-gradient-to, rgba(99, 102, 241, 0));
+}
+
+.hover\:via-indigo-700:hover {
+--tw-gradient-stops: var(--tw-gradient-from), #4338ca, var(--tw-gradient-to, rgba(67, 56, 202, 0));
+}
+
+.to-blue-300 {
+--tw-gradient-to: #93c5fd;
+}
+
+.to-blue-500 {
+--tw-gradient-to: #3b82f6;
+}
+
+.bg-clip-text {
+-webkit-background-clip: text;
+background-clip: text;
+}
+
+.p-3 {
+padding: 0.75rem;
+}
+
+.px-2 {
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+}
+
+.px-3 {
+padding-left: 0.75rem;
+padding-right: 0.75rem;
+}
+
+.px-4 {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+.px-8 {
+padding-left: 2rem;
+padding-right: 2rem;
+}
+
+.py-2 {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+
+.py-4 {
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+
+.pt-4 {
+padding-top: 1rem;
+}
+
+.pt-5 {
+padding-top: 1.25rem;
+}
+
+.pb-4 {
+padding-bottom: 1rem;
+}
+
+.pb-20 {
+padding-bottom: 5rem;
+}
+
+.text-left {
+text-align: left;
+}
+
+.text-center {
+text-align: center;
+}
+
+.align-baseline {
+vertical-align: baseline;
+}
+
+.align-bottom {
+vertical-align: bottom;
+}
+
+.text-sm {
+font-size: 0.875rem;
+line-height: 1.25rem;
+}
+
+.text-base {
+font-size: 1rem;
+line-height: 1.5rem;
+}
+
+.text-lg {
+font-size: 1.125rem;
+line-height: 1.75rem;
+}
+
+.text-3xl {
+font-size: 1.875rem;
+line-height: 2.25rem;
+}
+
+.font-medium {
+font-weight: 500;
+}
+
+.font-bold {
+font-weight: 700;
+}
+
+.leading-6 {
+line-height: 1.5rem;
+}
+
+.text-transparent {
+color: transparent;
+}
+
+.text-white {
+--tw-text-opacity: 1;
+color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+--tw-text-opacity: 1;
+color: rgba(209, 213, 219, var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+--tw-text-opacity: 1;
+color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+--tw-text-opacity: 1;
+color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+--tw-text-opacity: 1;
+color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+.text-indigo-400 {
+--tw-text-opacity: 1;
+color: rgba(129, 140, 248, var(--tw-text-opacity));
+}
+
+.hover\:text-gray-300:hover {
+--tw-text-opacity: 1;
+color: rgba(209, 213, 219, var(--tw-text-opacity));
+}
+
+.hover\:text-red-400:hover {
+--tw-text-opacity: 1;
+color: rgba(248, 113, 113, var(--tw-text-opacity));
+}
+
+.hover\:text-green-600:hover {
+--tw-text-opacity: 1;
+color: rgba(5, 150, 105, var(--tw-text-opacity));
+}
+
+.underline {
+text-decoration: underline;
+}
+
+.opacity-0 {
+opacity: 0;
+}
+
+.opacity-100 {
+opacity: 1;
+}
+
+*, ::before, ::after {
+--tw-shadow: 0 0 #0000;
+}
+
+.shadow-sm {
+--tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow {
+--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl {
+--tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:outline-none:focus {
+outline: 2px solid transparent;
+outline-offset: 2px;
+}
+
+*, ::before, ::after {
+--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+--tw-ring-offset-width: 0px;
+--tw-ring-offset-color: #fff;
+--tw-ring-color: rgba(59, 130, 246, 0.5);
+--tw-ring-offset-shadow: 0 0 #0000;
+--tw-ring-shadow: 0 0 #0000;
+}
+
+.focus\:ring-2:focus {
+--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-blue-500:focus {
+--tw-ring-opacity: 1;
+--tw-ring-color: rgba(59, 130, 246, var(--tw-ring-opacity));
+}
+
+.focus\:ring-indigo-500:focus {
+--tw-ring-opacity: 1;
+--tw-ring-color: rgba(99, 102, 241, var(--tw-ring-opacity));
+}
+
+.focus\:ring-offset-2:focus {
+--tw-ring-offset-width: 2px;
+}
+
+.drop-shadow {
+--tw-drop-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+}
+
+.transition-all {
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+
+.transition-opacity {
+transition-property: opacity;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+
+.transition-maxheight {
+transition-property: max-height;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+
+.duration-200 {
+transition-duration: 200ms;
+}
+
+.duration-300 {
+transition-duration: 300ms;
+}
+
+.duration-500 {
+transition-duration: 500ms;
+}
+
+.ease-in {
+transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-out {
+transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@media (min-width: 640px) {
+.sm\:col-start-1 {
+grid-column-start: 1;
+}
+
+.sm\:col-start-2 {
+grid-column-start: 2;
+}
+
+.sm\:my-8 {
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+
+.sm\:mt-0 {
+margin-top: 0px;
+}
+
+.sm\:mt-6 {
+margin-top: 1.5rem;
+}
+
+.sm\:block {
+display: block;
+}
+
+.sm\:inline-block {
+display: inline-block;
+}
+
+.sm\:grid {
+display: grid;
+}
+
+.sm\:h-screen {
+height: 100vh;
+}
+
+.sm\:w-full {
+width: 100%;
+}
+
+.sm\:max-w-lg {
+max-width: 32rem;
+}
+
+.sm\:translate-y-0 {
+--tw-translate-y: 0px;
+}
+
+.sm\:scale-95 {
+--tw-scale-x: .95;
+--tw-scale-y: .95;
+}
+
+.sm\:scale-100 {
+--tw-scale-x: 1;
+--tw-scale-y: 1;
+}
+
+.sm\:grid-flow-row-dense {
+grid-auto-flow: row dense;
+}
+
+.sm\:grid-cols-2 {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sm\:gap-3 {
+gap: 0.75rem;
+}
+
+.sm\:p-0 {
+padding: 0px;
+}
+
+.sm\:p-6 {
+padding: 1.5rem;
+}
+
+.sm\:align-middle {
+vertical-align: middle;
+}
+
+.sm\:text-sm {
+font-size: 0.875rem;
+line-height: 1.25rem;
+}
+}
+
+@media (min-width: 768px) {
+.md\:text-5xl {
+font-size: 3rem;
+line-height: 1;
+}
+
+.md\:leading-normal {
+line-height: 1.5;
+}
+}
+
+@media (min-width: 1024px) {
+.lg\:block {
+display: block;
+}
+
+.lg\:flex-row {
+flex-direction: row;
+}
+
+.lg\:border-r-2 {
+border-right-width: 2px;
+}
+
+.lg\:border-b-0 {
+border-bottom-width: 0px;
+}
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+}
+</style>
+<style type="text/css">
+.autoresize-textarea {
+/* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+display: grid;
+}
+
+.autoresize-textarea::after {
+/* Note the weird space! Needed to preventy jumpy behavior */
+content: attr(data-replicated-value) " ";
+/* This is how textarea text behaves */
+white-space: pre-wrap;
+/* Hidden from view, clicks, and screen readers */
+visibility: hidden;
+}
+.autoresize-textarea > textarea {
+/* You could leave this, but after a user resizes, then it ruins the auto sizing */
+resize: none;
+/* Firefox shows scrollbar on growth, you can hide like this. */
+overflow: hidden;
+}
+.autoresize-textarea > textarea,
+.autoresize-textarea::after {
+/* Place on top of each other */
+grid-area: 1 / 1 / 2 / 2;
+
+width: 100%;
+
+/* These are technically the same, but use both */
+overflow-wrap: break-word;
+word-wrap: break-word;
+/* non-standard, for Webkit in Safari */
+word-break: break-word;
+
+border-width: 1px;
+padding-left: 0.75rem;
+padding-right: 0.75rem;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+border-radius: 0.375rem;
+
+font-size: 0.875rem;
+line-height: 1.25rem;
+}
+</style>
+<style>
+.yagi-accordion button{
+border: none;
+cursor: pointer;
+padding: 0;
+line-height: inherit;
+color: inherit;
+font-family: inherit;
+font-size: 100%;
+margin: 0;
+text-transform: none;
+-webkit-appearance: button;
+background-color: rgba(229, 231, 235);
+background-image: none;
+}
+
+.yagi-accordion button p{
+margin: 0;
+}
+
+.yagi-accordion .mx-auto{
+margin-left: auto;
+margin-right: auto;
+}
+
+.yagi-accordion .my-2{
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+}
+
+.yagi-accordion .mb-2{
+margin-bottom: 0.5rem;
+}
+
+.yagi-accordion .flex{
+display: flex;
+}
+
+.yagi-accordion .table{
+display: table;
+}
+
+.yagi-accordion .hidden{
+display: none;
+}
+
+.yagi-accordion .h-6{
+height: 1.5rem;
+}
+
+.yagi-accordion .max-h-0{
+max-height: 0px;
+}
+
+.yagi-accordion .max-h-tall{
+max-height: 100rem;
+}
+
+@media (min-width: 768px){
+.yagi-accordion .max-h-tall{
+max-height: 50rem;
+}
+}
+
+.yagi-accordion .w-6{
+width: 1.5rem;
+}
+
+.yagi-accordion .w-full{
+width: 100%;
+}
+
+.yagi-accordion .max-w-prose{
+max-width: 80ch;
+}
+
+.yagi-accordion .items-center{
+align-items: center;
+}
+
+.yagi-accordion .justify-between{
+justify-content: space-between;
+}
+
+.yagi-accordion .overflow-hidden{
+overflow: hidden;
+}
+
+.yagi-accordion .rounded{
+border-radius: 0.25rem;
+}
+
+.yagi-accordion .p-3{
+padding: 0.75rem;
+}
+
+.yagi-accordion .px-2{
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+}
+
+.yagi-accordion .text-left{
+text-align: left;
+}
+
+.yagi-accordion .font-bold{
+font-weight: 700;
+}
+
+.yagi-accordion .whitespace-pre-wrap{
+white-space: pre-wrap;
+}
+
+.yagi-accordion .transition-maxheight{
+transition-property: max-height;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+
+.yagi-accordion .duration-500{
+transition-duration: 500ms;
+}
+
+.yagi-accordion .ease-out{
+transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+</style>
+
+</head>
+<body class="bg-gray-50" x-data="accordions()">
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div x-show="showModal" class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="display:none;">
+<div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+<!--
+Background overlay, show/hide based on modal state.
+
+Entering: "ease-out duration-300"
+From: "opacity-0"
+To: "opacity-100"
+Leaving: "ease-in duration-200"
+From: "opacity-100"
+To: "opacity-0"
+-->
+<div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+<!-- This element is to trick the browser into centering the modal contents. -->
+<span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+<!--
+Modal panel, show/hide based on modal state.
+
+Entering: "ease-out duration-300"
+From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+To: "opacity-100 translate-y-0 sm:scale-100"
+Leaving: "ease-in duration-200"
+From: "opacity-100 translate-y-0 sm:scale-100"
+To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+-->
+<div 
+x-show="showModal"
+x-transition:enter="ease-out duration-300"
+x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+x-transition:leave="ease-in duration-200"
+x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+@click.away="showModal = false"
+class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+<div>
+<div class="mt-0 text-center">
+<h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+HTML Code
+</h3>
+<div class="mt-2">
+<textarea id="htmlcode" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 focus:border-1 block w-full sm:text-sm border-gray-300 border px-3 py-2 rounded-md resize-none" style="min-height: 20rem;" role="textbox" x-text="accordionCode" readonly></textarea>
+</div>
+
+<p><a href="https://wahyu9kdl.github.io/islami " target="_blank" class="inline-block mt-4 underline text-indigo-400">GET APP ISLAMI</a></p>
+<p><a href="https://www.awdev.my.id " target="_blank" class="inline-block mt-4 underline text-indigo-400">VIEW PROFILE</a></p>
+<p><a href="https://www.devoloper.awdev.my.id " target="_blank" class="inline-block mt-4 underline text-indigo-400">VIEW WEBSITE</a></p>
+<p><a href="https://github.com/wahyu9kdl/wahyu9kdl.github.io" target="_blank" class="inline-block mt-4 underline text-indigo-400">FREE OPPEN SOURCE</a></p>
+<p><a href="https://pub-awdev.blogspot.com " target="_blank" class="inline-block mt-4 underline text-indigo-400">VISIT BLOOG</a></p>
+<p><a href="https://github.com/sponsors/wahyu9kdl" target="_blank" class="inline-block mt-4 underline text-indigo-400">Github Sponsor</a></p>
+<ul><li><a href="https://www.awdev.my.id/thema/"><i class="fas fa-qrcode"></i>DASHBOARD</a></li>
+<li><a href="https://www.awdev.my.id/file"><i class="fas fa-link"></i>NFT COLLECTION</a></li>
+<li><a href="https://www.awdev.eu.org"><i class="fas fa-stream"></i>OVERVIEW</a></li>
+<li><a href="https://qr.awdev.my.id "><i class="fas fa-calendar-week"></i>APP QRIS</a></li>
+<li><a href="https://www.awdev.eu.org/p/about.html"><i class="fas fa-question-circle"></i>ABOUT</a></li>
+<li><a href="https://devoloper.awdev.eu.org"><i class="fas fa-sliders-h"></i>SERVICE</a></li>
+<li><a href="https://www.awdev.my.id/ar"><i class="fas fa-link"></i>A R</a></li>
+<li><a href="https://www.awdev.my.id/vr"><i class="fas fa-link"></i>V R</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
+<button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm align-baseline" @click="copyCode()">
+Copy Code
+<svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+</svg>
+</button>
+<button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm" @click="showModal=false">
+Close
+</button>
+</div>
+</div>
+</div>
+</div>
+
+<h1 class="mt-8 mb-6 text-3xl md:text-5xl md:leading-normal drop-shadow font-bold text-center text-transparent bg-clip-text bg-gradient-to-b from-indigo-300 via-indigo-500 to-blue-300" style="-webkit-background-clip: text;">Accordion generator</h1>
+<p class="text-center mb-4 text-gray-400">by <a href="https://devoloper.awdev.eu.org" class="underline hover:text-green-600" target="_blank">AWDEV DEVOLOPER TOOLS</a></p>
+
+<br>
+<button type="button" class="my-10 mx-auto block items-center px-4 py-2 text-lg font-medium rounded-md shadow text-white bg-gradient-to-b from-indigo-300 via-indigo-500 to-blue-500 hover:from-indigo-500 hover:via-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:text-gray-300" @click="updateAccordionCode(); showModal = true">
+Get HTML Code
+</button>
+<br>
+
+<!-- Two column container -->
+<div class="flex flex-col lg:flex-row flex-1 w-full px-4">
+<div class="w-full border-b-2 mb-4 lg:border-r-2 lg:border-b-0 border-gray-500 border-dashed px-8" x-init="expandFirstTextArea()">
+
+<template x-for="(accordion, index) in accordions">
+<!-- input container -->
+<div class="border-b border-gray-300 py-4">
+<template x-if="index > 0">
+<div class="w-full flex flex-row-reverse">
+<button type="button" @click="removeAccordion(index)">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-300 hover:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+</button>
+</div>
+</template>
+<div>
+<label class="block text-sm font-medium text-gray-700">Title</label>
+<div class="mt-1">
+<input type="text" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md" x-model="accordions[index].title" placeholder="Title...">
+</div>
+</div>
+
+<div class="mt-4">
+<label class="block text-sm font-medium text-gray-700">Content</label>
+<div class="mt-1 autoresize-textarea">
+<textarea class="shadow-sm focus:ring-blue-500 focus:border-blue-500 focus:border-1 block w-full sm:text-sm border-gray-300 border px-3 py-2 rounded-md" role="textbox" oninput="this.parentNode.dataset.replicatedValue = this.value" rows="1" placeholder="content..." x-model="accordions[index].content"></textarea>
+</div>
+</div>
+</div>
+</template>
+
+<button type="button" class="w-full my-8 inline-flex items-center px-4 py-2 border border-gray-300 shadow text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" @click="addAccordion()">
+<p class="mx-auto">
+Add more accordion
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+</svg>
+</p>
+</button>
+</div>
+
+<!-- right column -->
+<div class="w-full relative">
+<img src="arrow.png" class="mx-auto absolute hidden lg:block" style="left: 12rem;top: -8rem;">
+<p class="text-sm text-gray-400 px-4">Preview</p>
+
+<div id="accordionContainer"><div class="yagi-accordion">
+<div class="mx-auto max-w-prose px-2">
+<template x-for="accordion in accordions">
+<div class="accordion-item">
+<button type="button" class="accordion-header w-full flex justify-between items-center my-2 p-3 rounded" onclick="this.nextElementSibling.classList.toggle('max-h-0');this.nextElementSibling.classList.toggle('max-h-tall'); this.querySelector('.plus').classList.toggle('hidden'); this.querySelector('.minus').classList.toggle('hidden');">
+<p class="font-bold text-left" x-text="accordion.title"></p>
+<svg xmlns="http://www.w3.org/2000/svg" class="plus h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="minus h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+</svg>
+</button>
+<div class="accordion-content transition-maxheight ease-out duration-500 max-h-0 overflow-hidden mb-2">
+<p class="whitespace-pre-wrap" x-html="accordion.content"></p>
+</div>
+</div>
+</template>
+</div>
+</div></div>
+
+</div>
+</div>
+
+
+<script>
+function accordions() {
+return {
+showModal: false,
+accordionCode: '',
+accordions: [ {title: 'Return policy', content: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'}, {title: 'Your FAQ title here', content: 'Your content here'}],
+addAccordion(){
+this.accordions.push({title: "", content: ""});
+},
+removeAccordion(index){
+this.accordions.splice(index, 1);
+},
+updateAccordionCode(){
+let startline = "<!-- start yagi accordion -->\n";
+let endline = "\n<!-- end yagi accordion -->\n";
+let style = "<style>\n" + document.querySelector('style').innerHTML + "</style>\n";
+let fullHTML = document.querySelector('#accordionContainer').innerHTML;
+let startTemplateTagIndex = fullHTML.indexOf('\<template');
+let endTemplateTagIndex = fullHTML.indexOf('\</template') + 11;
+
+this.accordionCode = startline + style + fullHTML.substr(0, startTemplateTagIndex) + fullHTML.substr(endTemplateTagIndex) + endline;
+},
+copyCode() {
+document.getElementById('htmlcode').select();
+
+setTimeout(function(){ 
+document.execCommand("copy");
+}, 10);
+},
+expandFirstTextArea() {
+setTimeout(function(){ 
+let textarea = document.querySelector('.autoresize-textarea textarea');
+textarea.parentNode.dataset.replicatedValue = textarea.value;
+}, 50);
+}
+}
+}
+</script>
+<!-- Fathom - beautiful, simple website analytics -->
+<script type="text/javascript">
+window.fathom=function(){var fathomScript=document.currentScript||document.querySelector('script[src*="script.js"][site]')||document.querySelector("script[data-site]")||document.querySelector("script[site]"),siteId=fathomScript.getAttribute("data-site")||fathomScript.getAttribute("site"),honorDNT=!1,auto=!0,canonical=!0,excludedDomains=[],allowedDomains=[];"true"==(fathomScript.getAttribute("data-honor-dnt")||fathomScript.getAttribute("honor-dnt"))&&(honorDNT="doNotTrack"in navigator&&"1"===navigator.doNotTrack),"false"==(fathomScript.getAttribute("data-auto")||fathomScript.getAttribute("auto"))&&(auto=!1),"false"==(fathomScript.getAttribute("data-canonical")||fathomScript.getAttribute("canonical"))&&(canonical=!1),(fathomScript.getAttribute("data-excluded-domains")||fathomScript.getAttribute("excluded-domains"))&&(excludedDomains=(fathomScript.getAttribute("data-excluded-domains")||fathomScript.getAttribute("excluded-domains")).split(",")),fathomScript.getAttribute("data-included-domains")||fathomScript.getAttribute("included-domains")?allowedDomains=(fathomScript.getAttribute("data-included-domains")||fathomScript.getAttribute("included-domains")).split(","):(fathomScript.getAttribute("data-allowed-domains")||fathomScript.getAttribute("allowed-domains"))&&(allowedDomains=(fathomScript.getAttribute("data-allowed-domains")||fathomScript.getAttribute("allowed-domains")).split(","));function trackPageview(){window.fathom.trackPageview()}function spaHistory(){var pushState;void 0!==history&&(pushState=history.pushState,history.pushState=function(){var ret=pushState.apply(history,arguments);return window.dispatchEvent(new Event("pushstate")),window.dispatchEvent(new Event("locationchangefathom")),ret},window.addEventListener("popstate",function(){window.dispatchEvent(new Event("locationchangefathom"))}),window.addEventListener("locationchangefathom",trackPageview))}function spaHash(){window.addEventListener("hashchange",trackPageview)}if(fathomScript.getAttribute("data-spa")||fathomScript.getAttribute("spa"))switch(fathomScript.getAttribute("data-spa")||fathomScript.getAttribute("spa")){case"history":spaHistory();break;case"hash":spaHash();break;case"auto":(void 0!==history?spaHistory:spaHash)()}var scriptUrl,trackerUrl="https://cdn.usefathom.com/";function encodeParameters(params){params.cid=Math.floor(1e8*Math.random())+1,params={[params.cid]:params.cid,...params};try{var string="?v="+encodeURIComponent(btoa(JSON.stringify(params)))}catch(err){string="?"+Object.keys(params).map(function(k){return encodeURIComponent(k)+"="+encodeURIComponent(params[k])}).join("&")}return string}function qs(){for(var pair,data={},pairs=window.location.search.substring(window.location.search.indexOf("?")+1).split("&"),i=0;i<pairs.length;i++)pairs[i]&&(pair=pairs[i].split("="),-1<["keyword","q","ref","s","utm_campaign","utm_content","utm_medium","utm_source","utm_term","action","name","pagename","tab"].indexOf(decodeURIComponent(pair[0]))&&(data[decodeURIComponent(pair[0])]=decodeURIComponent(pair[1])));return data}function trackingEnabled(){var fathomIsBlocked=!1;try{fathomIsBlocked=window.localStorage&&window.localStorage.getItem("blockFathomTracking")}catch(err){}var prerender="visibilityState"in document&&"prerender"===document.visibilityState,isExcludedDomain=-1<excludedDomains.indexOf(window.location.hostname),isAllowedDomain=!(0<allowedDomains.length)||-1<allowedDomains.indexOf(window.location.hostname);return!(fathomIsBlocked||prerender||honorDNT||isExcludedDomain)&&isAllowedDomain}function getLocation(params){var a,location=window.location;return void 0===params.url?canonical&&document.querySelector('link[rel="canonical"][href]')&&((a=document.createElement("a")).href=document.querySelector('link[rel="canonical"][href]').href,location=a):(location=document.createElement("a")).href=params.url,location}return fathomScript.src.indexOf("cdn.usefathom.com")<0&&((scriptUrl=document.createElement("a")).href=fathomScript.src,trackerUrl="https://"+scriptUrl.hostname+"/"),auto&&setTimeout(function(){window.fathom.trackPageview()}),{siteId:siteId,send:function(params){var img;trackingEnabled()&&((img=document.createElement("img")).setAttribute("alt",""),img.setAttribute("aria-hidden","true"),img.style.position="absolute",img.src=trackerUrl+encodeParameters(params),img.addEventListener("load",function(){img.parentNode.removeChild(img)}),img.addEventListener("error",function(){img.parentNode.removeChild(img)}),document.body.appendChild(img))},beacon:function(params){trackingEnabled()&&navigator.sendBeacon(trackerUrl+encodeParameters(params))},trackPageview:function(params){var hostname,pathnameToSend,location=getLocation(params=void 0===params?{}:params);""!==location.host&&(hostname=location.protocol+"//"+location.hostname,pathnameToSend=location.pathname||"/","hash"==fathomScript.getAttribute("data-spa")&&(pathnameToSend+=location.hash),this.send({h:hostname,p:pathnameToSend,r:params.referrer||(document.referrer.indexOf(hostname)<0?document.referrer:""),sid:this.siteId,qs:qs()}))},trackGoal:function(code,cents){var location=getLocation({}),hostname=location.protocol+"//"+location.hostname;this.beacon({gcode:code,gval:cents,qs:qs(),p:location.pathname||"/",h:hostname,r:document.referrer.indexOf(hostname)<0?document.referrer:"",sid:this.siteId})},trackEvent:function(name,payload={}){var location=getLocation({}),hostname=location.protocol+"//"+location.hostname;this.beacon({name:name,payload:JSON.stringify(payload),p:location.pathname||"/",h:hostname,r:document.referrer.indexOf(hostname)<0?document.referrer:"",sid:this.siteId,qs:qs()})},setSite(siteId){this.siteId=siteId},blockTrackingForMe:function(){window.localStorage?(window.localStorage.setItem("blockFathomTracking",!0),alert("You have blocked Fathom for yourself on this website.")):alert("Your browser doesn't support localStorage.")},enableTrackingForMe:function(){window.localStorage&&(window.localStorage.removeItem("blockFathomTracking"),alert("Fathom has been enabled for this website."))}}}();
+</script>
+<!-- / Fathom -->
+</body>
+</html>
