@@ -12,8 +12,7 @@ My Profile github.io <a href="https://wahyu9kdl.github.io">clik here...! </a>
   <p align="center">
   <a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Ftransfer%2Fhomepage%2Fexternal%2Fprofile%3FflowContextData%3DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%26amount%3D25%26currencyCode%3DAUD&onboardData=%7B%22country.x%22%3A%22ID%22%2C%22locale.x%22%3A%22id_ID%22%2C%22intent%22%3A%22paypalme%22%2C%22redirect_url%22%3A%22https%253A%252F%252Fwww.paypal.com%252Fmyaccount%252Ftransfer%252Fhomepage%252Fexternal%252Fprofile%253FflowContextData%253DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%2526amount%253D25%2526currencyCode%253DAUD%22%2C%22sendMoneyText%22%3A%22Anda%2520mengirimkan%2520Ahmad%2520wahyudi%22%7D"><img src="https://img.shields.io/badge/support-PayPal-blue?logo=PayPal&style=flat-square&label=Donate" alt="sponsor github profile readme generator"/>
   </a>  
-  <a href="https://ko-fi.com/awfanspage#checkoutModal" target='_blank'><img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for rahuldkjain' />
-  </a>
+
 # A Records
 
 | Name | TTL | Data |
@@ -79,19 +78,10 @@ No records present.
 📥 <a href="https://www.file-upload.com/users/Awfanspage/89315/FREE">💯 FREE DOWNLODER FILE</a>
 ## 📊 FUNDING.yml
 
-🏅<a href="https://www.patreon.com/bePatron?u=65164893" data-patreon-widget-type="become-patron-button">Become a Patreon!</a>
+🏅<a href="https://www.patreon.com/Awfanspage" data-patreon-widget-type="become-patron-button">Become a Patreon!</a>
 🎗<a href="https://sociabuzz.com/wahyu9kdl/donate">SOCIABUZZ</a>
-🏅<a href="https://sociabuzz.com/wahyu9kdl/support">SUPPORT</a>
-🎗<a href="https://sociabuzz.com/wahyu9kdl/give">GIVE</a>
 🏅<a href="https://saweria.co/AwGroupChannel">SAWERIA</a>
 🎗 <a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Ftransfer%2Fhomepage%2Fexternal%2Fprofile%3FflowContextData%3DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW&onboardData=%7B%22country.x%22%3A%22ID%22%2C%22locale.x%22%3A%22id_ID%22%2C%22intent%22%3A%22paypalme%22%2C%22redirect_url%22%3A%22https%253A%252F%252Fwww.paypal.com%252Fmyaccount%252Ftransfer%252Fhomepage%252Fexternal%252Fprofile%253FflowContextData%253DdnQz6co9bTO3dXsoaSQoXrylmBBr7Z4w4NgW64GB_WDfmLR52ffZouE7E54etjPgewijP0OxmZksVyVuBbZSxh7v9r8PWndQTi1eJUMZCCj7rrJftUv11NTxekLdOnVJT8vh6pE128RXl6Lq4yOTwu0f2kutdDCQ_qZkx2CTsh1Z3f_OGWFAvKJiKVMHbhq3dn4SWoaIs2dY-I1dSekSdPbZuEHLmCfV3kIA3MpjsPC9xVmmiRxgIY0fsKhMIEnZZQdCZUSJTpNWAnvYDIc-pUIdstyJJzGtqMk0TeqjSG7LnM5jOZufDLI4W8Jbk14B1O-3rAfdL66TgrgjcVRK35l6WhQzVDZEWvimVxtUMuqCgf8gboCEKwLD3ywxApHbM23LBMJY9KBXh6ILB3oZCmB0wYYJxSwmpLiIEW%22%2C%22sendMoneyText%22%3A%22Anda%2520mengirimkan%2520Ahmad%2520wahyudi%22%7D">Paypal </a>
-
-
-## 🏅 open collective badge
-<img alt="open collective badge" src="https://opencollective.com/animation/tiers/layanan-exclusive/badge.svg?label=Layanan%20Exclusive&color=brightgreen" />
-<object type="image/svg+xml" data="https://opencollective.com/animation/tiers/layanan-exclusive.svg?avatarHeight=36&width=600"></object>
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C57S9WF)
 
 
 ## 📊 Github Readme Streak Stats
@@ -222,6 +212,148 @@ No records present.
 |  18  | AUTO VISITOR      | GET CODE  | <a href="https://wahyu9kdl.github.io/DASHBOARD/TOOLS/AUTO%20VISITOR/AUTO%20VISITOR.html" >LIVE PROJECTS  </a> | AKTIVED  |
 |  19  | Awfanspage        | GET CODE  | <a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/FACEBOOK/Awfanspage.html" >LIVE PROJECTS  </a> | AKTIVED  |
 |  20  | YOUTUBE Loop      | GET CODE  | <a href="https://wahyu9kdl.github.io/DASHBOARD/PROJECTS/YOUTUBE/loop.html" >LIVE PROJECTS </a>  | AKTIVED  |
+
+## DA PA CHEKER
+
+<div style="margin:10px auto; float:none; width:100%">
+<table>
+<tr style="background:#FFF5CD">
+<td width="7%">SR#</td>
+<td width="30%">Urls</td>
+<td width="10%">DA</td>
+<td width="10%">PA</td>
+<td width="10%">Moz Rank</td>
+<td width="18%">View Indexed GOOGLE</td>
+<td width="18%">View Indexed BING</td>
+<td width="18%">View Indexed YAHOO</td>
+
+</tr>
+<tr>
+<td>1</td>
+<td>wahyu9kdl.github.io</td>
+<td>6</td>
+<td>12</td>
+<td>1.2</td>
+<td><a href="https://www.google.com/search?q=site:wahyu9kdl.github.io" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.bing.com/search?q=site:wahyu9kdl.github.io" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:wahyu9kdl.github.io" target="_blank">View indexed pages</a></td>
+
+</tr>
+<tr>
+<td>2</td>
+<td>alhikmah.my.id</td>
+<td>18</td>
+<td>21</td>
+<td>2.1</td>
+<td><a href="https://www.google.com/search?q=site:alhikmah.my.id" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.bing.com/search?q=site:alhikmah.my.id" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:alhikmah.my.id" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>3</td>
+<td>awdev.my.id</td>
+<td>6</td>
+<td>13</td>
+<td>1.3</td>
+<td><a href="https://www.google.com/search?q=site:awdev.my.id" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.bing.com/search?q=site:awdev.my.id" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:awdev.my.id" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>4</td>
+<td>imofrok.eu.org</td>
+<td>3</td>
+<td>6</td>
+<td>0.6</td>
+<td><a href="https://www.google.com/search?q=site:imofrok.eu.org" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.bing.com/search?q=site:imofrok.eu.org" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:imofrok.eu.org" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>5</td>
+<td>goozmedia.com</td>
+<td>7</td>
+<td>8</td>
+<td>0.8</td>
+<td><a href="https://www.google.com/search?q=site:goozmedia.com" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.bing.com/search?q=site:goozmedia.com" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:goozmedia.com" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>6</td>
+<td>alhikmah.eu.org</td>
+<td>3</td>
+<td>9</td>
+<td>0.9</td>
+<td><a href="https://www.google.com/search?q=site:alhikmah.eu.org" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.bing.com/search?q=site:alhikmah.eu.org" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:alhikmah.eu.org" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>7</td>
+<td>poindev.site</td>
+<td>3</td>
+<td>11</td>
+<td>1.1</td>
+<td><a href="https://www.google.com/search?q=site:poindev.site" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.bing.com/search?q=site:poindev.site" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:poindev.site" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>8</td>
+<td>awdev.eu.org</td>
+<td>10</td>
+<td>17</td>
+<td>1.7</td>
+<td><a href="https://www.google.com/search?q=site:awdev.eu.org" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.google.com/search?q=site:awdev.eu.org" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:awdev.eu.org" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>9</td>
+<td>awdev-corporation.github.io</td>
+<td>3</td>
+<td>7</td>
+<td>0.7</td>
+<td><a href="https://www.google.com/search?q=site:awdev-corporation.github.io" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.google.com/search?q=site:awdev-corporation.github.io" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:awdev-corporation.github.io" target="_blank">View indexed pages</a></td>
+
+
+</tr>
+<tr>
+<td>10</td>
+<td>awdevmyid.github.io</td>
+<td>1</td>
+<td>1</td>
+<td>0.1</td>
+<td><a href="https://www.google.com/search?q=site:awdevmyid.github.io" target="_blank">View indexed pages</a></td>
+<td><a href="https://www.google.com/search?q=site:awdevmyid.github.io" target="_blank">View indexed pages</a></td>
+<td><a href="https://search.yahoo.com/search?q=site:awdevmyid.github.io" target="_blank">View indexed pages</a></td>
+
+</tr>
+<tr>
+<td colspan="8">
+Report Generated on <strong>19 Oct, 2023</strong> by <a href="https://www.awdev.my.id/" target="_blank">AWDEV</a>
+  
+</td>
+</tr>
+</table>
+
 
 
 ## GITHUB 
